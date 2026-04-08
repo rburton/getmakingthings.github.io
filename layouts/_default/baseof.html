@@ -22,6 +22,7 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
+    <p><a href="mailto:{{ .Site.Params.email }}">Contact</a></p>
     <p>&copy; {{ now.Year }} {{ .Site.Params.company }}</p>
   </footer>
 </body>

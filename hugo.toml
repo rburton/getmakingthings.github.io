@@ -5,6 +5,7 @@ title = 'Making Things LLC'
 [params]
   tagline = 'We build iOS apps people love to use.'
   company = 'Making Things LLC'
+  email = 'support@getmakingthings.com'
 
 [menus]
   [[menus.main]]
