@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ if .Sections }}
+  {{/* This is the top-level apps listing (has sub-sections) */}}
+  <section class="apps-listing">
+    <h1>Our Apps</h1>
+    {{ $apps := .Sections }}
+    {{ if $apps }}
+      <ul class="apps-list">
+        {{ range $apps.ByDate.Reverse }}
+          <li class="apps-list__item">
+            <a href="{{ .RelPermalink }}" class="apps-list__link">
+              {{ with .Params.icon }}
+                <img src="{{ . }}" alt="{{ $.Title }} app icon" class="apps-list__icon" width="64" height="64" loading="lazy">
+              {{ else }}
+                <span class="apps-list__icon-fallback" aria-hidden="true">{{ substr .Title 0 1 }}</span>
+              {{ end }}
+              <div class="apps-list__info">
+                <span class="apps-list__name">{{ .Title }}</span>
+                {{ with .Params.tagline }}<span class="apps-list__tagline">{{ . }}</span>{{ end }}
+                <span class="apps-list__date">Released {{ .Date.Format "January 2006" }}</span>
+              </div>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <div class="apps-listing__empty">
+        <p>We're working on something new. Check back soon.</p>
+      </div>
+    {{ end }}
+  </section>
+{{ else }}
+  {{/* This is an individual app detail page (no sub-sections) */}}
+  <article class="app-detail">
+    <header class="app-detail__header">
+      {{ with .Params.icon }}
+        <img src="{{ . }}" alt="{{ $.Title }} app icon" class="app-detail__icon" width="96" height="96">
+      {{ else }}
+        <span class="app-detail__icon-fallback" aria-hidden="true">{{ substr .Title 0 1 }}</span>
+      {{ end }}
+      <div class="app-detail__meta">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.tagline }}<p class="app-detail__tagline">{{ . }}</p>{{ end }}
+        <p class="app-detail__date">Released {{ .Date.Format "January 2, 2006" }}</p>
+      </div>
+    </header>
+
+    {{ with .Params.appStoreURL }}
+      <div class="app-detail__store">
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="app-detail__badge">
+          <img src="/images/app-store-badge-white.svg" alt="Download on the App Store" height="40">
+        </a>
+      </div>
+    {{ else }}
+      <p class="app-detail__coming-soon">Coming Soon</p>
+    {{ end }}
+
+    {{ if .Content }}
+      <div class="app-detail__body prose">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    <nav class="app-detail__legal">
+      {{ $privacy := .GetPage "privacy" }}
+      {{ $terms := .GetPage "terms" }}
+      {{ if or $privacy $terms }}
+        <ul>
+          {{ with $privacy }}<li><a href="{{ .RelPermalink }}">Privacy Policy</a></li>{{ end }}
+          {{ with $terms }}<li><a href="{{ .RelPermalink }}">Terms of Service</a></li>{{ end }}
+        </ul>
+      {{ end }}
+    </nav>
+  </article>
+{{ end }}
+{{ end }}

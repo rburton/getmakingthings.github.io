@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">{{ .Site.Title }}</h1>
+    <p class="hero__tagline">{{ .Site.Params.tagline }}</p>
+    <a href="/apps/" class="hero__cta">See Our Apps</a>
+  </div>
+  <div class="hero__accent" aria-hidden="true"></div>
+</section>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="legal-page">
+  {{ with .Params.parentApp }}
+    <nav class="legal-page__breadcrumb">
+      <a href="{{ $.Parent.RelPermalink }}">← {{ . }}</a>
+    </nav>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

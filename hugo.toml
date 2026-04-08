@@ -1,0 +1,13 @@
+baseURL = 'https://getmakingthings.com/'
+languageCode = 'en-us'
+title = 'Making Things LLC'
+
+[params]
+  tagline = 'We build iOS apps people love to use.'
+  company = 'Making Things LLC'
+
+[menus]
+  [[menus.main]]
+    name = 'Apps'
+    pageRef = '/apps'
+    weight = 10

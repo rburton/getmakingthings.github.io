@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example App on Making Things LLC</title>
+    <link>http://localhost:1316/apps/example-app/</link>
+    <description>Recent content in Example App on Making Things LLC</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1316/apps/example-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1316/apps/example-app/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1316/apps/example-app/privacy/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Last updated: June 15, 2024&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Making Things LLC (&amp;ldquo;we&amp;rdquo;, &amp;ldquo;us&amp;rdquo;, or &amp;ldquo;our&amp;rdquo;) operates the Example App application. This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our app.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-collection&#34;&gt;Information Collection&lt;/h2&gt;&#xA;&lt;p&gt;We do not collect, store, or transmit any personal data. Example App operates entirely on your device.&lt;/p&gt;&#xA;&lt;h2 id=&#34;analytics&#34;&gt;Analytics&lt;/h2&gt;&#xA;&lt;p&gt;We do not use any third-party analytics or tracking tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;changes-to-this-policy&#34;&gt;Changes to This Policy&lt;/h2&gt;&#xA;&lt;p&gt;We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terms of Service</title>
+      <link>http://localhost:1316/apps/example-app/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1316/apps/example-app/terms/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Last updated: June 15, 2024&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;agreement-to-terms&#34;&gt;Agreement to Terms&lt;/h2&gt;&#xA;&lt;p&gt;By downloading or using Example App, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.&lt;/p&gt;&#xA;&lt;h2 id=&#34;use-license&#34;&gt;Use License&lt;/h2&gt;&#xA;&lt;p&gt;We grant you a limited, non-exclusive, non-transferable license to use Example App for personal, non-commercial purposes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h2&gt;&#xA;&lt;p&gt;Example App is provided &amp;ldquo;as is&amp;rdquo; without warranty of any kind, express or implied.&lt;/p&gt;&#xA;&lt;h2 id=&#34;limitation-of-liability&#34;&gt;Limitation of Liability&lt;/h2&gt;&#xA;&lt;p&gt;In no event shall Making Things LLC be liable for any indirect, incidental, special, or consequential damages arising from your use of Example App.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
