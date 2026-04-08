@@ -386,6 +386,31 @@ ul {
   color: var(--color-accent);
 }
 
+/* === About Page === */
+.about-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.about-page__header {
+  margin-bottom: var(--space-xl);
+}
+
+.about-page__header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-sm);
+}
+
+.about-page__intro {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 55ch;
+}
+
 /* === Legal Pages === */
 .legal-page {
   max-width: var(--max-width);

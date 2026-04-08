@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Our Apps on Making Things LLC</title>
-    <link>https://getmakingthings.com/apps/</link>
+    <link>http://localhost:1313/apps/</link>
     <description>Recent content in Our Apps on Making Things LLC</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://getmakingthings.com/apps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/apps/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

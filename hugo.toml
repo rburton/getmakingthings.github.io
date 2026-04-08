@@ -12,3 +12,7 @@ title = 'Making Things LLC'
     name = 'Apps'
     pageRef = '/apps'
     weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20

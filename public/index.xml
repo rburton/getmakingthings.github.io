@@ -2,11 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Making Things LLC</title>
-    <link>https://getmakingthings.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Making Things LLC</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://getmakingthings.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;a-family-business-building-for-families&#34;&gt;A Family Business, Building for Families&lt;/h2&gt;&#xA;&lt;p&gt;Making Things is a family-run business. We build apps the same way we raise our kids with care, intention, and a deep sense of responsibility. Every decision we make starts with a simple question: would we put this in front of our own children?&lt;/p&gt;&#xA;&lt;p&gt;That question keeps us honest.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ai-that-stays-out-of-the-way&#34;&gt;AI That Stays Out of the Way&lt;/h2&gt;&#xA;&lt;p&gt;We believe artificial intelligence is at its best when you don&amp;rsquo;t notice it&amp;rsquo;s there. Our apps use AI to adapt to each child adjusting difficulty, surfacing the right content at the right moment, and responding to how a child actually learns rather than how a curriculum assumes they should.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
