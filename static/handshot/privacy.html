@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Handshot</title>
+    <meta name="description" content="Handshot Privacy Policy. Your privacy matters. All hand detection and photo processing happens entirely on your device.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #FFFFFF;
+            --bg-surface: #F8F7FF;
+            --bg-card: #FFFFFF;
+            --accent: #7C3AED;
+            --accent-light: #6D28D9;
+            --text-primary: #1E1B4B;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 16px 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .nav-brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .nav-brand span {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+
+        /* ── CONTENT ── */
+        .policy-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+
+        .policy-header {
+            margin-bottom: 48px;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .policy-header .effective-date {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .policy-intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            padding-top: 8px;
+        }
+
+        .policy-section h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .policy-section p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .policy-section ul li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .policy-section ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.6;
+        }
+
+        .highlight-box {
+            background: var(--bg-surface);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 20px 24px;
+            margin: 20px 0 24px;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-block {
+            background: var(--bg-surface);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-top: 12px;
+        }
+
+        .contact-block p {
+            margin-bottom: 6px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid #E5E7EB;
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .footer-brand span { font-weight: 700; font-size: 1rem; }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--text-secondary); }
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            .policy-header h1 {
+                font-size: 1.75rem;
+            }
+            .policy-intro {
+                font-size: 1rem;
+            }
+            .nav-links {
+                gap: 16px;
+            }
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+            .contact-block {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Handshot">
+            <span>Handshot</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mailto:support@handshot.co">Support</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- PRIVACY POLICY -->
+<div class="policy-container">
+
+    <div class="policy-header">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective Date: March 24, 2026</p>
+    </div>
+
+    <p class="policy-intro">
+        Handshot is built by Make Things LLC ("we," "us," or "our"). We believe your camera, your photos, and your hands are nobody's business but yours. This Privacy Policy explains how Handshot (the "App") handles your information. The short version: almost nothing leaves your device.
+    </p>
+
+    <!-- 1. Information We Collect -->
+    <div class="policy-section">
+        <h2>1. Information We Collect</h2>
+
+        <div class="highlight-box">
+            <p>Handshot collects virtually no personal information. We do not require account creation, login credentials, email addresses, or any form of registration to use the App.</p>
+        </div>
+
+        <h3>Information We Do Not Collect</h3>
+        <ul>
+            <li>No names, email addresses, or contact information</li>
+            <li>No photos, videos, or image data</li>
+            <li>No hand detection data, gesture data, or biometric information</li>
+            <li>No location or GPS data</li>
+            <li>No device identifiers for tracking purposes</li>
+            <li>No browsing history or usage analytics sent to our servers</li>
+            <li>No third-party analytics, advertising, or tracking SDKs</li>
+        </ul>
+
+        <h3>Information Handled by Apple</h3>
+        <p>
+            If you purchase a subscription or make an in-app purchase, that transaction is processed entirely by Apple through the App Store. Apple may collect transaction-related data as described in <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. We receive only the information necessary to verify your purchase status (such as whether you have an active subscription), and this is handled on-device through Apple's StoreKit 2 framework.
+        </p>
+
+        <h3>On-Device Preferences</h3>
+        <p>
+            The App stores your settings and preferences (such as countdown duration, haptic feedback toggles, and camera mode) locally on your device using standard iOS storage mechanisms. This data never leaves your device and is not transmitted to us or any third party.
+        </p>
+    </div>
+
+    <!-- 2. How We Use Information -->
+    <div class="policy-section">
+        <h2>2. How We Use Information</h2>
+        <p>
+            Because we collect virtually no personal information, our use of data is minimal:
+        </p>
+        <ul>
+            <li><strong>Purchase verification:</strong> We use on-device purchase status from Apple's StoreKit 2 to determine whether Pro features should be unlocked. This check happens entirely on your device.</li>
+            <li><strong>App preferences:</strong> Your locally stored settings are used solely to customize your experience within the App.</li>
+        </ul>
+        <p>
+            We do not sell, rent, share, or monetize any user data. We do not display advertisements. We never will.
+        </p>
+    </div>
+
+    <!-- 3. Camera and Hand Detection -->
+    <div class="policy-section">
+        <h2>3. Camera and Hand Detection</h2>
+
+        <div class="highlight-box">
+            <p>All camera processing and hand gesture recognition happens entirely on your device. No image data, video frames, or hand landmark coordinates are ever transmitted off your device.</p>
+        </div>
+
+        <h3>How It Works</h3>
+        <p>
+            Handshot uses your device's camera to display a live preview and capture photos or videos. The App uses Apple's Vision framework (<code>VNDetectHumanHandPoseRequest</code>) to detect hand poses in the camera feed. This allows you to use hand gestures to control the camera.
+        </p>
+
+        <h3>What Stays on Your Device</h3>
+        <ul>
+            <li>All camera frames are processed in real time on your device's neural engine and CPU</li>
+            <li>Hand landmark coordinates (joint positions) are computed on-device and used only to recognize gestures</li>
+            <li>No camera frames, processed images, or hand pose data are stored, logged, or transmitted anywhere</li>
+            <li>Hand detection data is discarded immediately after each frame is processed</li>
+            <li>The App does not perform facial recognition, body tracking, or any biometric identification</li>
+        </ul>
+
+        <h3>Camera Permission</h3>
+        <p>
+            Handshot requires camera access to function. You can grant or revoke camera permission at any time in your device's Settings app. If camera access is denied, the App cannot capture photos, record videos, or detect hand gestures.
+        </p>
+    </div>
+
+    <!-- 4. Photos and Videos -->
+    <div class="policy-section">
+        <h2>4. Photos and Videos</h2>
+        <p>
+            When you capture a photo or video with Handshot, the media is saved directly to your device's photo library using Apple's PhotoKit framework. We request add-only access to your photo library, meaning:
+        </p>
+        <ul>
+            <li>Handshot can save new photos and videos to your library</li>
+            <li>Handshot cannot read, browse, modify, or delete your existing photos or videos</li>
+            <li>Your captured media is never uploaded to our servers or any third-party service</li>
+            <li>Your captured media is never processed off-device</li>
+        </ul>
+        <p>
+            You have full control over your photos and videos through Apple's Photos app. Handshot does not maintain a separate copy or database of your captured media.
+        </p>
+    </div>
+
+    <!-- 5. In-App Purchases -->
+    <div class="policy-section">
+        <h2>5. In-App Purchases</h2>
+        <p>
+            Handshot offers optional in-app purchases (weekly, monthly, annual subscriptions, and a lifetime purchase) to unlock Pro features. All purchase transactions are handled entirely by Apple through the App Store.
+        </p>
+        <ul>
+            <li>We do not process, store, or have access to your payment information (credit card numbers, billing address, etc.)</li>
+            <li>Purchase verification is performed on-device using Apple's StoreKit 2 framework</li>
+            <li>Subscription management (renewal, cancellation) is handled through your Apple ID account settings</li>
+            <li>We do not operate our own payment servers or billing infrastructure</li>
+        </ul>
+        <p>
+            For questions about App Store purchases, billing, or refunds, please contact <a href="https://support.apple.com/" target="_blank" rel="noopener">Apple Support</a>.
+        </p>
+    </div>
+
+    <!-- 6. Third-Party Services -->
+    <div class="policy-section">
+        <h2>6. Third-Party Services</h2>
+        <p>
+            Handshot does not integrate any third-party analytics, advertising, crash reporting, or tracking services. The only third-party involvement is Apple, which provides:
+        </p>
+        <ul>
+            <li><strong>App Store and StoreKit 2:</strong> For processing in-app purchases and subscriptions</li>
+            <li><strong>Vision framework:</strong> Apple's on-device machine learning framework for hand pose detection (runs entirely on your device)</li>
+            <li><strong>PhotoKit:</strong> Apple's framework for saving media to your photo library</li>
+        </ul>
+        <p>
+            All of these are native Apple frameworks that run on your device. None of them transmit your personal data to us. Apple's own data practices are governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+        </p>
+    </div>
+
+    <!-- 7. Children's Privacy -->
+    <div class="policy-section">
+        <h2>7. Children's Privacy</h2>
+        <p>
+            Handshot is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. Since Handshot collects virtually no personal information from any user, there is minimal risk. However, if you believe a child under 13 has somehow provided personal information through the App, please contact us at <a href="mailto:support@handshot.co">support@handshot.co</a> and we will take appropriate action.
+        </p>
+    </div>
+
+    <!-- 8. Data Security -->
+    <div class="policy-section">
+        <h2>8. Data Security</h2>
+        <p>
+            Your privacy is protected by design. Because Handshot processes everything on-device and does not transmit data to external servers, your information benefits from the security measures built into iOS, including:
+        </p>
+        <ul>
+            <li>Apple's hardware-level encryption and Secure Enclave</li>
+            <li>iOS app sandboxing, which prevents other apps from accessing Handshot's data</li>
+            <li>App Store review and code signing to ensure app integrity</li>
+            <li>On-device processing that eliminates the risk of server-side data breaches</li>
+        </ul>
+        <p>
+            We do not operate servers that store your personal data, so there is no centralized database that could be compromised.
+        </p>
+    </div>
+
+    <!-- 9. Your Rights -->
+    <div class="policy-section">
+        <h2>9. Your Rights</h2>
+        <p>
+            Because Handshot does not collect or store personal data on our servers, traditional data rights requests (access, deletion, portability) do not apply in the typical sense. However, you have full control over your data:
+        </p>
+        <ul>
+            <li><strong>Camera access:</strong> You can revoke camera permission at any time in Settings &gt; Privacy &amp; Security &gt; Camera</li>
+            <li><strong>Photo library access:</strong> You can manage photo library permissions in Settings &gt; Privacy &amp; Security &gt; Photos</li>
+            <li><strong>App data:</strong> You can delete all locally stored preferences and data by uninstalling the App</li>
+            <li><strong>Subscriptions:</strong> You can manage or cancel subscriptions through Settings &gt; Apple ID &gt; Subscriptions</li>
+        </ul>
+        <p>
+            If you are located in the European Economic Area (EEA), California, or another jurisdiction with specific data protection laws, and you have questions about your rights, please contact us at <a href="mailto:support@handshot.co">support@handshot.co</a>.
+        </p>
+    </div>
+
+    <!-- 10. Changes to This Policy -->
+    <div class="policy-section">
+        <h2>10. Changes to This Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time to reflect changes in the App or applicable law. When we make changes, we will update the "Effective Date" at the top of this page. We encourage you to review this policy periodically.
+        </p>
+        <p>
+            If we ever make a material change that significantly affects how your data is handled (for example, if we were to introduce server-side features), we will provide prominent notice within the App before the change takes effect.
+        </p>
+    </div>
+
+    <!-- 11. Contact Us -->
+    <div class="policy-section">
+        <h2>11. Contact Us</h2>
+        <p>
+            If you have any questions, concerns, or requests regarding this Privacy Policy or Handshot's data practices, please contact us:
+        </p>
+        <div class="contact-block">
+            <p><strong>Make Things LLC</strong></p>
+            <p>239 Fourth Ave, Ste 1401 #8376</p>
+            <p>Pittsburgh, Pennsylvania 15222</p>
+            <p>United States</p>
+            <p style="margin-top: 12px;"><strong>Email:</strong> <a href="mailto:support@handshot.co">support@handshot.co</a></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="logo.png" alt="Handshot">
+            <span>Handshot</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:support@handshot.co">Support</a></li>
+        </ul>
+        <div class="footer-copy">&copy; 2026 Make Things LLC. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>
