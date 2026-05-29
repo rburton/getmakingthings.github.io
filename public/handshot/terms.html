@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Handshot</title>
+    <meta name="description" content="Terms of Service for Handshot, the hand gesture camera app for iPhone.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #FFFFFF;
+            --bg-surface: #F8F7FF;
+            --bg-card: #FFFFFF;
+            --accent: #7C3AED;
+            --accent-light: #6D28D9;
+            --text-primary: #1E1B4B;
+            --text-secondary: #6B7280;
+            --text-muted: #9CA3AF;
+            --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-lg: 24px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 16px 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .nav-brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .nav-brand span {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+
+        /* ── CONTENT ── */
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+
+        .legal-header {
+            margin-bottom: 48px;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .legal-header .effective-date {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .legal-body h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .legal-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .legal-body p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            line-height: 1.75;
+        }
+
+        .legal-body ul, .legal-body ol {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            padding-left: 24px;
+            line-height: 1.75;
+        }
+
+        .legal-body li {
+            margin-bottom: 8px;
+        }
+
+        .legal-body strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .legal-body a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .legal-body a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        .legal-body table th,
+        .legal-body table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #E5E7EB;
+            color: var(--text-secondary);
+        }
+        .legal-body table th {
+            color: var(--text-primary);
+            font-weight: 600;
+            background: var(--bg-surface);
+        }
+        .legal-body table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid #E5E7EB;
+            padding: 48px 24px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .footer-brand span { font-weight: 700; font-size: 1rem; }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--text-secondary); }
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            width: 100%;
+            text-align: center;
+            padding-top: 16px;
+            border-top: 1px solid #F3F4F6;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .legal-header h1 { font-size: 1.75rem; }
+            .legal-body h2 { font-size: 1.15rem; margin-top: 36px; }
+            .nav-links { display: none; }
+            .footer-inner { justify-content: center; text-align: center; }
+            .footer-links { justify-content: center; flex-wrap: wrap; }
+            .legal-body table { font-size: 0.8rem; }
+            .legal-body table th,
+            .legal-body table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Handshot">
+            <span>Handshot</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="legal-container">
+    <div class="legal-header">
+        <h1>Terms of Service</h1>
+        <p class="effective-date">Effective Date: March 24, 2026</p>
+    </div>
+
+    <div class="legal-body">
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("you" or "User") and <strong>Make Things LLC</strong>, a Pennsylvania limited liability company ("Company," "we," "us," or "our"), governing your access to and use of the Handshot mobile application ("App") and any related services (collectively, the "Service").</p>
+        <p>By downloading, installing, or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree to these Terms, you must not download, install, or use the App.</p>
+        <p>We may update these Terms from time to time. Your continued use of the App after any changes constitutes your acceptance of the revised Terms. We encourage you to review these Terms periodically.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>Handshot is an iOS camera application that uses on-device hand gesture recognition to allow users to take photos and videos hands-free. The App uses Apple's Vision framework to detect hand poses through the device camera and trigger camera actions based on recognized gestures.</p>
+        <p>Key features of the App include:</p>
+        <ul>
+            <li><strong>Hand gesture recognition</strong> &mdash; The App detects hand gestures (such as open palm, fist, finger counts, thumbs up, thumbs down, and pinch gestures) to control camera functions.</li>
+            <li><strong>Photo capture</strong> &mdash; Trigger photo capture using hand gestures with configurable countdown timers.</li>
+            <li><strong>Video recording</strong> &mdash; Start and stop video recording using hand gestures (Pro feature).</li>
+            <li><strong>Zoom control</strong> &mdash; Adjust camera zoom using pinch gestures (Pro feature).</li>
+            <li><strong>On-device processing</strong> &mdash; All hand detection and image processing occurs entirely on your device. No camera data, photos, videos, or hand landmark data is transmitted off your device.</li>
+        </ul>
+
+        <h2>3. Eligibility</h2>
+        <p>You must be at least 13 years of age to use the App. If you are between 13 and 18 years of age (or the age of legal majority in your jurisdiction), you may only use the App with the consent and supervision of a parent or legal guardian who agrees to be bound by these Terms.</p>
+        <p>The App requires an iPhone running iOS 18.0 or later. You are responsible for ensuring that your device meets the minimum system requirements.</p>
+        <p>By using the App, you represent and warrant that you meet these eligibility requirements.</p>
+
+        <h2>4. User Accounts</h2>
+        <p>Handshot does not require you to create an account, provide personal information, or sign in to use the App. There is no registration process, no username, and no password. You simply download the App and begin using it.</p>
+        <p>Subscription status and purchase history are managed entirely through your Apple ID and the App Store. We do not store or have access to your Apple ID credentials or payment information.</p>
+
+        <h2>5. Free and Pro Tiers</h2>
+        <p>Handshot is available in two tiers:</p>
+
+        <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">Free Tier</h3>
+        <p>The Free tier is available to all users at no cost and includes:</p>
+        <ul>
+            <li>Open palm gesture for photo capture</li>
+            <li>Thumbs down gesture for cancellation</li>
+            <li>Countdown options of 0 seconds (instant) and 3 seconds</li>
+            <li>Sessions limited to 10 photos</li>
+            <li>A subtle "Shot with Handshot" watermark on saved photos</li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">Pro Tier</h3>
+        <p>The Pro tier unlocks the full capabilities of the App, including:</p>
+        <ul>
+            <li>All hand gestures (fist, peace sign, finger counts, pinch zoom, thumbs up for mode switching)</li>
+            <li>All countdown options (0, 1, 2, 3, 4, and 5 seconds)</li>
+            <li>Burst mode for rapid photo capture</li>
+            <li>Sessions of up to 50 photos</li>
+            <li>No watermark on saved photos</li>
+            <li>Video recording via hand gestures</li>
+            <li>All future Pro features as they are released</li>
+        </ul>
+
+        <p>Features available only to Pro subscribers will be indicated in the App with a lock icon or similar visual indicator. Attempting to use a Pro-only gesture or feature on the Free tier will not perform the action.</p>
+
+        <h2>6. Subscriptions and Payments</h2>
+        <p>Pro tier access is available through the following subscription plans and one-time purchase:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price (USD)</th>
+                    <th>Free Trial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pro Weekly</td>
+                    <td>$2.99 / week</td>
+                    <td>3-day free trial</td>
+                </tr>
+                <tr>
+                    <td>Pro Monthly</td>
+                    <td>$6.99 / month</td>
+                    <td>7-day free trial</td>
+                </tr>
+                <tr>
+                    <td>Pro Annual</td>
+                    <td>$34.99 / year</td>
+                    <td>7-day free trial</td>
+                </tr>
+                <tr>
+                    <td>Pro Lifetime</td>
+                    <td>$69.99 (one-time)</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>All prices are in United States Dollars and are subject to change. Actual prices may vary by region based on the App Store's pricing policies and local tax requirements.</p>
+        <p><strong>Billing and payment.</strong> All purchases and subscriptions are processed through Apple's App Store using Apple's payment infrastructure. We do not directly collect, store, or process any payment information. Payment will be charged to your Apple ID account at confirmation of purchase.</p>
+        <p><strong>Automatic renewal.</strong> Subscription plans (Weekly, Monthly, and Annual) automatically renew at the end of each billing period unless canceled at least 24 hours before the end of the current period. Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period at the same price as your original subscription.</p>
+        <p><strong>Managing subscriptions.</strong> You can manage or cancel your subscription at any time through your Apple ID account settings (Settings &gt; [Your Name] &gt; Subscriptions on your iPhone). Cancellation will take effect at the end of the current billing period; you will retain Pro access until that date.</p>
+        <p><strong>Lifetime purchase.</strong> The Lifetime plan is a one-time, non-recurring purchase that grants permanent access to all current and future Pro features for the life of the App.</p>
+        <p><strong>No ads.</strong> Handshot does not display advertisements in any tier.</p>
+
+        <h2>7. Free Trials</h2>
+        <p>Certain subscription plans offer a free trial period as indicated in Section 6. During the free trial, you will have full access to all Pro features.</p>
+        <p>If you do not cancel the subscription before the free trial period ends, your Apple ID account will be automatically charged the subscription price for the selected plan. The unused portion of a free trial period will be forfeited when you purchase a subscription.</p>
+        <p>Free trial eligibility is determined by Apple and is typically limited to one free trial per Apple ID per subscription group. We do not control free trial eligibility.</p>
+
+        <h2>8. Intellectual Property</h2>
+        <p><strong>Our intellectual property.</strong> The App, including its design, code, graphics, user interface, visual elements, trademarks, logos, and all other proprietary content (excluding User Content as defined below), is owned by Make Things LLC or its licensors and is protected by copyright, trademark, and other intellectual property laws. These Terms do not grant you any right, title, or interest in or to any of our intellectual property except for the limited, non-exclusive, non-transferable, revocable license to use the App in accordance with these Terms.</p>
+        <p><strong>Open-source components.</strong> The App may include open-source software components, each of which has its own license. Nothing in these Terms limits your rights under, or grants you rights that supersede, the terms of any applicable open-source license.</p>
+        <p><strong>Feedback.</strong> If you provide us with feedback, suggestions, or ideas regarding the App, you grant us a non-exclusive, worldwide, royalty-free, perpetual, irrevocable license to use, modify, and incorporate such feedback for any purpose without obligation or compensation to you.</p>
+
+        <h2>9. User Content</h2>
+        <p><strong>Ownership.</strong> All photos and videos captured using the App ("User Content") belong entirely to you. We claim no ownership, license, or rights of any kind to your User Content.</p>
+        <p><strong>On-device processing.</strong> User Content is created and stored locally on your device. The App saves photos and videos to your device's photo library using Apple's PhotosKit framework with add-only access. We do not upload, transmit, access, collect, or store your User Content on any server or cloud service.</p>
+        <p><strong>Watermark.</strong> Photos captured using the Free tier will include a "Shot with Handshot" watermark. This watermark does not transfer any ownership rights to us. Upgrading to Pro removes the watermark from future captures.</p>
+        <p><strong>Responsibility.</strong> You are solely responsible for your User Content, including its legality, appropriateness, and compliance with applicable laws. We are not responsible for and do not endorse any User Content.</p>
+
+        <h2>10. Acceptable Use</h2>
+        <p>You agree to use the App only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+        <ul>
+            <li>Use the App for any purpose that is illegal or prohibited by these Terms or applicable law.</li>
+            <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App, except to the extent expressly permitted by applicable law.</li>
+            <li>Modify, adapt, translate, or create derivative works based on the App.</li>
+            <li>Remove, alter, or obscure any proprietary notices, labels, or markings on the App.</li>
+            <li>Use the App to capture photos or videos of individuals without their consent where required by law.</li>
+            <li>Distribute, sublicense, lease, rent, or lend the App to any third party.</li>
+            <li>Use the App in any manner that could damage, disable, overburden, or impair the App or interfere with any other party's use of the App.</li>
+            <li>Attempt to circumvent any subscription or feature restrictions, including but not limited to Pro tier gating mechanisms.</li>
+            <li>Use the App in connection with any fraudulent, deceptive, or illegal activity.</li>
+        </ul>
+
+        <h2>11. Disclaimer of Warranties</h2>
+        <p><strong>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE.</strong> TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+        <p>Without limiting the foregoing, we do not warrant that:</p>
+        <ul>
+            <li>The App will be uninterrupted, error-free, secure, or free of viruses or other harmful components.</li>
+            <li>Hand gesture recognition will be accurate, reliable, or function correctly in all lighting conditions, distances, or environments.</li>
+            <li>The App will be compatible with all devices, operating system versions, or configurations.</li>
+            <li>Photos or videos captured using the App will be of any particular quality.</li>
+            <li>Any defects or errors in the App will be corrected.</li>
+        </ul>
+        <p>Hand gesture recognition technology is inherently probabilistic and may not detect or correctly interpret all hand gestures. Performance may vary based on environmental factors including but not limited to lighting, distance from camera, hand size, skin tone, background complexity, and device capabilities.</p>
+
+        <h2>12. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MAKE THINGS LLC, ITS OFFICERS, DIRECTORS, MEMBERS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, GOODWILL, DATA, PHOTOS, VIDEOS, OR OTHER INTANGIBLE LOSSES, REGARDLESS OF WHETHER SUCH DAMAGES ARE BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, AND EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU HAVE PAID TO US FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) FIFTY UNITED STATES DOLLARS ($50.00 USD).</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>
+
+        <h2>13. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Make Things LLC, its officers, directors, members, employees, agents, and licensors from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+        <ul>
+            <li>Your use of the App or any activity in connection with the App.</li>
+            <li>Your violation of these Terms.</li>
+            <li>Your violation of any applicable law, regulation, or third-party right.</li>
+            <li>Your User Content, including any claim that your User Content infringes or violates the rights of any third party.</li>
+        </ul>
+
+        <h2>14. Governing Law</h2>
+        <p>These Terms and any dispute arising out of or relating to these Terms or the App shall be governed by and construed in accordance with the laws of the Commonwealth of Pennsylvania, United States of America, without regard to its conflict of law principles.</p>
+
+        <h2>15. Dispute Resolution</h2>
+        <p><strong>Informal resolution.</strong> Before filing any formal legal action, you agree to first contact us at <a href="mailto:support@getmakingthings.com">support@getmakingthings.com</a> and attempt to resolve the dispute informally for at least thirty (30) days. Most concerns can be resolved quickly and to your satisfaction through informal communication.</p>
+        <p><strong>Jurisdiction and venue.</strong> If informal resolution is unsuccessful, any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the state or federal courts located in Allegheny County, Pennsylvania, and you irrevocably consent to the personal jurisdiction and venue of such courts.</p>
+        <p><strong>Class action waiver.</strong> TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, YOU AND MAKE THINGS LLC AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR OUR INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION.</p>
+
+        <h2>16. Termination</h2>
+        <p>You may stop using the App at any time by deleting it from your device. If you have an active subscription, deleting the App does not automatically cancel your subscription; you must cancel through your Apple ID account settings.</p>
+        <p>We reserve the right to suspend or terminate your access to the App at any time, without notice, for conduct that we determine, in our sole discretion, violates these Terms or is harmful to other users, us, or third parties, or for any other reason.</p>
+        <p>Upon termination, all rights and licenses granted to you under these Terms will immediately cease. Sections 8 (Intellectual Property), 9 (User Content &mdash; Ownership), 11 (Disclaimer of Warranties), 12 (Limitation of Liability), 13 (Indemnification), 14 (Governing Law), 15 (Dispute Resolution), and 18 (Severability) shall survive termination.</p>
+
+        <h2>17. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. When we make material changes, we will update the "Effective Date" at the top of this page and, where practicable, provide notice through the App or on our website.</p>
+        <p>Your continued use of the App after the effective date of any revised Terms constitutes your acceptance of the changes. If you do not agree to the revised Terms, you must stop using the App and delete it from your device.</p>
+
+        <h2>18. Severability</h2>
+        <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be enforced to the maximum extent permissible, and the remaining provisions of these Terms shall remain in full force and effect.</p>
+
+        <h2>19. Entire Agreement</h2>
+        <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a>, constitute the entire agreement between you and Make Things LLC regarding your use of the App and supersede all prior and contemporaneous agreements, proposals, representations, and understandings, whether written or oral, relating to the subject matter herein.</p>
+        <p>No waiver of any provision of these Terms shall be deemed a further or continuing waiver of such provision or any other provision, and our failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+        <h2>20. Apple-Specific Terms</h2>
+        <p>The App is distributed through Apple's App Store. You acknowledge and agree that:</p>
+        <ul>
+            <li>These Terms are between you and Make Things LLC only, not with Apple Inc. ("Apple"). Make Things LLC, not Apple, is solely responsible for the App and its content.</li>
+            <li>Apple has no obligation to provide any maintenance or support services with respect to the App.</li>
+            <li>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the App. To the maximum extent permitted by applicable law, Apple has no other warranty obligation with respect to the App.</li>
+            <li>Apple is not responsible for addressing any claims by you or any third party relating to the App or your possession and use of the App.</li>
+            <li>In the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, Apple is not responsible for the investigation, defense, settlement, or discharge of any such claim.</li>
+            <li>Apple and its subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
+        </ul>
+
+        <h2>21. Contact Us</h2>
+        <p>If you have any questions, concerns, or feedback regarding these Terms, please contact us:</p>
+        <p>
+            <strong>Make Things LLC</strong><br>
+            239 Fourth Ave, Ste 1401 #8376<br>
+            Pittsburgh, Pennsylvania 15222<br>
+            United States
+        </p>
+        <p>Email: <a href="mailto:support@getmakingthings.com">support@getmakingthings.com</a></p>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="logo.png" alt="Handshot">
+            <span>Handshot</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+        <div class="footer-copy">&copy; 2026 Make Things LLC. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>

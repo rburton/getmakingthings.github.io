@@ -53,12 +53,6 @@
         "price": "79.99",
         "priceCurrency": "USD",
         "description": "Annual subscription"
-      },
-      {
-        "@type": "Offer",
-        "price": "99.99",
-        "priceCurrency": "USD",
-        "description": "Lifetime purchase"
       }
     ],
     "description": "Turn any physical children's book into an interactive, narrated reading experience with word-level highlighting.",
@@ -199,13 +193,6 @@
       </div>
       <div class="features__grid">
         <div class="feature-card fade-in">
-          <div class="feature-card__icon">📷</div>
-          <div>
-            <h3 class="feature-card__title">Scan with your camera</h3>
-            <p class="feature-card__text">Point your phone at any children's book and snap a photo. StoryGlow instantly imports the pages and turns them into an interactive read-aloud experience.</p>
-          </div>
-        </div>
-        <div class="feature-card fade-in">
           <div class="feature-card__icon">💡</div>
           <div>
             <h3 class="feature-card__title">Word-by-word highlighting</h3>
@@ -224,6 +211,13 @@
           <div>
             <h3 class="feature-card__title">Real page turns</h3>
             <p class="feature-card__text">Pages curl like a real book with a satisfying sound. Narration pauses mid-turn and resumes seamlessly on the next page.</p>
+          </div>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-card__icon">🔤</div>
+          <div>
+            <h3 class="feature-card__title">Dyslexia-friendly</h3>
+            <p class="feature-card__text">Toggle OpenDyslexic font with one tap. Designed to make reading more accessible and comfortable for every child.</p>
           </div>
         </div>
         <div class="feature-card fade-in">
@@ -269,7 +263,7 @@
             <tr>
               <td>Works with ANY physical book</td>
               <td class="highlight-col"><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
               <td><span class="cross">&#10005;</span></td>
               <td><span class="cross">&#10005;</span></td>
             </tr>
@@ -284,8 +278,8 @@
               <td>Word-by-word highlighting</td>
               <td class="highlight-col"><span class="check">&#10003;</span></td>
               <td><span class="cross">&#10005;</span></td>
-              <td><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
             </tr>
             <tr>
               <td>Tap any word to hear it</td>
@@ -295,11 +289,25 @@
               <td><span class="cross">&#10005;</span></td>
             </tr>
             <tr>
+              <td>Dyslexia font support</td>
+              <td class="highlight-col"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
               <td>Works offline</td>
               <td class="highlight-col"><span class="check">&#10003;</span></td>
               <td><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
               <td><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>Starting price</td>
+              <td class="highlight-col"><strong>Free</strong></td>
+              <td>$5.99/mo</td>
+              <td>$9.99/mo</td>
+              <td>Subscription</td>
             </tr>
           </tbody>
         </table>
@@ -399,6 +407,67 @@
   </section>
 
   <!-- ==========================================
+       PRICING
+       ========================================== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Start free, upgrade when you're ready</h2>
+        <p class="section-subtitle">Try StoryGlow with 3 free books. No credit card needed. Upgrade anytime for unlimited books and premium features.</p>
+      </div>
+      <div class="pricing__cards fade-in">
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">Monthly</h3>
+          <p class="pricing-card__price">$9.99</p>
+          <p class="pricing-card__period">per month</p>
+          <ul class="pricing-card__features">
+            <li>Unlimited book scans</li>
+            <li>Premium narrator voices</li>
+            <li>Word-by-word highlighting</li>
+            <li>Tap-to-hear on every word</li>
+            <li>OpenDyslexic font</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="https://apps.apple.com/app/storyglow/idYOUR_APP_ID" class="btn btn--cta" style="width: 100%;">Get Started</a>
+        </div>
+        <div class="pricing-card pricing-card--popular">
+          <span class="pricing-card__badge">Save 33%</span>
+          <h3 class="pricing-card__name">Yearly</h3>
+          <p class="pricing-card__price">$79.99</p>
+          <p class="pricing-card__period">per year ($6.67/month)</p>
+          <ul class="pricing-card__features">
+            <li>Everything in Monthly</li>
+            <li>Save $39.89 per year</li>
+            <li>Best value for families</li>
+            <li>Priority support</li>
+            <li>Early access to new features</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="https://apps.apple.com/app/storyglow/idYOUR_APP_ID" class="btn btn--cta" style="width: 100%;">Get Started — Best Value</a>
+        </div>
+      </div>
+      <div class="pricing__free-note fade-in">
+        <strong>Free tier included:</strong> Try StoryGlow with up to 3 books at no cost. No time limit. Upgrade only when you want more.
+      </div>
+      <div class="pricing__reassurance fade-in">
+        <span class="pricing__reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Secure via Apple
+        </span>
+        <span class="pricing__reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+          Cancel anytime
+        </span>
+        <span class="pricing__reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          No data collected
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        FAQ
        ========================================== -->
   <section class="faq" id="faq">
@@ -414,7 +483,7 @@
             <span class="faq-item__icon">+</span>
           </button>
           <div class="faq-item__answer">
-            <p>StoryGlow offers a free tier (3 books, no time limit), subscriptions ($9.99/month or $79.99/year, save 33%), and a one-time lifetime purchase ($99.99). Both subscriptions include a 7-day free trial. All plans are billed through Apple and subscriptions can be cancelled anytime in your iPhone's Settings. If your subscription lapses, you keep access to books you've already scanned — you just can't add new ones beyond the free limit. The lifetime purchase never expires.</p>
+            <p>StoryGlow offers a free tier (3 books, no time limit) and optional subscriptions: $9.99/month or $79.99/year (save 33%). Subscriptions are billed through Apple and can be cancelled anytime in your iPhone's Settings. If your subscription lapses, you keep access to books you've already scanned — you just can't add new ones beyond the free limit.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -459,7 +528,7 @@
             <span class="faq-item__icon">+</span>
           </button>
           <div class="faq-item__answer">
-            <p>Download StoryGlow and scan up to 3 books completely free — no time limit, no credit card required. You get all features: narration, highlighting, word tap, dyslexia font, everything. When you want to add more books, start a 7-day free trial of any subscription, or buy the $99.99 lifetime access.</p>
+            <p>Download StoryGlow and scan up to 3 books completely free — no time limit, no credit card required. You get all features: narration, highlighting, word tap, dyslexia font, everything. When you want to add more books, upgrade to a subscription.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -495,7 +564,7 @@
       <nav class="footer__links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
-        <a href="mailto:support@getmakingthings.com">Support</a>
+        <a href="mailto:support@storyglow.app">Support</a>
       </nav>
       <p class="footer__copyright">&copy; 2026 StoryGlow. All rights reserved.</p>
     </div>
