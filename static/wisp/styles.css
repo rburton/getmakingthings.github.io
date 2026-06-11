@@ -253,7 +253,7 @@ img { max-width: 100%; display: block; }
   filter: blur(50px);
   z-index: -1;
 }
-/* floating "wrong code" tag near hero phone */
+/* floating trust tags near hero phone */
 .float-tag {
   position: absolute;
   z-index: 4;
@@ -318,7 +318,7 @@ section { position: relative; }
   margin: 18px 0 0;
 }
 
-/* ---------- the decoy spotlight ---------- */
+/* ---------- the Guest Vault spotlight ---------- */
 .spotlight {
   background:
     linear-gradient(180deg, rgba(255,159,10,0.05), transparent 40%),
