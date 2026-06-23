@@ -249,6 +249,161 @@ h2 { font-size: 1.7rem; margin: 0 0 16px; }
 .price .per { color: var(--ink-muted); font-size: 0.95rem; }
 .price h3 { font-size: 1.3rem; margin: 0 0 4px; }
 
+/* ---------------------------------------------------------------------------
+   Literacy / call-to-action page (literacy.html)
+--------------------------------------------------------------------------- */
+
+/* Hero illustration alongside the headline */
+.hero img.scene {
+  width: 320px;
+  max-width: 46vw;
+  height: auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--indigo-1);
+  margin: 0 0 10px;
+}
+
+/* Big-number callout grid (the headline statistics) */
+.bignums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.bignum {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 14px rgba(50, 46, 56, 0.08);
+  border-top: 6px solid var(--indigo-1);
+}
+.bignum .big {
+  font-size: clamp(2.4rem, 7vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--indigo-2);
+}
+.bignum .what { font-weight: 700; margin: 10px 0 4px; }
+.bignum .who { color: var(--ink-muted); font-size: 0.95rem; margin: 0; }
+.bignum .src { display: block; margin-top: 12px; font-size: 0.78rem; }
+.bignum .src a { color: var(--ink-muted); }
+
+/* A few accent variants so the grid isn't monotone */
+.bignum.c2 { border-top-color: var(--eraser); }
+.bignum.c2 .big { color: var(--eraser); }
+.bignum.c3 { border-top-color: var(--pencil); }
+.bignum.c3 .big { color: #d99400; }
+.bignum.c4 { border-top-color: var(--grass); }
+.bignum.c4 .big { color: var(--grass); }
+
+/* Data-viz figure (inline SVG charts) */
+.chart {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 24px 22px 14px;
+  box-shadow: 0 4px 14px rgba(50, 46, 56, 0.08);
+  margin: 0;
+}
+.chart svg { width: 100%; height: auto; display: block; }
+.chart figcaption {
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  margin-top: 12px;
+}
+.chart figcaption strong { color: var(--ink); }
+
+/* Pull-quote / thesis callout */
+.quote {
+  border-left: 6px solid var(--pencil);
+  background: #fff;
+  border-radius: 0 16px 16px 0;
+  padding: 22px 24px;
+  margin: 26px 0 0;
+  box-shadow: 0 4px 14px rgba(50, 46, 56, 0.06);
+}
+.quote p { font-size: 1.2rem; margin: 0; font-weight: 600; }
+.quote .by { color: var(--ink-muted); font-size: 0.95rem; font-weight: 600; margin-top: 8px; }
+
+/* Two-column band: text beside an illustration */
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+.band > .copy { flex: 1 1 320px; }
+.band > .art { flex: 1 1 240px; text-align: center; }
+.band > .art img { width: 300px; max-width: 80%; height: auto; }
+
+/* The big warm call-to-action: read at home tonight */
+.cta-read {
+  background: linear-gradient(135deg, #6f7bf7, var(--indigo-2));
+  color: #fff;
+  border-radius: 24px;
+  padding: 40px 36px;
+}
+.cta-read h2 { color: #fff; font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+.cta-read .lead { color: #efe9ff; }
+.cta-read a.badge { background: var(--pencil); color: var(--ink); margin-top: 8px; }
+
+/* Tips list — concrete things parents can do tonight */
+.tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+.tips li {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+.tips li b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.tips li span { color: #e7e1ff; font-size: 0.96rem; }
+
+/* Index page: link banner to the literacy page */
+.mission-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  background: var(--card);
+  border-radius: 22px;
+  padding: 28px 30px;
+  box-shadow: 0 4px 14px rgba(50, 46, 56, 0.08);
+  border: 2px solid #ece4ff;
+}
+.mission-link img { width: 130px; max-width: 30vw; height: auto; }
+.mission-link .copy { flex: 1 1 280px; }
+.mission-link h2 { margin: 0 0 8px; }
+.mission-link p { color: var(--ink-muted); margin: 0 0 14px; }
+.mission-link a.more {
+  font-weight: 800;
+  color: var(--indigo-2);
+  text-decoration: none;
+}
+.mission-link a.more:hover { text-decoration: underline; }
+
+/* Sources block */
+.sources { font-size: 0.9rem; color: var(--ink-muted); }
+.sources ol { margin: 0; padding-left: 22px; }
+.sources li { margin-bottom: 8px; }
+.sources a { color: var(--indigo-2); overflow-wrap: anywhere; }
+.note { font-size: 0.88rem; color: var(--ink-muted); font-style: italic; }
+
+@media (max-width: 600px) {
+  .hero img.scene { max-width: 70vw; width: 260px; }
+  .cta-read { padding: 28px 22px; }
+  .mission-link { padding: 22px 20px; }
+}
+
 footer.site {
   border-top: 2px solid #eee2c8;
   padding: 28px 24px 48px;
