@@ -3,10 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wobbly: Learn to Write, Read &amp; Count (Ages 4–7)</title>
-  <meta name="description" content="Wobbly teaches children ages 4–7 to write letters and numbers and to read with phonics: step-by-step tracing, 500+ decodable words, stars, and cheers. No ads, no tracking, everything stays on your device.">
+  <title>Wobbly: Learn to Write, Read &amp; Count (Ages 3–8)</title>
+  <meta name="description" content="Wobbly teaches children ages 3–8 to write letters and numbers and to read with phonics. A gentle, growth-mindset approach that praises effort over perfection: step-by-step tracing, 500+ decodable words, stars, and cheers. No buzzers, no red marks. No ads, no tracking, everything stays on your device.">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="assets/app-icon-light.svg" type="image/svg+xml">
+  <meta name="apple-itunes-app" content="app-id=6783044178">
+  <script>
+    // The page's one script. If the link that brought you here carries an
+    // invite code (?code=FRIEND15), every App Store link on the page becomes
+    // the store's redemption URL with that code filled in, the Smart App
+    // Banner makes the same offer, and a small welcome explains the discount.
+    // Without a code, the links simply open Wobbly's App Store page. Nothing
+    // is stored, nothing is sent anywhere.
+    (function () {
+      var appID = "6783044178";
+      var match = /[?&]code=([A-Za-z0-9]{1,32})(?:&|$)/.exec(location.search);
+      var code = match ? match[1].toUpperCase() : null;
+      var storeURL = code
+        ? "https://apps.apple.com/redeem?id=" + appID + "&code=" + code
+        : "https://apps.apple.com/app/id" + appID;
+
+      var banner = document.querySelector('meta[name="apple-itunes-app"]');
+      if (banner) {
+        banner.setAttribute("content",
+          "app-id=" + appID + (code ? ", app-argument=" + storeURL : ""));
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var links = document.querySelectorAll("a[data-appstore]");
+        for (var i = 0; i < links.length; i++) links[i].href = storeURL;
+        if (!code) return;
+
+        var modal = document.getElementById("invite-modal");
+        if (!modal) return;
+        var codeEls = modal.querySelectorAll(".invite-code");
+        for (var j = 0; j < codeEls.length; j++) codeEls[j].textContent = code;
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+
+        function close() {
+          modal.hidden = true;
+          document.body.classList.remove("modal-open");
+        }
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) close();
+        });
+        modal.querySelector(".invite-close").addEventListener("click", close);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") close();
+        });
+        modal.querySelector(".invite-card").focus();
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -14,6 +63,8 @@
   <div class="bar">
     <img class="logo" src="assets/app-icon-light.svg" alt="Wobbly app icon">
     <div class="name">Wobbly</div>
+    <input type="checkbox" id="nav-open" class="nav-toggle" aria-label="Menu">
+    <label class="nav-button" for="nav-open"><span class="nav-icon" aria-hidden="true"></span>Menu</label>
     <nav>
       <a href="literacy.html">Reading in America</a>
       <a href="privacy.html">Privacy</a>
@@ -27,15 +78,15 @@
   <div class="hero">
     <img class="mascot" src="assets/mascot.svg" alt="Wobbly, a friendly bouncing pencil mascot with round glasses">
     <div>
-      <span class="pill">Ages 4–7 · iPhone &amp; iPad</span>
+      <span class="pill">Ages 3–8 · iPhone &amp; iPad</span>
       <h1>Big skills for <span class="hl">little hands</span>.</h1>
       <p class="tag">Wobbly teaches your child to <strong>write</strong>,
-      <strong>read</strong>, and <strong>count</strong>. They watch each stroke,
+      <strong>read</strong>, <strong>Listen</strong>, and <strong>do</strong>! They watch each stroke,
       trace it with a finger or Apple&nbsp;Pencil, and earn stars and cheers.
       Never a buzzer, never a red mark.</p>
-      <a class="badge" href="#" aria-label="Download on the App Store">
+      <a class="badge" data-appstore href="https://apps.apple.com/app/id6783044178"
+         aria-label="Download on the App Store">
          Download on the App&nbsp;Store</a>
-      <!-- Replace href with the real App Store URL after the app is approved. -->
     </div>
   </div>
 
@@ -55,10 +106,11 @@
     cheers.</p>
     <div class="cards">
       <div class="card">
-        <h3>✍️ Write every letter</h3>
+        <h3>✍️ Write letters &amp; words</h3>
         <p>All 52 letters (A–Z and a–z) with the correct stroke order and
-        direction. Wobbly draws each stroke first, then little fingers trace
-        it. Wobbles and overshoots still count when the idea is right.</p>
+        direction, then whole words traced letter by letter, hearing each
+        sound as they go. Wobbly draws every stroke first, then little fingers
+        trace it. Wobbles and overshoots still count when the idea is right.</p>
       </div>
       <div class="card">
         <h3>📖 Learn to read</h3>
@@ -75,57 +127,57 @@
     </div>
   </section>
 
-  <section>
+  <section aria-label="See Wobbly in action">
     <h2>See Wobbly in action</h2>
     <p class="lead">A peek at the real app: trace every letter and number,
     sound out real words, and celebrate every win. Grown-ups get a private zone
     of their own.</p>
-    <div class="shots">
-      <figure class="shot">
-        <img src="assets/screenshots/home-letters.png" loading="lazy"
-             alt="The Wobbly home screen showing the full alphabet of letters to practice.">
-        <figcaption>The whole alphabet, A to Z</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/tracing.png" loading="lazy"
-             alt="A child tracing the letter A with guiding arrows and soft ink.">
-        <figcaption>Trace, with gentle guidance</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/celebration.png" loading="lazy"
-             alt="A celebration screen with stars earned for finishing a letter.">
-        <figcaption>Always celebrated with stars</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/numbers.png" loading="lazy"
-             alt="The numbers screen showing 0 through 9 to trace.">
-        <figcaption>Numbers 0 to 9, too</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/phonics.png" loading="lazy"
-             alt="A phonics card for the letter A with its sound and the picture words Ant, Apple, and Alligator.">
-        <figcaption>Hear every letter’s sound</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/read-words.png" loading="lazy"
-             alt="A list of decodable words to read, grouped by their starting letter.">
-        <figcaption>500+ words to read</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/read-word.png" loading="lazy"
-             alt="Reading a word with letter tiles to sound out and a Listen button.">
-        <figcaption>Sound it out, then read</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/word-families.png" loading="lazy"
-             alt="Word families like -at, -an, and -ig shown as picture cards.">
-        <figcaption>Rhyming word families</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/parent-zone.png" loading="lazy"
-             alt="The grown-up Parent Zone with progress insights and settings.">
-        <figcaption>A private Parent Zone</figcaption>
-      </figure>
+
+    <!-- Pure-CSS showcase: auto-crossfading carousel + iPhone/iPad toggle.
+         No scripts, no cookies, no external requests — just like the app. -->
+    <div class="showcase">
+      <div class="device-toggle" role="group" aria-label="Choose device">
+        <input type="radio" name="device" id="dev-iphone" checked>
+        <label for="dev-iphone">📱 iPhone</label>
+        <input type="radio" name="device" id="dev-ipad">
+        <label for="dev-ipad">▫️ iPad</label>
+
+        <div class="carousel-wrap">
+          <figure class="carousel is-iphone" aria-label="Wobbly on iPhone">
+            <img class="slide" src="assets/shots/iphone/01-trace.png" alt="Wobbly shows each stroke of the letter A, then the child traces it.">
+            <img class="slide" src="assets/shots/iphone/02-stars.png" loading="lazy" alt="A finished letter earns a burst of gold stars.">
+            <img class="slide" src="assets/shots/iphone/03-letters.png" loading="lazy" alt="Home screen with the whole alphabet, A to Z, to practice.">
+            <img class="slide" src="assets/shots/iphone/04-words.png" loading="lazy" alt="A list of real, decodable words to sound out and read.">
+            <img class="slide" src="assets/shots/iphone/05-read.png" loading="lazy" alt="Sounding out a word one letter tile at a time, then reading it.">
+            <img class="slide" src="assets/shots/iphone/06-families.png" loading="lazy" alt="Rhyming word families grouped together as picture cards.">
+            <img class="slide" src="assets/shots/iphone/07-numbers.png" loading="lazy" alt="Home screen with numbers 0 to 9 to trace.">
+            <img class="slide" src="assets/shots/iphone/08-parents.png" loading="lazy" alt="The private Parent Zone showing a child's real progress and letter mastery.">
+            <img class="slide" src="assets/shots/iphone/09-privacy.png" loading="lazy" alt="Onboarding: everything stays on your device, with no ads or tracking.">
+            <img class="slide" src="assets/shots/iphone/10-phonics.png" loading="lazy" alt="Letter Buddies phonics: two letters that make one sound, like sh and ch.">
+            <img class="slide" src="assets/shots/iphone/11-trace-word.png" loading="lazy" alt="Tracing a whole word letter by letter on the Trace a Word screen, hearing each sound.">
+          </figure>
+
+          <figure class="carousel is-ipad" aria-label="Wobbly on iPad">
+            <img class="slide" src="assets/shots/ipad/01-trace.png" loading="lazy" alt="Wobbly shows each stroke of the letter A, then the child traces it.">
+            <img class="slide" src="assets/shots/ipad/02-stars.png" loading="lazy" alt="A finished letter earns a burst of gold stars.">
+            <img class="slide" src="assets/shots/ipad/03-letters.png" loading="lazy" alt="Home screen with the whole alphabet, A to Z, to practice.">
+            <img class="slide" src="assets/shots/ipad/04-words.png" loading="lazy" alt="A list of real, decodable words to sound out and read.">
+            <img class="slide" src="assets/shots/ipad/05-read.png" loading="lazy" alt="Sounding out a word one letter tile at a time, then reading it.">
+            <img class="slide" src="assets/shots/ipad/06-families.png" loading="lazy" alt="Rhyming word families grouped together as picture cards.">
+            <img class="slide" src="assets/shots/ipad/07-numbers.png" loading="lazy" alt="Home screen with numbers 0 to 9 to trace.">
+            <img class="slide" src="assets/shots/ipad/08-parents.png" loading="lazy" alt="The private Parent Zone showing a child's real progress and letter mastery.">
+            <img class="slide" src="assets/shots/ipad/09-privacy.png" loading="lazy" alt="Onboarding: everything stays on your device, with no ads or tracking.">
+            <img class="slide" src="assets/shots/ipad/10-phonics.png" loading="lazy" alt="Letter Buddies phonics: two letters that make one sound, like sh and ch.">
+            <img class="slide" src="assets/shots/ipad/11-trace-word.png" loading="lazy" alt="Tracing a whole word letter by letter on the Trace a Word screen, hearing each sound.">
+          </figure>
+
+          <div class="dots" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -150,9 +202,53 @@
       </div>
       <div class="card">
         <h3>⭐ Celebrate</h3>
-        <p>Finishing always earns at least one star. Coaching is specific and
+        <p>Finishing always earns at least one star, plus collectible stickers
+        for first tries, comebacks, and personal bests. Coaching is specific and
         kind, spoken aloud: “Let’s make the tall line again!” Because most
         four-year-olds can’t read yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Why Wobbly's gentle approach works">
+    <h2>Praise the effort, grow the child</h2>
+    <p class="lead">The way we talk to children while they learn shapes how hard
+    they try, and whether they want to try again at all. Wobbly is built around
+    one well-studied idea from early-childhood research: praise the effort and
+    the progress, never the “smart.” Kids who learn that ability grows with
+    practice take on harder things, bounce back from stumbles, and go further.
+    Every cheer, star, and gentle nudge is designed to build exactly that.</p>
+
+    <div class="ethos-note">
+      <p>“You worked so hard on that tall line!” teaches a child far more than
+      “You’re so clever.” One grows with every try. The other quietly whispers
+      that a stumble means you’re not. Wobbly only ever says the first kind.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🌱 A growth mindset from stroke one</h3>
+        <p>Wobbly praises what your child <em>did</em>, not who they are: the
+        effort, the persistence, the progress. That is the mindset researchers
+        tie most closely to children who keep going when things get tricky.</p>
+      </div>
+      <div class="card">
+        <h3>🛟 Safe to be wrong</h3>
+        <p>No buzzers, no red marks, no failure screens. Off-path ink is a soft
+        blue, never a scold. When mistakes stop feeling scary, children take the
+        small, brave risks that real learning is made of.</p>
+      </div>
+      <div class="card">
+        <h3>🗣️ Specific, spoken encouragement</h3>
+        <p>Instead of an empty “good job,” Wobbly names the win out loud:
+        “Let’s make the round part again!” Concrete, kind coaching helps
+        pre-readers know just what they did well and what to try next.</p>
+      </div>
+      <div class="card">
+        <h3>❤️ Confidence that lasts</h3>
+        <p>No timers, no pressure, no punishments. Finishing always earns a
+        star, so your child walks away from every letter thinking “I can do
+        this,” and wanting to come back tomorrow.</p>
       </div>
     </div>
   </section>
@@ -219,11 +315,11 @@
       <div class="price hero-price">
         <div class="price-flag">One simple price</div>
         <h3>Full Access</h3>
-        <div class="amount">$14.99</div>
+        <div class="amount">$19.99</div>
         <div class="per">one time · whole family · forever</div>
-        <p>Unlocks all 52 letters and 10 numbers, 500+ words and 40 sentences
-        to read across 8 phonics stages, unlimited recordings, and practice
-        insights.
+        <p>Unlocks all 52 letters and 10 numbers, whole words to trace, 500+
+        words and 40 sentences to read across 8 phonics stages, unlimited
+        recordings, and practice insights.
         <strong>No subscription.</strong> Buy once, done, and we’ll never upsell
         you again. The free letters are the only trial you need.</p>
       </div>
@@ -237,10 +333,26 @@
        <a href="privacy.html">Privacy Policy</a> ·
        <a href="terms.html">Terms of Service</a> ·
        <a href="support.html">Support</a></p>
-    <p>This website sets no cookies, runs no scripts, and uses no analytics,
-       just like the app.</p>
+    <p>This website sets no cookies and uses no analytics, just like the app.
+       Its one small script only checks your link for an invite code, and
+       sends nothing.</p>
   </div>
 </footer>
+
+<!-- Shown only when the address that brought you here carries ?code=… -->
+<div class="invite-modal" id="invite-modal" role="dialog" aria-modal="true"
+     aria-labelledby="invite-modal-title" hidden>
+  <div class="invite-card" tabindex="-1">
+    <img src="assets/mascot.svg" alt="Wobbly the pencil, waving hello">
+    <h2 id="invite-modal-title">A friend invited you!</h2>
+    <p>They are sharing <strong>15% off</strong> Wobbly with you. Your code
+       <strong class="invite-code">FRIEND15</strong> is ready, and the App Store
+       applies it for you.</p>
+    <a class="badge" data-appstore href="https://apps.apple.com/app/id6783044178">
+       Get 15% off on the App&nbsp;Store</a>
+    <button type="button" class="invite-close">Maybe later</button>
+  </div>
+</div>
 
 </body>
 </html>

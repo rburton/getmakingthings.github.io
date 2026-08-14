@@ -16,6 +16,8 @@
       <img class="logo" src="assets/app-icon-light.svg" alt="Wobbly app icon">
       <div class="name">Wobbly</div>
     </a>
+    <input type="checkbox" id="nav-open" class="nav-toggle" aria-label="Menu">
+    <label class="nav-button" for="nav-open"><span class="nav-icon" aria-hidden="true"></span>Menu</label>
     <nav>
       <a href="literacy.html" aria-current="page">Reading in America</a>
       <a href="privacy.html">Privacy</a>
@@ -248,7 +250,218 @@
         Left alone, the gap repeats generation to generation. Break it once, and you
         bend the line for everyone who comes after.</p>
       </div>
+      <div class="card">
+        <h3>🏥 The body: harder to stay well</h3>
+        <p>So much of staying healthy is reading: dosages, discharge papers, consent
+        forms. Low health literacy is tied to an estimated <strong>$106–238 billion</strong>
+        in extra U.S. health costs a year and to more hospital readmissions.
+        <a href="#s16" style="color:var(--ink-muted);font-size:0.82rem;">(GWU / Milken, 2007)</a></p>
+      </div>
     </div>
+  </section>
+
+  <!-- INCOME LADDER -->
+  <section aria-label="Reading and income">
+    <h2>Every reading level is a different paycheck</h2>
+    <p class="lead">This isn't about a diploma on a wall. When researchers sort
+    adults purely by how well they read, average income climbs at every single step.
+    The distance between the weakest and strongest readers is about
+    <strong>$29,000 a year</strong>, every year, for a working life.</p>
+
+    <figure class="chart">
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="incTitle incDesc">
+        <title id="incTitle">Average annual income by adult reading level</title>
+        <desc id="incDesc">Average income rises with reading skill: about 34,000
+        dollars a year for adults at the lowest literacy levels, 48,000 dollars at a
+        third-to-fifth-grade level, and 63,000 dollars at a sixth-grade level or
+        above.</desc>
+        <line x1="60" y1="250" x2="690" y2="250" stroke="#e9e3f5" stroke-width="1"></line>
+        <rect x="90"  y="148" width="120" height="102" rx="8" fill="#FF8FAB"></rect>
+        <rect x="300" y="106" width="120" height="144" rx="8" fill="#7B6CF6"></rect>
+        <rect x="510" y="61"  width="120" height="189" rx="8" fill="#58C472"></rect>
+        <g font-family="inherit" font-weight="800" text-anchor="middle">
+          <text x="150" y="136" font-size="22" fill="#d65b7e">$34k</text>
+          <text x="360" y="94"  font-size="22" fill="#4936D8">$48k</text>
+          <text x="570" y="49"  font-size="24" fill="#3a9b54">$63k</text>
+        </g>
+        <g font-family="inherit" font-size="13.5" fill="#322e38" text-anchor="middle">
+          <text x="150" y="272">Lowest readers</text>
+          <text x="360" y="272">3rd–5th grade</text>
+          <text x="570" y="272">6th grade &amp; up</text>
+        </g>
+      </svg>
+      <figcaption><strong>$34k → $63k.</strong> Average annual income by adult reading
+      level, from a Gallup analysis for the Barbara Bush Foundation. Adults reading at
+      a 6th-grade level earn nearly twice what the lowest readers do, and lifting every
+      U.S. adult to that line would add an estimated $2.2&nbsp;trillion a year to the
+      economy. <a href="#s5">Barbara Bush Foundation / Gallup, 2020</a>.</figcaption>
+    </figure>
+
+    <div class="bignums" style="margin-top:18px;">
+      <div class="bignum c3">
+        <div class="big">$1.2M</div>
+        <p class="what">more, over a working life</p>
+        <p class="who">Median lifetime earnings run about $1.6M with a high-school
+        diploma versus $2.8M with a bachelor's: roughly 75% more.</p>
+        <small class="src"><a href="#s9">Source: Georgetown CEW, 2021</a></small>
+      </div>
+      <div class="bignum c2">
+        <div class="big">2.5×</div>
+        <p class="what">the unemployment rate</p>
+        <p class="who">Adults without a high-school diploma faced 6.2% unemployment in
+        2024, versus 2.5% for bachelor's-degree holders.</p>
+        <small class="src"><a href="#s10">Source: U.S. Bureau of Labor Statistics, 2024</a></small>
+      </div>
+    </div>
+    <p class="note" style="margin-top:14px;">These earnings figures track
+    <em>educational attainment</em>, the closest nationwide proxy for literacy
+    attainment, and reading is the skill that makes school, and everything gated
+    behind it, possible.</p>
+  </section>
+
+  <!-- BEHIND BARS -->
+  <section aria-label="Literacy and incarceration">
+    <h2>The hardest place this shows up, and the way out</h2>
+    <p class="lead">Step into an American prison and you step into a room of people
+    whom reading failed first. It is the starkest measure of how high the stakes get,
+    and, just as importantly, one of the clearest proofs that teaching someone to read
+    changes a life at <em>any</em> age.</p>
+
+    <div class="bignums">
+      <div class="bignum c2">
+        <div class="big">43%</div>
+        <p class="what">finished high school first</p>
+        <p class="who">Fewer than half of people in state and federal prison held a
+        high-school credential before they were incarcerated.</p>
+        <small class="src"><a href="#s14">Source: NCES, Literacy Behind Bars, 2007</a></small>
+      </div>
+      <div class="bignum c3">
+        <div class="big">3×</div>
+        <p class="what">as many learning disabilities</p>
+        <p class="who">17% of inmates had a diagnosed learning disability, versus 6%
+        of adults living in households.</p>
+        <small class="src"><a href="#s14">Source: NCES, Literacy Behind Bars, 2007</a></small>
+      </div>
+    </div>
+
+    <figure class="chart" style="margin-top:18px;">
+      <svg viewBox="0 0 720 250" role="img" aria-labelledby="recTitle recDesc">
+        <title id="recTitle">Odds of returning to prison, with and without education</title>
+        <desc id="recDesc">People who took part in correctional education had about 43
+        percent lower odds of returning to prison than those who did not.</desc>
+        <text x="60" y="18" font-family="inherit" font-size="14" font-weight="700"
+              fill="#322e38">Relative odds of returning to prison</text>
+        <line x1="60" y1="210" x2="690" y2="210" stroke="#e9e3f5" stroke-width="1"></line>
+        <rect x="150" y="30"  width="150" height="180" rx="8" fill="#FF8FAB"></rect>
+        <rect x="420" y="107" width="150" height="103" rx="8" fill="#58C472"></rect>
+        <g font-family="inherit" font-weight="800" text-anchor="middle">
+          <text x="225" y="55"  font-size="22" fill="#fff">100</text>
+          <text x="495" y="135" font-size="22" fill="#fff">57</text>
+          <text x="495" y="92"  font-size="20" fill="#3a9b54">−43%</text>
+        </g>
+        <g font-family="inherit" font-size="13.5" fill="#322e38" text-anchor="middle">
+          <text x="225" y="232">No education in prison</text>
+          <text x="495" y="232">Took part in education</text>
+        </g>
+      </svg>
+      <figcaption><strong>Teaching reading is the exit.</strong> In a U.S. Department
+      of Justice–funded RAND meta-analysis, people who took part in prison education
+      had <strong>43% lower odds of returning</strong>, were 13% more likely to find
+      work afterward, and every $1 spent saved an estimated $4–$5 in re-incarceration
+      costs. <a href="#s15">RAND Corporation, 2013</a>.</figcaption>
+    </figure>
+
+    <div class="quote good" style="margin-top:22px;">
+      <p>The lesson behind bars is the same one at the kitchen table: it is never too
+      late to learn to read, and never too early to start. The cheapest, kindest place
+      to win this is years earlier, in a five-year-old's very first letters.</p>
+    </div>
+  </section>
+
+  <!-- VOICES: VIDEO GALLERY -->
+  <section aria-label="Watch: the literacy crisis in real voices">
+    <h2>See it and hear it, in real voices</h2>
+    <p class="lead">The numbers are stark, but they land hardest when you watch
+    them play out. These two videos, one a clear explainer, one a sobering look at
+    young people asked to read aloud, put faces and voices to the American literacy
+    crisis. They open on YouTube in a new tab.</p>
+    <div class="videos">
+      <a class="video-card"
+         href="https://www.youtube.com/watch?v=ZvCT31BOLDM"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Watch on YouTube: The American Literacy Crisis, Explained, by Jared Henderson, 12 minutes 55 seconds">
+        <div class="video-thumb">
+          <img src="assets/literacy/video_henderson.jpg" alt="" loading="lazy" width="1280" height="720">
+          <span class="video-dur">12:55</span>
+        </div>
+        <div class="video-meta">
+          <span class="src-name">YouTube · Jared Henderson</span>
+          <h3>The American Literacy Crisis, Explained</h3>
+          <p>A calm, well-sourced walk through how a wealthy country ended up with
+          tens of millions of adults who can't read well, and what's driving the
+          recent decline.</p>
+        </div>
+      </a>
+      <a class="video-card"
+         href="https://www.youtube.com/watch?v=pcVUfux19rA"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Watch on YouTube: This Generation Can't Read and It's Getting Sad, by Ohmeezzy, 17 minutes 59 seconds">
+        <div class="video-thumb">
+          <img src="assets/literacy/video_ohmeezzy.jpg" alt="" loading="lazy" width="1280" height="720">
+          <span class="video-dur">17:59</span>
+        </div>
+        <div class="video-meta">
+          <span class="src-name">YouTube · Ohmeezzy</span>
+          <h3>This Generation Can't Read &amp; It's Getting Sad…</h3>
+          <p>A reaction to clip after clip of older students struggling to read
+          everyday sentences aloud, a gut-check on what “below Basic” looks like in
+          real classrooms and hallways.</p>
+        </div>
+      </a>
+    </div>
+    <p class="note" style="margin-top:14px;">These videos are the work and opinions
+    of their creators, linked here for reference; Wobbly isn't affiliated with them
+    and doesn't host the videos. Thumbnails are still frames from each video.</p>
+  </section>
+
+  <!-- THIRD-GRADE FORK -->
+  <section aria-label="Third-grade reading and graduation">
+    <h2>By third grade, the road forks</h2>
+    <p class="lead">Through third grade, children <em>learn to read</em>. After it,
+    they <em>read to learn</em>, and a child who hasn't crossed that bridge begins
+    falling behind in every subject at once. It surfaces, years later, at the
+    graduation that does, or doesn't, happen.</p>
+
+    <figure class="chart">
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="forkTitle forkDesc">
+        <title id="forkTitle">Share of students who do not finish high school on time, by third-grade reading</title>
+        <desc id="forkDesc">About 4 percent of proficient third-grade readers fail to
+        finish high school on time, versus 16 percent of those not reading
+        proficiently, and roughly 35 percent of children who are both struggling
+        readers and growing up in poverty.</desc>
+        <line x1="60" y1="240" x2="690" y2="240" stroke="#e9e3f5" stroke-width="1"></line>
+        <rect x="90"  y="220" width="120" height="20"  rx="6" fill="#58C472"></rect>
+        <rect x="300" y="160" width="120" height="80"  rx="8" fill="#FFC53D"></rect>
+        <rect x="510" y="65"  width="120" height="175" rx="8" fill="#FF8FAB"></rect>
+        <g font-family="inherit" font-weight="800" text-anchor="middle">
+          <text x="150" y="210" font-size="20" fill="#3a9b54">4%</text>
+          <text x="360" y="148" font-size="22" fill="#b8860b">16%</text>
+          <text x="570" y="53"  font-size="24" fill="#d65b7e">35%</text>
+        </g>
+        <g font-family="inherit" font-size="13" fill="#322e38" text-anchor="middle">
+          <text x="150" y="262">Reading on track</text>
+          <text x="360" y="262">Not reading well</text>
+          <text x="570" y="262">Not reading</text>
+          <text x="570" y="280">&amp; in poverty</text>
+        </g>
+      </svg>
+      <figcaption><strong>4× more likely.</strong> Children not reading proficiently by
+      the end of third grade are four times as likely not to finish high school on time
+      (about 16% versus 4%). For children who are <em>also</em> growing up in poverty,
+      it climbs toward one in three. The earliest thing we can act on, whether a child
+      reads on time, is the strongest signal of all. <a href="#s11">Annie E. Casey
+      Foundation, Double Jeopardy, 2011</a>.</figcaption>
+    </figure>
   </section>
 
   <!-- WHY EARLY -->
@@ -256,7 +469,7 @@
     <div class="band">
       <div class="copy">
         <p class="eyebrow">The highest-leverage moment</p>
-        <h2>The curve bends at ages 4–7</h2>
+        <h2>The curve bends at ages 3–8</h2>
         <p class="lead">Functional illiteracy is, overwhelmingly, a
         <strong>foundational-skills</strong> problem: decoding, letter–sound
         mapping, and letter formation so automatic it frees a child's attention to
@@ -276,6 +489,61 @@
       <div class="art">
         <img src="assets/literacy/read_grow.png"
              alt="A storybook with a green sprout and an upward arrow growing out of its pages, cupped by a gentle hand, early reading care making the trend rise.">
+      </div>
+    </div>
+  </section>
+
+  <!-- WORD GAP -->
+  <section aria-label="The reading word gap">
+    <h2>A million words before kindergarten</h2>
+    <p class="lead">Where does the third-grade gap begin? Long before school, in the
+    simple act of a lap and a book. Researchers counted the words children hear from
+    storybooks, and the distance between the read-to and the not-read-to child is
+    almost too large to fit on a page.</p>
+
+    <figure class="chart">
+      <svg viewBox="0 0 720 240" role="img" aria-labelledby="gapTitle gapDesc">
+        <title id="gapTitle">Words heard from books before kindergarten, by how often a child is read to</title>
+        <desc id="gapDesc">A child never read to hears about 4,662 words from books
+        before kindergarten; one book a day adds up to about 296,660; five books a day
+        reaches about 1,483,300 words.</desc>
+        <g font-family="inherit" font-size="13.5" fill="#322e38">
+          <text x="30" y="74">Never read to</text>
+          <text x="30" y="134">1 book a day</text>
+          <text x="30" y="194">5 books a day</text>
+        </g>
+        <!-- bars start at x=200, full scale 480px = 1,483,300 words -->
+        <rect x="200" y="50"  width="2"   height="40" rx="1" fill="#C9B8FF"></rect>
+        <rect x="200" y="110" width="96"  height="40" rx="6" fill="#7B6CF6"></rect>
+        <rect x="200" y="170" width="480" height="40" rx="6" fill="#4936D8"></rect>
+        <g font-family="inherit" font-weight="800" font-size="14">
+          <text x="212" y="76"  fill="#6b6477">4,662 words</text>
+          <text x="306" y="136" fill="#4936D8">296,660</text>
+          <text x="668" y="196" fill="#fff" text-anchor="end">1,483,300 words</text>
+        </g>
+      </svg>
+      <figcaption><strong>~1.4 million words.</strong> A child read five books a day
+      enters kindergarten having heard close to 1.5 million more words from books than
+      a child who is never read to. Those words are the raw material of reading.
+      <a href="#s12">Ohio State University, 2019</a>.</figcaption>
+    </figure>
+
+    <div class="bignums" style="margin-top:18px;">
+      <div class="bignum c1">
+        <div class="big">1 : 300</div>
+        <p class="what">books per child, in some neighborhoods</p>
+        <p class="who">In communities of concentrated poverty, researchers counted
+        about one age-appropriate book for every 300 children, versus 13 books per
+        child in a middle-income neighborhood.</p>
+        <small class="src"><a href="#s13">Source: Neuman &amp; Celano, “book deserts”</a></small>
+      </div>
+      <div class="bignum c4">
+        <div class="big">~½</div>
+        <p class="what">of young children read to daily</p>
+        <p class="who">About 85% of 3-to-5-year-olds are read to a few times a week,
+        but only around half hear a book every day, and the rate climbs with a
+        parent's own education.</p>
+        <small class="src"><a href="#s17">Source: NCES, Condition of Education</a></small>
       </div>
     </div>
   </section>
@@ -322,7 +590,7 @@
         <p class="eyebrow">Built for that exact moment</p>
         <h2>Where Wobbly comes in</h2>
         <p>We built Wobbly to attack this problem at its single highest-leverage
-        point: the 4–7-year-old, right as letter formation and letter–sound
+        point: the 3–8-year-old, right as letter formation and letter–sound
         knowledge get wired in. Multi-sensory by design: <strong>see</strong> each
         stroke, <strong>trace</strong> it, <strong>hear</strong> its sound, then it
         teaches the foundation, not a patch. It's deliberately forgiving and
@@ -344,13 +612,25 @@
       <li id="s6">The Nation's Report Card (NAEP): <a href="https://www.nationsreportcard.gov/reports/reading/2024/g4_8/national-trends/?grade=4">2024 Reading, Grade 4 National Trends</a>; National Assessment Governing Board: <a href="https://www.nagb.gov/news-and-events/news-releases/2025/nations-report-card-decline-in-reading-progress-in-math.html">2025 release</a>: ~40% of 4th-graders below Basic (largest since 2002); ~31% at or above Proficient.</li>
       <li id="s7">The Nation's Report Card (NAEP): <a href="https://www.nationsreportcard.gov/">2025 Long-Term Trend, reading at ages 9 and 13</a>: age-9 reading rose about 4 points from its 2022 low, with the largest gains among lower-performing students; age-13 reading showed no significant change and remained below pre-pandemic levels.</li>
       <li id="s8">NCES: <a href="https://nces.ed.gov/naal/lit_history.asp">NAAL: 120 Years of Literacy</a> and <a href="https://nces.ed.gov/whatsnew/commissioner/remarks2005/12_15_2005.asp">2003 NAAL Commissioner's Remarks</a>: 14% “Below Basic” prose in 1992 and again in 2003 (unchanged). Earliest functional-literacy signal: the 1975 <a href="https://www.ebsco.com/research-starters/education/adult-illiteracy-us">Adult Performance Level study</a>.</li>
+      <li id="s9">Georgetown University Center on Education and the Workforce: <a href="https://cew.georgetown.edu/cew-reports/collegepayoff2021/">The College Payoff (2021)</a>: median lifetime earnings of about $1.6 million with a high-school diploma versus $2.8 million with a bachelor's degree (≈75% more). The report stresses wide overlap between groups.</li>
+      <li id="s10">U.S. Bureau of Labor Statistics: <a href="https://www.bls.gov/emp/tables/unemployment-earnings-education.htm">Education pays</a> (Current Population Survey, 2024): 6.2% unemployment and $738 median weekly earnings for workers without a high-school diploma, versus 2.5% and $1,543 for bachelor's-degree holders. Figures reflect educational attainment and refresh annually.</li>
+      <li id="s11">Annie E. Casey Foundation: Donald J. Hernandez, <a href="https://www.aecf.org/resources/double-jeopardy">Double Jeopardy: How Third-Grade Reading Skills and Poverty Influence High School Graduation</a> (2011), a longitudinal study of 3,975 students: those not reading proficiently by the end of 3rd grade were 4× more likely not to graduate on time (≈16% vs. ~4%), rising toward 1 in 3 for children also living in poverty (<a href="https://files.eric.ed.gov/fulltext/ED518818.pdf">full report</a>).</li>
+      <li id="s12">Ohio State University: Logan, Justice, Yumus &amp; Chaparro-Moreno, <a href="https://news.osu.edu/a-million-word-gap-for-children-who-arent-read-to-at-home/">“When Children Are Not Read to at Home: The Million Word Gap”</a>, <em>Journal of Developmental &amp; Behavioral Pediatrics</em> (2019): a child read five books a day hears ≈1,483,300 words from books before kindergarten, about 1.4 million more than a child never read to.</li>
+      <li id="s13">Neuman &amp; Celano, “Access to Print in Low-Income and Middle-Income Communities,” <em>Reading Research Quarterly</em> (2001); extended by Neuman &amp; Moland, <a href="https://www.nyu.edu/about/news-publications/news/2016/july/nyu-study-identifies-book-deserts-across-the-country-.html">“Book Deserts”</a> (NYU, 2019): roughly one age-appropriate book per 300 children in concentrated-poverty communities versus 13 per child in middle-income ones.</li>
+      <li id="s14">NCES: <a href="https://nces.ed.gov/pubs2007/2007473.pdf">Literacy Behind Bars: Results From the 2003 National Assessment of Adult Literacy Prison Survey</a> (NCES 2007-473): prison inmates scored well below the household population on all three literacy scales; 17% had a diagnosed learning disability (vs. 6% of household adults); 43% held a high-school credential before incarceration.</li>
+      <li id="s15">RAND Corporation: <a href="https://www.rand.org/pubs/research_reports/RR266.html">Evaluating the Effectiveness of Correctional Education: A Meta-Analysis</a> (2013), funded by the U.S. Department of Justice: participation in correctional education was associated with 43% lower odds of recidivating, 13% higher odds of post-release employment, and an estimated $4–$5 saved per $1 spent (<a href="https://www.justice.gov/archives/opa/pr/justice-and-education-departments-announce-new-research-showing-prison-education-reduces">DOJ release</a>).</li>
+      <li id="s16">Vernon, Trujillo, Rosenbaum &amp; DeBuono, <a href="https://hsrc.himmelfarb.gwu.edu/cgi/viewcontent.cgi?article=1173&amp;context=sphhs_policy_facpubs">Low Health Literacy: Implications for National Health Policy</a> (George Washington University / Milken Institute School of Public Health, 2007): low health literacy associated with an estimated $106–238 billion in additional U.S. health-care costs each year, and with higher hospital readmission rates.</li>
+      <li id="s17">NCES: <a href="https://nces.ed.gov/programs/coe/indicator/sfa/home-literacy-activities">Home Literacy Activities (Condition of Education)</a>, National Household Education Surveys (2019): 85% of children ages 3–5 were read to by a family member three or more times in the past week; 91% among children whose mothers held a bachelor's degree.</li>
     </ol>
     <p class="note">A note on method: literacy figures shift with the instrument and
     definition used (self-reported vs. assessed, “basic” vs. “functional,” differing
     cut-points and age ranges). The 50-year comparison above is directional, not
     exact; the federal PIAAC and NAAL/NALS series are the most internally
     comparable and are weighted accordingly. Every figure on this page is attributed
-    to a named federal statistics agency or major literacy foundation.</p>
+    to a named federal statistics agency, university research center, or major
+    literacy foundation. We've deliberately left out several widely repeated but
+    poorly sourced claims (for example, that states plan prison space from
+    third-grade reading scores, which fact-checkers have rated false).</p>
   </section>
 
 </main>
@@ -362,8 +642,9 @@
        <a href="privacy.html">Privacy Policy</a> ·
        <a href="terms.html">Terms of Service</a> ·
        <a href="support.html">Support</a></p>
-    <p>This website sets no cookies, runs no scripts, and uses no analytics,
-       just like the app.</p>
+    <p>This website sets no cookies and uses no analytics, just like the app.
+       Its one small script only checks your link for an invite code, and
+       sends nothing.</p>
   </div>
 </footer>
 
