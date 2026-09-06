@@ -6,7 +6,7 @@
   <title>Wobbly: Learn to Write, Read &amp; Count (Ages 3–8)</title>
   <meta name="description" content="Wobbly teaches children ages 3–8 to write letters and numbers and to read with phonics. A gentle, growth-mindset approach that praises effort over perfection: step-by-step tracing, 500+ decodable words, stars, and cheers. No buzzers, no red marks. No ads, no tracking, everything stays on your device.">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/app-icon-light.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/app-icon-light.png" type="image/png">
   <meta name="apple-itunes-app" content="app-id=6783044178">
   <script>
     // The page's one script. If the link that brought you here carries an
@@ -61,7 +61,7 @@
 
 <header class="site">
   <div class="bar">
-    <img class="logo" src="assets/app-icon-light.svg" alt="Wobbly app icon">
+    <img class="logo" src="assets/app-icon-light.png" alt="Wobbly app icon">
     <div class="name">Wobbly</div>
     <input type="checkbox" id="nav-open" class="nav-toggle" aria-label="Menu">
     <label class="nav-button" for="nav-open"><span class="nav-icon" aria-hidden="true"></span>Menu</label>
@@ -76,7 +76,7 @@
 
 <main>
   <div class="hero">
-    <img class="mascot" src="assets/mascot.svg" alt="Wobbly, a friendly bouncing pencil mascot with round glasses">
+    <img class="mascot" src="assets/mascot.png" alt="Wobbly, a friendly blue pencil with round glasses, waving hello">
     <div>
       <span class="pill">Ages 3–8 · iPhone &amp; iPad</span>
       <h1>Big skills for <span class="hl">little hands</span>.</h1>
@@ -94,7 +94,7 @@
     <div class="stats">
       <div class="stat"><div class="num">62</div><div class="lbl">letters &amp; numbers to trace</div></div>
       <div class="stat"><div class="num">500+</div><div class="lbl">words to read</div></div>
-      <div class="stat"><div class="num">40</div><div class="lbl">decodable sentences</div></div>
+      <div class="stat"><div class="num">50</div><div class="lbl">decodable sentences</div></div>
       <div class="stat"><div class="num">9</div><div class="lbl">phonics reading stages</div></div>
     </div>
   </section>
@@ -110,21 +110,25 @@
         <p>All 26 letters, upper and lower case (A–Z and a–z), with the correct
         stroke order and direction, then whole words traced letter by letter, hearing each
         sound as they go. Wobbly draws every stroke first, then little fingers
-        trace it. Wobbles and overshoots still count when the idea is right.</p>
+        trace it. Wobbles and overshoots still count when the idea is right.
+        There are tracing worksheets too, rows of practice cells with no
+        printer and no paper, quietly marked so a grown-up can look them over
+        later.</p>
       </div>
       <div class="card">
         <h3>📖 Learn to read</h3>
         <p>A full phonics journey: 26 letter sounds, 90+ picture words, 500+
         decodable words, 34 word families, blends, digraphs, magic&nbsp;e, vowel
         teams, word endings like <em>-ing</em> and <em>-ed</em>, tricky words,
-        and 40 whole sentences, across 9 gentle reading stages.</p>
+        and 50 whole sentences, across 9 gentle reading stages.</p>
       </div>
       <div class="card">
         <h3>🎧 Train little ears</h3>
-        <p>Seven listening games, all free: match rhymes, clap syllables, catch
-        first sounds, play sound detective, and build words tile by tile,
-        with a cast of 54 friendly animals. Strong ears make strong
-        readers.</p>
+        <p>Seven listening games, all free: match rhymes, clap out syllables,
+        catch first sounds, find the letter that makes a sound, find the picture
+        that starts with a letter, squeeze two sounds into a blend, and build
+        words tile by tile, with a cast of 54 friendly animals. Strong ears make
+        strong readers.</p>
       </div>
       <div class="card">
         <h3>🔢 Count and write numbers</h3>
@@ -136,12 +140,13 @@
 
   <section aria-label="See Wobbly in action">
     <h2>See Wobbly in action</h2>
-    <p class="lead">A peek at the real app: trace every letter and number,
-    sound out real words, and celebrate every win. Grown-ups get a private zone
-    of their own.</p>
+    <p class="lead">Ten screens from the real app, the same ten on its App Store
+    page. Nothing here is a mockup. Scroll sideways to see them all.</p>
 
-    <!-- Pure-CSS showcase: auto-crossfading carousel + iPhone/iPad toggle.
-         No scripts, no cookies, no external requests — just like the app. -->
+    <!-- Pure-CSS showcase: a scroll-snapping rail of shots + an iPhone/iPad
+         toggle driven by radios. No scripts, no cookies, no external requests,
+         just like the app. The shots live in assets/store/ and are copied from
+         release/screenshots/, so the website and the App Store never drift. -->
     <div class="showcase">
       <div class="device-toggle" role="group" aria-label="Choose device">
         <input type="radio" name="device" id="dev-iphone" checked>
@@ -149,72 +154,84 @@
         <input type="radio" name="device" id="dev-ipad">
         <label for="dev-ipad">▫️ iPad</label>
 
-        <div class="carousel-wrap">
-          <figure class="carousel is-iphone" aria-label="Wobbly on iPhone">
-            <img class="slide" src="assets/shots/iphone/01-trace.png" alt="Wobbly shows each stroke of the letter A, then the child traces it.">
-            <img class="slide" src="assets/shots/iphone/02-stars.png" loading="lazy" alt="A finished letter earns a burst of gold stars.">
-            <img class="slide" src="assets/shots/iphone/03-letters.png" loading="lazy" alt="Home screen with the whole alphabet, A to Z, to practice.">
-            <img class="slide" src="assets/shots/iphone/04-words.png" loading="lazy" alt="A list of real, decodable words to sound out and read.">
-            <img class="slide" src="assets/shots/iphone/05-read.png" loading="lazy" alt="Sounding out a word one letter tile at a time, then reading it.">
-            <img class="slide" src="assets/shots/iphone/06-families.png" loading="lazy" alt="Rhyming word families grouped together as picture cards.">
-            <img class="slide" src="assets/shots/iphone/07-numbers.png" loading="lazy" alt="Home screen with numbers 0 to 9 to trace.">
-            <img class="slide" src="assets/shots/iphone/08-parents.png" loading="lazy" alt="The private Parent Zone showing a child's real progress and letter mastery.">
-            <img class="slide" src="assets/shots/iphone/09-privacy.png" loading="lazy" alt="Onboarding: everything stays on your device, with no ads or tracking.">
-            <img class="slide" src="assets/shots/iphone/10-phonics.png" loading="lazy" alt="Letter Buddies phonics: two letters that make one sound, like sh and ch.">
-            <img class="slide" src="assets/shots/iphone/11-trace-word.png" loading="lazy" alt="Tracing a whole word letter by letter on the Trace a Word screen, hearing each sound.">
-          </figure>
-
-          <figure class="carousel is-ipad" aria-label="Wobbly on iPad">
-            <img class="slide" src="assets/shots/ipad/01-trace.png" loading="lazy" alt="Wobbly shows each stroke of the letter A, then the child traces it.">
-            <img class="slide" src="assets/shots/ipad/02-stars.png" loading="lazy" alt="A finished letter earns a burst of gold stars.">
-            <img class="slide" src="assets/shots/ipad/03-letters.png" loading="lazy" alt="Home screen with the whole alphabet, A to Z, to practice.">
-            <img class="slide" src="assets/shots/ipad/04-words.png" loading="lazy" alt="A list of real, decodable words to sound out and read.">
-            <img class="slide" src="assets/shots/ipad/05-read.png" loading="lazy" alt="Sounding out a word one letter tile at a time, then reading it.">
-            <img class="slide" src="assets/shots/ipad/06-families.png" loading="lazy" alt="Rhyming word families grouped together as picture cards.">
-            <img class="slide" src="assets/shots/ipad/07-numbers.png" loading="lazy" alt="Home screen with numbers 0 to 9 to trace.">
-            <img class="slide" src="assets/shots/ipad/08-parents.png" loading="lazy" alt="The private Parent Zone showing a child's real progress and letter mastery.">
-            <img class="slide" src="assets/shots/ipad/09-privacy.png" loading="lazy" alt="Onboarding: everything stays on your device, with no ads or tracking.">
-            <img class="slide" src="assets/shots/ipad/10-phonics.png" loading="lazy" alt="Letter Buddies phonics: two letters that make one sound, like sh and ch.">
-            <img class="slide" src="assets/shots/ipad/11-trace-word.png" loading="lazy" alt="Tracing a whole word letter by letter on the Trace a Word screen, hearing each sound.">
-          </figure>
-
-          <div class="dots" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span>
+        <div class="shot-rails">
+          <div class="shot-rail is-iphone" tabindex="0" role="group"
+               aria-label="Wobbly on iPhone, ten screens, scroll sideways to see them all">
+            <img src="assets/store/iphone/01-squiggle-to-sentence.jpg" alt="From first squiggle to first sentence: the Wobbly splash screen, and a seven day free trial with no card, no account and nothing to cancel.">
+            <img src="assets/store/iphone/02-first-they-watch.jpg" loading="lazy" alt="First they watch, then they try: Wobbly draws the stroke while a pointing hand shows where to start.">
+            <img src="assets/store/iphone/03-doesnt-stop-at-letters.jpg" loading="lazy" alt="It does not stop at letters: the reading home, with all nine phonics levels on one screen.">
+            <img src="assets/store/iphone/04-never-stuck.jpg" loading="lazy" alt="Never wrong, never stuck: the gentle b versus d lesson for the letters children flip most.">
+            <img src="assets/store/iphone/05-where-letters-become-reading.jpg" loading="lazy" alt="Where letters become reading: sounding out b a g one letter at a time, then reading the whole word.">
+            <img src="assets/store/iphone/06-books-that-answer.jpg" loading="lazy" alt="Real books that answer back: a storybook page built only from sounds the child already knows.">
+            <img src="assets/store/iphone/07-sound-games.jpg" loading="lazy" alt="Seven sound games, none of them locked: the Sound Games room.">
+            <img src="assets/store/iphone/08-a-path-not-a-pile.jpg" loading="lazy" alt="A path, not a pile of games: the Letter Sounds trail, with treasure chests along the way.">
+            <img src="assets/store/iphone/09-from-letters-to-words.jpg" loading="lazy" alt="From letters to whole words: tracing a word letter by letter on ruled lines.">
+            <img src="assets/store/iphone/10-one-price.jpg" loading="lazy" alt="One price, not one a month: the Full Access offer, a single 24.99 dollar purchase for the whole family.">
           </div>
+
+          <div class="shot-rail is-ipad" tabindex="0" role="group"
+               aria-label="Wobbly on iPad, ten screens, scroll sideways to see them all">
+            <img src="assets/store/ipad/01-squiggle-to-sentence.jpg" alt="From first squiggle to first sentence: the Wobbly splash screen, and a seven day free trial with no card, no account and nothing to cancel.">
+            <img src="assets/store/ipad/02-first-they-watch.jpg" loading="lazy" alt="First they watch, then they try: Wobbly draws the stroke while a pointing hand shows where to start.">
+            <img src="assets/store/ipad/03-doesnt-stop-at-letters.jpg" loading="lazy" alt="It does not stop at letters: the reading home, with all nine phonics levels on one screen.">
+            <img src="assets/store/ipad/04-never-stuck.jpg" loading="lazy" alt="Never wrong, never stuck: the gentle b versus d lesson for the letters children flip most.">
+            <img src="assets/store/ipad/05-where-letters-become-reading.jpg" loading="lazy" alt="Where letters become reading: sounding out b a g one letter at a time, then reading the whole word.">
+            <img src="assets/store/ipad/06-books-that-answer.jpg" loading="lazy" alt="Real books that answer back: a storybook page built only from sounds the child already knows.">
+            <img src="assets/store/ipad/07-no-printer-needed.jpg" loading="lazy" alt="No printer needed: the iPad tracing worksheet, each letter down the side with practice cells across its row.">
+            <img src="assets/store/ipad/08-a-path-not-a-pile.jpg" loading="lazy" alt="A path, not a pile of games: the Letter Sounds trail, with treasure chests along the way.">
+            <img src="assets/store/ipad/09-from-letters-to-words.jpg" loading="lazy" alt="From letters to whole words: tracing a word letter by letter on ruled lines.">
+            <img src="assets/store/ipad/10-one-price.jpg" loading="lazy" alt="One price, not one a month: the Full Access offer, a single 24.99 dollar purchase for the whole family.">
+          </div>
+
+          <p class="rail-hint" aria-hidden="true">Swipe or scroll sideways →</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section aria-label="How Wobbly teaches">
     <h2>How Wobbly teaches</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>👀 Watch</h3>
+    <p class="lead">The same four steps, every letter, every time, so a child
+    always knows what happens next. It is the whole method, and there is
+    nothing else to learn.</p>
+    <ol class="steps">
+      <li class="step" style="--accent: #7B6CF6;">
+        <span class="step-num" aria-hidden="true">1</span>
+        <span class="step-icon" aria-hidden="true">👀</span>
+        <h3>Watch</h3>
         <p>Wobbly draws every stroke first. A traveling dot and a spoken prompt
-        show exactly where to start and which way to go.</p>
-      </div>
-      <div class="card">
-        <h3>✏️ Trace</h3>
-        <p>Friendly arrows and gentle vibrations guide little fingers. The
-        tracing is deliberately forgiving, so trying always feels good, never
-        frustrating.</p>
-      </div>
-      <div class="card">
-        <h3>🔊 Hear</h3>
+        show exactly where to start and which way to go, and a little gloved
+        hand rides the line as it is drawn, so a child who cannot read a word
+        yet still knows exactly what is being asked.</p>
+      </li>
+      <li class="step" style="--accent: #E0A400;">
+        <span class="step-num" aria-hidden="true">2</span>
+        <span class="step-icon" aria-hidden="true">✏️</span>
+        <h3>Trace</h3>
+        <p>Friendly arrows and gentle vibrations guide little fingers, and the
+        tracing is deliberately forgiving, so trying always feels good. Start a
+        stroke from the wrong end and Wobbly quietly rewinds and points at the
+        right place, because a backwards letter looks fine while rehearsing a
+        habit that is expensive to undo later. The pairs children flip most,
+        b and d, p and q, get their own gentle lesson.</p>
+      </li>
+      <li class="step" style="--accent: #FF8FAB;">
+        <span class="step-num" aria-hidden="true">3</span>
+        <span class="step-icon" aria-hidden="true">🔊</span>
+        <h3>Hear</h3>
         <p>Every letter has its sound and a picture word (“A is for Apple”), so
         writing and reading reinforce each other from the very first day.</p>
-      </div>
-      <div class="card">
-        <h3>⭐ Celebrate</h3>
+      </li>
+      <li class="step" style="--accent: #58C472;">
+        <span class="step-num" aria-hidden="true">4</span>
+        <span class="step-icon" aria-hidden="true">⭐</span>
+        <h3>Celebrate</h3>
         <p>Finishing always earns at least one star, plus collectible stickers
         for first tries, comebacks, and personal bests. Coaching is specific and
         kind, spoken aloud: “Let’s make the tall line again!” Because most
         four-year-olds can’t read yet.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </section>
 
   <section aria-label="The reading adventure">
@@ -260,77 +277,101 @@
     practice take on harder things, bounce back from stumbles, and go further.
     Every cheer, star, and gentle nudge is designed to build exactly that.</p>
 
-    <div class="ethos-note">
+    <blockquote class="pullquote">
       <p>“You worked so hard on that tall line!” teaches a child far more than
       “You’re so clever.” One grows with every try. The other quietly whispers
-      that a stumble means you’re not. Wobbly only ever says the first kind.</p>
-    </div>
+      that a stumble means you’re not.</p>
+      <footer>Wobbly only ever says the first kind.</footer>
+    </blockquote>
 
-    <div class="cards">
-      <div class="card">
-        <h3>🌱 A growth mindset from stroke one</h3>
-        <p>Wobbly praises what your child <em>did</em>, not who they are: the
-        effort, the persistence, the progress. That is the mindset researchers
-        tie most closely to children who keep going when things get tricky.</p>
-      </div>
-      <div class="card">
-        <h3>🛟 Safe to be wrong</h3>
-        <p>No buzzers, no red marks, no failure screens. Off-path ink is a soft
-        blue, never a scold. When mistakes stop feeling scary, children take the
-        small, brave risks that real learning is made of.</p>
-      </div>
-      <div class="card">
-        <h3>🗣️ Specific, spoken encouragement</h3>
-        <p>Instead of an empty “good job,” Wobbly names the win out loud:
-        “Let’s make the round part again!” Concrete, kind coaching helps
-        pre-readers know just what they did well and what to try next.</p>
-      </div>
-      <div class="card">
-        <h3>❤️ Confidence that lasts</h3>
-        <p>No timers, no pressure, no punishments. Finishing always earns a
-        star, so your child walks away from every letter thinking “I can do
-        this,” and wanting to come back tomorrow.</p>
-      </div>
-    </div>
+    <ul class="principles">
+      <li style="--accent: #58C472;">
+        <span class="principle-icon" aria-hidden="true">🌱</span>
+        <div>
+          <h3>A growth mindset from stroke one</h3>
+          <p>Wobbly praises what your child <em>did</em>, not who they are: the
+          effort, the persistence, the progress. That is the mindset researchers
+          tie most closely to children who keep going when things get tricky.</p>
+        </div>
+      </li>
+      <li style="--accent: #7B6CF6;">
+        <span class="principle-icon" aria-hidden="true">🛟</span>
+        <div>
+          <h3>Safe to be wrong</h3>
+          <p>No buzzers, no red marks, no failure screens. Off-path ink is a soft
+          blue, never a scold. When mistakes stop feeling scary, children take the
+          small, brave risks that real learning is made of.</p>
+        </div>
+      </li>
+      <li style="--accent: #E0A400;">
+        <span class="principle-icon" aria-hidden="true">🗣️</span>
+        <div>
+          <h3>Specific, spoken encouragement</h3>
+          <p>Instead of an empty “good job,” Wobbly names the win out loud:
+          “Let’s make the round part again!” Concrete, kind coaching helps
+          pre-readers know just what they did well and what to try next.</p>
+        </div>
+      </li>
+      <li style="--accent: #FF8FAB;">
+        <span class="principle-icon" aria-hidden="true">❤️</span>
+        <div>
+          <h3>Confidence that lasts</h3>
+          <p>No timers, no pressure, no punishments. Finishing always earns a
+          star, so your child walks away from every letter thinking “I can do
+          this,” and wanting to come back tomorrow.</p>
+        </div>
+      </li>
+    </ul>
   </section>
 
-  <section>
-    <h2>Made for grown-ups, too</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>👨‍👩‍👧 Up to three kids, free</h3>
-        <p>Each child gets their own profile, stars, and progress. Nothing ever
-        mixes between them.</p>
-      </div>
-      <div class="card">
-        <h3>🔒 A private Parent Zone</h3>
-        <p>Setup is grown-up-only, gated by a quick adult check before anything
-        is saved. Then Face&nbsp;ID, Touch&nbsp;ID, or a PIN guards progress
-        insights, replays of your child’s actual strokes, and every setting.
-        Kids never see any of it.</p>
-      </div>
-      <div class="card">
-        <h3>🎯 Starts at the right level</h3>
-        <p>During setup you pick a starting point, or let a short
-        listen-and-tap placement quiz suggest one. No child sits through
-        letters they already know.</p>
-      </div>
-      <div class="card">
-        <h3>😴 Wobbly keeps your schedule</h3>
-        <p>Choose the hours Wobbly is awake each day. Outside them, your child
-        meets a sleeping pencil and a lullaby instead of a lockout, and a
-        grown-up can always grant a little extra time.</p>
-      </div>
-      <div class="card">
-        <h3>☁️ Optional iCloud backup</h3>
-        <p>Off by default. A parent can back up each child’s progress to your
-        family’s own private iCloud and restore it on a new device. We run no
-        servers and can never see it.</p>
-      </div>
-      <div class="card">
-        <h3>♿ Built for everyone</h3>
-        <p>Full VoiceOver support, Dynamic Type, Reduce Motion, adjustable
-        haptics, and high-contrast guide colors.</p>
+  <section aria-label="Made for grown-ups, too">
+    <div class="grownup-room">
+      <p class="eyebrow">The grown-up side</p>
+      <h2>Made for grown-ups, too</h2>
+      <p class="lead">A quieter room behind a lock, where you set the rules and
+      see the progress. Your child never opens this door.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>👨‍👩‍👧 Up to three kids, free</h3>
+          <p>Each child gets their own profile, stars, and progress. Nothing ever
+          mixes between them.</p>
+        </div>
+        <div class="card">
+          <h3>🔒 A private Parent Zone</h3>
+          <p>Setup is grown-up-only, gated by a quick adult check before anything
+          is saved. Then Face&nbsp;ID, Touch&nbsp;ID, or a PIN guards progress
+          insights, replays of your child’s actual strokes, and every setting.
+          Kids never see any of it.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Starts at the right level</h3>
+          <p>During setup you pick a starting point, or let a short
+          listen-and-tap placement quiz suggest one. No child sits through
+          letters they already know.</p>
+        </div>
+        <div class="card">
+          <h3>📄 Worksheets you can look over</h3>
+          <p>Every practice cell your child traces is quietly marked and kept as
+          one sheet, so you can see how a whole page went and replay any letter
+          stroke by stroke.</p>
+        </div>
+        <div class="card">
+          <h3>😴 Wobbly keeps your schedule</h3>
+          <p>Choose the hours Wobbly is awake each day. Outside them, your child
+          meets a sleeping pencil and a lullaby instead of a lockout, and a
+          grown-up can always grant a little extra time.</p>
+        </div>
+        <div class="card">
+          <h3>☁️ Optional iCloud backup</h3>
+          <p>Off by default. A parent can back up each child’s progress to your
+          family’s own private iCloud and restore it on a new device. We run no
+          servers and can never see it.</p>
+        </div>
+        <div class="card">
+          <h3>♿ Built for everyone</h3>
+          <p>Full VoiceOver support, Dynamic Type, Reduce Motion, adjustable
+          haptics, and high-contrast guide colors.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -367,26 +408,72 @@
     </div>
   </section>
 
-  <section>
+  <section id="pricing">
     <h2>Honest pricing, no surprises</h2>
-    <p class="lead">Letters A–E, numbers 0–3, your child’s first 20 reading
-    words and sentences, the first two treasure chests, and all seven listening
-    games are <strong>free forever</strong>, with every feature included, so you
-    can truly try before you buy. Every new family also starts with a
+    <p class="lead">Every new family starts with a
     <strong>7-day free trial of everything</strong>. When it ends, it simply
-    ends: there is no card to enter and nothing that can ever bill you.</p>
-    <div class="price-table">
+    ends: there is no card to enter and nothing that can ever bill you. After
+    that a real slice of Wobbly stays <strong>free forever</strong>, so you can
+    keep going without buying anything. Here is exactly where the line sits, so
+    nobody finds it on day two.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🎁 Free forever</h3>
+        <ul>
+          <li>Letters A–E and numbers 0–3, both cases, with the whole tracing
+              experience: the stroke demo, the guidance, the stars, the
+              coaching.</li>
+          <li>Your child’s first 20 reading words, and the sentences that close
+              the first level.</li>
+          <li>The first treasure chest of each of the first two reading
+              levels.</li>
+          <li><strong>All seven listening games.</strong> Not one of them is
+              ever locked.</li>
+          <li>Every letter’s sound and picture words.</li>
+          <li>Up to three children, each kept separate, and the whole grown-up
+              zone with a weekly report card.</li>
+          <li>The last three stroke recordings and worksheets for each
+              letter.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔓 What Full Access adds</h3>
+        <ul>
+          <li>The other 21 letters in both cases and numbers 4–9, plus whole
+              words to trace.</li>
+          <li>All 9 reading levels: 500+ decodable words and 50 sentences.</li>
+          <li>All 13 interactive storybooks. The free tier has none of these
+              yet.</li>
+          <li>As many children as you like.</li>
+          <li>Unlimited stroke recordings and worksheets, kept forever, with no
+              watermark on anything you save or share.</li>
+          <li>Report card windows longer than a week, and deeper practice
+              insights.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-table pricing-price">
       <div class="price hero-price">
         <div class="price-flag">One simple price</div>
         <h3>Full Access</h3>
         <div class="amount">$24.99</div>
         <div class="per">one time · whole family · forever</div>
-        <p>Unlocks all 26 letters in both cases and all 10 numbers, whole words to trace, 500+
-        words and 40 sentences to read across 9 phonics stages, 13 interactive
-        storybooks, unlimited recordings, and practice insights.
+        <p>One payment, for every child and every device you own.
         <strong>No subscription.</strong> Buy once, done, and we’ll never upsell
         you again.</p>
       </div>
+    </div>
+
+    <div class="ethos-note pricing-note">
+      <p>One thing to know before you download: until the app is bought, a
+      grown-up opens each session. Wobbly asks for Face&nbsp;ID, Touch&nbsp;ID
+      or your PIN when it starts, then hands the device to your child. Once the
+      free week has passed, that is also the only place the purchase screen can
+      appear, behind the gate you just passed, with a large “No thank you”
+      button. Your child never meets a price. Buying the app ends the lock and
+      the ask, both at once, forever.</p>
     </div>
   </section>
 </main>
@@ -407,7 +494,7 @@
 <div class="invite-modal" id="invite-modal" role="dialog" aria-modal="true"
      aria-labelledby="invite-modal-title" hidden>
   <div class="invite-card" tabindex="-1">
-    <img src="assets/mascot.svg" alt="Wobbly the pencil, waving hello">
+    <img src="assets/mascot.png" alt="Wobbly, a friendly blue pencil with round glasses, waving hello">
     <h2 id="invite-modal-title">A friend invited you!</h2>
     <p>They are sharing <strong>15% off</strong> Wobbly with you. Your code
        <strong class="invite-code">FRIEND15</strong> is ready, and the App Store
