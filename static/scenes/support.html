@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | Scenes</title>
+<meta name="description" content="Help with Scenes on iPhone: widgets, Control Center, Live Activities, subscriptions and your data. Written answers, and a real address to write to.">
+<meta name="theme-color" content="#0E1116">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="mark" src="assets/apple-touch-icon.png" width="180" height="180" alt=""> Scenes</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section>
+<div class="wrap prose">
+
+  <h1>Support</h1>
+  <p class="stamp">Scenes for iPhone. Making Things LLC.</p>
+
+  <p class="lede">Write to <a href="mailto:support+scenes@getmakingthings.com">support+scenes@getmakingthings.com</a>. A person reads it, usually within two business days. Tell us your iPhone model, your iOS version and what you expected to happen; a screenshot or a Settings export helps more than anything else.</p>
+
+  <p><a class="btn btn-primary" href="mailto:support+scenes@getmakingthings.com">Email support</a></p>
+
+  <h2>The app does nothing on my Lock Screen</h2>
+  <p>iOS does not let an app add its own widgets or controls, so the one-time setup is yours to do. Scenes walks you through it in Settings, under Finish setup:</p>
+  <ul>
+    <li><strong>Lock Screen widget.</strong> Touch and hold the Lock Screen, tap Customize, then Lock Screen, then the widget area, and pick Scenes.</li>
+    <li><strong>Control Center.</strong> Swipe down from the top right, tap the plus at the top left, then Add a control, and search for Scenes.</li>
+    <li><strong>Action button.</strong> iPhone Settings, then Action Button, then Shortcut, then pick a Scenes shortcut.</li>
+    <li><strong>Live Activity.</strong> If the card never appears while a scene is live, check iPhone Settings, then Scenes, and make sure Live Activities is on.</li>
+  </ul>
+
+  <h2>A timer or alarm did not fire</h2>
+  <p>Check that notifications are allowed for Scenes in iPhone Settings, and that Focus is not filtering them out. Scenes uses a real alarm for the end of a block, a rest set and reminders, so it can ring on silent; if you denied the alarm permission, iOS falls back to a normal notification, which will not ring on silent.</p>
+
+  <h2>A reminder did not go off, or went off when I had already done it</h2>
+  <p>Scenes arms one alarm at a time, for the next occurrence only. If you have already run that scene today, the reminder stands down for the day and re-arms for the next one. Nothing about it is scored, so a skipped day costs you nothing.</p>
+
+  <h2>Managing your subscription</h2>
+  <ul>
+    <li><strong>Cancel or switch plan.</strong> iPhone Settings, tap your name, then Subscriptions, then Scenes. Canceling keeps access until the end of the period you have paid for.</li>
+    <li><strong>Restore a purchase.</strong> Open the subscription screen in Scenes and tap Restore purchases. Make sure you are signed in with the Apple Account that bought it.</li>
+    <li><strong>Refunds.</strong> Apple handles them, at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Write to us as well if something went wrong.</li>
+    <li><strong>The trial.</strong> Seven days, granted once per subscription group, so the first plan you take spends it.</li>
+  </ul>
+
+  <h2>Your data</h2>
+  <ul>
+    <li><strong>Export.</strong> Settings, then Export data, gives you a JSON file of your scenes and your record through the share sheet.</li>
+    <li><strong>Sync.</strong> Settings, then iCloud sync. It uses your own iCloud account; both devices need to be signed into the same one.</li>
+    <li><strong>Delete.</strong> Deleting the app deletes the local copy. To remove the synced copy as well, turn sync off first, or delete the app's iCloud data in iPhone Settings.</li>
+  </ul>
+  <p>What Scenes stores and what it never touches is set out in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2>Health and location</h2>
+  <p>Both are optional and asked for late. Health is only offered when you open a walk, run, meditation or gym scene, and nothing read from Health is stored, synced or exported. Location is asked for only on your first errand stop with an address, is used only to show how far away it is, and is never "Always". Say no to either and the app keeps working, minus that one detail.</p>
+
+  <hr class="rule" style="margin-top:3rem">
+
+  <h2 id="app-review">For App Review</h2>
+  <p><strong>Contact:</strong> Making Things LLC, <a href="mailto:support+scenes@getmakingthings.com">support+scenes@getmakingthings.com</a>. No demo account is needed: Scenes has no sign-in and no server.</p>
+  <p>Notes for the reviewer, in the order they are likely to come up:</p>
+  <ol>
+    <li><strong>Scenes is subscription only by design.</strong> There is no free tier and no free feature set, because there are no gated features: every plan is the whole app. Please use the sandbox 7-day free trial to get past the gate. The same disclosure is on all three subscription products and on the first screen of onboarding.</li>
+    <li><strong>Where the gate appears.</strong> At the end of onboarding, once the first live scene exists, and again if a subscription lapses. It is not shown to an active subscriber, and the cached entitlement means it does not flash on a cold launch.</li>
+    <li><strong>HealthKit is optional and asked for late.</strong> It is offered only inside a walk, run, meditation or gym scene. Denying it leaves the app fully usable. Nothing read from Health is persisted, synced or exported.</li>
+    <li><strong>Location is When In Use only</strong>, requested on the first errand stop that has an address, and used only to show the distance to that stop. Never "Always", never background tracking.</li>
+    <li><strong>AlarmKit is used</strong> so a focus block, a rest set or a reminder can ring while the phone is on silent.</li>
+    <li><strong>The system surfaces render from a shared snapshot.</strong> Live Activities, widgets and Control Center controls draw from a small file in the app group, so they stay correct without the app running.</li>
+    <li><strong>No accounts, no tracking, no third-party SDKs.</strong> The app is Data Not Collected, and shows no App Tracking Transparency prompt because it tracks nothing.</li>
+  </ol>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Making Things LLC</span>
+    <span class="spacer"></span>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+    <a href="mailto:support+scenes@getmakingthings.com">support+scenes@getmakingthings.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
