@@ -1,9 +1,14 @@
 # Perch website
 
-The legal and support pages for the Perch app. No build step, no JavaScript, no cookies, no
-analytics: two HTML files, one stylesheet and three icons.
+The home, legal and support pages for the Perch app. No build step, no JavaScript, no cookies,
+no analytics: three HTML files, one stylesheet, three icons and six screenshots.
 
 ```
+index.html      Home: what Perch does, the four screens, filters, cities, privacy summary.
+                Says Perch is in testing; swap in an App Store link once it is public
+                (app ID 6811679793)
+assets/img/*.jpg  iPhone 17 Pro Max simulator captures (iOS 26.5), 1320x2868 scaled to 736x1600
+                by AppStoreScreenshotsUITests in the Perch repo
 privacy.html    Privacy policy (App Store Connect: privacyPolicyUrl)
 support.html    Support answers, plus a "For App Review" section at #app-review
 assets/css/site.css   Perch's closed palette: Ink, Body, Muted, Wash, Rule, Accent
