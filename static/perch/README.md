@@ -35,10 +35,9 @@ Drawn from `docs/REQUIREMENTS.md` §6 and the in-app Privacy Policy
 
 ## Before it goes live
 
-1. Confirm `support+perch@getmakingthings.com` reaches the support inbox.
-2. The app's Send a catalog correction button writes to `catalog@perch.app`. Confirm that
-   mailbox exists, or change the app to use the support address.
-3. Push, then check both URLs load.
+1. Confirm `support+perch@getmakingthings.com` reaches the support inbox. The app's Send a
+   catalog correction button writes to the same address.
+2. Push, then check both URLs load.
 
 ## App Store Connect fields this fills
 
