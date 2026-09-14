@@ -7,6 +7,9 @@
 <meta name="description" content="Afterbook teaches chess openings as plans, pawn structures, and board fights, not move trees. For iPhone and iPad.">
 <meta name="theme-color" content="#0E1110">
 <meta name="color-scheme" content="dark">
+<meta property="og:title" content="Afterbook: chess opening plans">
+<meta property="og:description" content="Learn the fight, not the tree. Chess openings as plans, pawn structures, and board fights.">
+<meta property="og:image" content="https://www.getmakingthings.com/afterbook/images/ipad-lesson.jpg">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   :root {
@@ -15,6 +18,7 @@
     --rule: #26302A;
     --gold: #D4A017;
     --plan: #3D8B5F;
+    --clay: #C45C4A;
     --text: #EDE4D4;
     --body: #C9C3B6;
     --muted: #8F948C;
@@ -23,42 +27,80 @@
   }
   html { -webkit-text-size-adjust: 100%; }
   body { margin: 0; background: var(--bg); color: var(--body); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; }
+  img { max-width: 100%; height: auto; display: block; }
   a { color: var(--gold); text-underline-offset: 3px; }
   a:hover { color: #E6B838; }
   a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
   .skip { position: absolute; left: -9999px; }
   .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wide { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   header.site { border-bottom: 1px solid var(--rule); }
-  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; max-width: 1080px; }
   .brand { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
   nav.primary { display: flex; gap: 20px; font-size: 0.95rem; }
   nav.primary a { color: var(--body); text-decoration: none; }
   nav.primary a:hover, nav.primary a[aria-current="page"] { color: var(--gold); }
-  main { padding: 72px 0 64px; }
   h1, h2, h3 { font-family: var(--serif); color: var(--text); font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
   h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 0 0 16px; }
-  h2 { font-size: 1.5rem; margin: 48px 0 12px; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); margin: 0 0 14px; }
   h3 { font-size: 1.15rem; margin: 0 0 6px; }
   .eyebrow { color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px; }
   .tagline { font-family: var(--serif); font-size: 1.35rem; color: var(--body); margin: 0 0 32px; font-style: italic; }
   .lede { font-size: 1.15rem; max-width: 36em; }
-  .points { list-style: none; padding: 0; margin: 48px 0 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-  .points li { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px 22px 20px; }
-  .points li::before { content: ""; display: block; width: 28px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 14px; }
-  .points p { margin: 0; font-size: 0.98rem; }
-  .cta { margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .cta { margin: 32px 0 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .btn { display: inline-block; background: var(--gold); color: #0E1110; font-weight: 600; text-decoration: none; padding: 12px 22px; border-radius: 12px; }
   .btn:hover { background: #E6B838; color: #0E1110; }
   .note { color: var(--muted); font-size: 0.9rem; }
+
+  .hero { padding: 72px 0 0; }
+  .hero-shot { margin: 56px auto 0; max-width: 1080px; padding: 0 24px; }
+  .hero-shot img { border-radius: 18px; border: 1px solid var(--rule); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); }
+  .hero-shot figcaption { color: var(--muted); font-size: 0.9rem; text-align: center; margin-top: 14px; }
+
+  .features { padding: 96px 0 24px; }
+  .feature { display: grid; grid-template-columns: 1fr minmax(0, 320px); gap: 64px; align-items: center; padding: 56px 0; border-top: 1px solid var(--rule); }
+  .feature:first-child { border-top: 0; padding-top: 0; }
+  .feature:nth-child(even) { grid-template-columns: minmax(0, 320px) 1fr; }
+  .feature:nth-child(even) .copy { order: 2; }
+  .copy { max-width: 32em; }
+  .copy .eyebrow { margin-bottom: 10px; }
+  .copy p { margin: 0 0 14px; }
+  .copy ul { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .copy li { position: relative; padding-left: 22px; font-size: 0.98rem; }
+  .copy li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 10px; height: 3px; border-radius: 2px; background: var(--gold); }
+  .phone { margin: 0; justify-self: center; width: 100%; max-width: 320px; }
+  .phone img { border-radius: 34px; border: 1px solid var(--rule); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); }
+  .key { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+  .swatch.gold { background: var(--gold); }
+  .swatch.clay { background: transparent; border: 2px dashed var(--clay); }
+
+  .numbers { padding: 72px 0; border-top: 1px solid var(--rule); }
+  .stats { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .stats li { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; }
+  .stats strong { display: block; font-family: var(--serif); font-size: 2.4rem; color: var(--gold); line-height: 1.1; font-weight: 600; }
+  .stats span { font-size: 0.98rem; }
+  .fine { margin-top: 28px; color: var(--muted); font-size: 0.95rem; }
+
   footer.site { border-top: 1px solid var(--rule); padding: 32px 0 48px; font-size: 0.9rem; color: var(--muted); }
   footer.site nav { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 12px; }
   footer.site a { color: var(--body); text-decoration: none; }
   footer.site a:hover { color: var(--gold); }
   footer.site p { margin: 4px 0; }
+
+  @media (max-width: 760px) {
+    .feature, .feature:nth-child(even) { grid-template-columns: 1fr; gap: 32px; }
+    .feature:nth-child(even) .copy { order: 0; }
+    .phone { max-width: 280px; }
+    .features { padding-top: 72px; }
+  }
   @media (max-width: 520px) {
-    main { padding: 48px 0 40px; }
+    .hero { padding-top: 48px; }
     .tagline { font-size: 1.15rem; }
+    .hero-shot { margin-top: 40px; }
+    .hero-shot img { border-radius: 10px; }
+    .phone img { border-radius: 28px; }
   }
 </style>
 </head>
@@ -69,41 +111,137 @@
   <div class="wrap">
     <a class="brand" href="index.html">Afterbook</a>
     <nav class="primary" aria-label="Primary">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="#features">Features</a>
       <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <div class="wrap">
-    <p class="eyebrow">Chess opening plans for iPhone and iPad</p>
-    <h1>Stop memorizing. Start understanding.</h1>
-    <p class="tagline">Learn the fight, not the tree.</p>
-    <p class="lede">Afterbook shows you what an opening is fighting for: the squares that matter, the pieces that do the work, and the pawn break that decides the middlegame. Short lessons. Quizzes that ask "what is the break?", not "what is move 14?"</p>
-
-    <ul class="points">
-      <li>
-        <h3>Plans, not trees</h3>
-        <p>Each lesson teaches one idea on the board. When your opponent leaves the book, you still know the plan.</p>
-      </li>
-      <li>
-        <h3>A complete repertoire</h3>
-        <p>40 plan cards in 9 complete repertoire paths, plus 16 pawn structures you will meet again and again.</p>
-      </li>
-      <li>
-        <h3>Drills on ideas</h3>
-        <p>Spaced review asks about squares, breaks, and plans, so the ideas stay with you for the next game.</p>
-      </li>
-    </ul>
-
-    <div class="cta">
-      <!-- App Store badge placeholder. Replace with Apple's official badge and the app link once the app is live. -->
-      <a class="btn" href="support.html">Download on the App Store (coming soon)</a>
-      <span class="note">Every plan starts with a 7-day free trial.</span>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Chess opening plans for iPhone and iPad</p>
+      <h1>Stop memorizing. Start understanding.</h1>
+      <p class="tagline">Learn the fight, not the tree.</p>
+      <p class="lede">Afterbook shows you what an opening is fighting for: the squares that matter, the pieces that do the work, and the pawn break that decides the middlegame. Short lessons. Quizzes that ask "what is the break?", not "what is move 14?"</p>
+      <div class="cta">
+        <!-- App Store badge placeholder. Replace with Apple's official badge and the app link once the app is live. -->
+        <a class="btn" href="support.html">Download on the App Store (coming soon)</a>
+        <span class="note">Every plan starts with a 7-day free trial.</span>
+      </div>
     </div>
-  </div>
+    <figure class="hero-shot">
+      <img src="images/ipad-lesson.jpg" width="1600" height="1200" alt="Afterbook lesson on iPad. The board on the left paints the fight for d4 in the Italian Game, with attacker counts on each contested square. The plan on the right lists the goal, the phase, and each side's goals.">
+      <figcaption>A lesson on iPad: the board paints the fight, the plan sits beside it.</figcaption>
+    </figure>
+  </section>
+
+  <section class="features" id="features" aria-label="Features">
+    <div class="wide">
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">The painted board</p>
+          <h2>See the fight before the moves.</h2>
+          <p>Every lesson step shows one idea on the board. Contested squares glow, and each one carries a count of who attacks it, so "d4 must wait" is something you can see, not something you have to trust.</p>
+          <ul>
+            <li><span class="key"><span class="swatch gold" aria-hidden="true"></span>Gold and solid</span> is your plan.</li>
+            <li><span class="key"><span class="swatch clay" aria-hidden="true"></span>Clay and dashed</span> is your opponent's.</li>
+            <li>One idea per step, in a few short sentences.</li>
+          </ul>
+        </div>
+        <figure class="phone">
+          <img src="images/lesson.jpg" width="720" height="1564" loading="lazy" alt="Lesson step in the Italian Game. The squares d4, d5, and e4 are shaded with attacker counts such as W2 B1, and a lens tray below the board offers Plan, Structure, Squares, Lines, King, and Tension.">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">Board lenses</p>
+          <h2>Read the position like a coach.</h2>
+          <p>Switch lenses to look at the same position a different way. Structure draws pawn chains from base to head and marks half-open files. Squares finds holes and outposts. Lines, King, and Tension show open files, the king's shelter, and pawns about to trade.</p>
+          <ul>
+            <li>Look from your side, your opponent's, or both.</li>
+            <li>Fixed rules on the position. No engine, no score.</li>
+          </ul>
+        </div>
+        <figure class="phone">
+          <img src="images/structure-lens.jpg" width="720" height="1564" loading="lazy" alt="Structure lens on the Carlsbad structure. White's chain runs from base f2 to head d4 in gold, Black's chain runs from base b7 to head d5 in dashed clay, and file markers show the c-file half-open for White and the e-file half-open for Black.">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">Drills</p>
+          <h2>Drill the idea, not move 14.</h2>
+          <p>Quizzes ask what a strong player actually thinks about: tap the square both sides want, name the break, pick the critical piece, choose the plan. Get it right and the board paints the answer.</p>
+          <ul>
+            <li>Spaced review on ideas, so they come back right before you forget them.</li>
+            <li>Quick 5 fits in three minutes a day.</li>
+          </ul>
+        </div>
+        <figure class="phone">
+          <img src="images/drill.jpg" width="720" height="1564" loading="lazy" alt="Drill asking: Tap the square both sides are fighting for. The d4 square is highlighted in green and the feedback reads: That's the idea.">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">Structure library</p>
+          <h2>Every opening has a structure.</h2>
+          <p>Sixteen pawn structures you will meet again and again: the Carlsbad, the isolated queen's pawn, the French chain, the Hedgehog, and more. Each one shows its plans for both sides and the openings that reach it.</p>
+          <p>Learn a structure once and you already know the plan in several openings.</p>
+        </div>
+        <figure class="phone">
+          <img src="images/structures.jpg" width="720" height="1564" loading="lazy" alt="Structure library grid showing pawn skeletons for the Carlsbad, Caro-Kann advance chain, Caro-Kann classical, and Closed Sicilian, each with a one-line plan.">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">Compare structures</p>
+          <h2>One pawn changes the plan.</h2>
+          <p>Put two structures side by side and Afterbook points at the pawns that differ, then shows what that does to each file and to the tension in the center. The Carlsbad and the Slav triangle look alike; the plans do not.</p>
+        </div>
+        <figure class="phone">
+          <img src="images/compare.jpg" width="720" height="1564" loading="lazy" alt="Compare structures screen with the Carlsbad and Slav triangle pawn skeletons side by side. The differing pawns c4 and e6 are circled, and a table compares the c-file, the e-file, and tension.">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="copy">
+          <p class="eyebrow">Repertoire</p>
+          <h2>A repertoire with no holes.</h2>
+          <p>Pick an answer to 1.e4, 1.d4, and the rest. Each path is a complete set of lessons, and its coverage map shows the reply you will meet at the club and the lesson that answers it.</p>
+          <ul>
+            <li>Mastery rings show how well each opening has stuck.</li>
+            <li>Every common reply has an answer in the path.</li>
+          </ul>
+        </div>
+        <figure class="phone">
+          <img src="images/coverage-map.jpg" width="720" height="1564" loading="lazy" alt="Caro-Kann repertoire path with four lessons and a coverage map. It reads: Every reply below has an answer in this path. They play 2.d4 maps to Caro-Kann Classical, 3.Nc3 to Caro-Kann Classical, and 3.e5 to Caro-Kann Advance.">
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="numbers" aria-labelledby="numbers-title">
+    <div class="wrap">
+      <h2 id="numbers-title">A complete, small repertoire you understand.</h2>
+      <ul class="stats">
+        <li><strong>40</strong><span>plan cards, each built around one tabia</span></li>
+        <li><strong>9</strong><span>complete repertoire paths for White and Black</span></li>
+        <li><strong>16</strong><span>pawn structures with plans for both sides</span></li>
+      </ul>
+      <p class="fine">Works offline. No account. No ads. Built for iPhone and iPad, with the board on the left and the plan on the right when there is room.</p>
+      <div class="cta">
+        <a class="btn" href="support.html">Download on the App Store (coming soon)</a>
+        <span class="note">Every plan starts with a 7-day free trial.</span>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site">
@@ -113,6 +251,7 @@
       <a href="terms.html">Terms</a>
       <a href="support.html">Support</a>
     </nav>
+    <p>Screens shown are captures of the running app.</p>
     <p>Opening names from the Lichess chess-openings database (CC0).</p>
     <p>&copy; 2026 Making Things LLC</p>
   </div>
