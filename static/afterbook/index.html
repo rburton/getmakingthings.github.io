@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afterbook | Chess opening plans</title>
+<meta name="description" content="Afterbook teaches chess openings as plans, pawn structures, and board fights, not move trees. For iPhone and iPad.">
+<meta name="theme-color" content="#0E1110">
+<meta name="color-scheme" content="dark">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #0E1110;
+    --surface: #171C19;
+    --rule: #26302A;
+    --gold: #D4A017;
+    --plan: #3D8B5F;
+    --text: #EDE4D4;
+    --body: #C9C3B6;
+    --muted: #8F948C;
+    --serif: "New York", ui-serif, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--body); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; }
+  a { color: var(--gold); text-underline-offset: 3px; }
+  a:hover { color: #E6B838; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header.site { border-bottom: 1px solid var(--rule); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+  .brand { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
+  nav.primary { display: flex; gap: 20px; font-size: 0.95rem; }
+  nav.primary a { color: var(--body); text-decoration: none; }
+  nav.primary a:hover, nav.primary a[aria-current="page"] { color: var(--gold); }
+  main { padding: 72px 0 64px; }
+  h1, h2, h3 { font-family: var(--serif); color: var(--text); font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: 0 0 16px; }
+  h2 { font-size: 1.5rem; margin: 48px 0 12px; }
+  h3 { font-size: 1.15rem; margin: 0 0 6px; }
+  .eyebrow { color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px; }
+  .tagline { font-family: var(--serif); font-size: 1.35rem; color: var(--body); margin: 0 0 32px; font-style: italic; }
+  .lede { font-size: 1.15rem; max-width: 36em; }
+  .points { list-style: none; padding: 0; margin: 48px 0 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .points li { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px 22px 20px; }
+  .points li::before { content: ""; display: block; width: 28px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 14px; }
+  .points p { margin: 0; font-size: 0.98rem; }
+  .cta { margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-block; background: var(--gold); color: #0E1110; font-weight: 600; text-decoration: none; padding: 12px 22px; border-radius: 12px; }
+  .btn:hover { background: #E6B838; color: #0E1110; }
+  .note { color: var(--muted); font-size: 0.9rem; }
+  footer.site { border-top: 1px solid var(--rule); padding: 32px 0 48px; font-size: 0.9rem; color: var(--muted); }
+  footer.site nav { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 12px; }
+  footer.site a { color: var(--body); text-decoration: none; }
+  footer.site a:hover { color: var(--gold); }
+  footer.site p { margin: 4px 0; }
+  @media (max-width: 520px) {
+    main { padding: 48px 0 40px; }
+    .tagline { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Afterbook</a>
+    <nav class="primary" aria-label="Primary">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="eyebrow">Chess opening plans for iPhone and iPad</p>
+    <h1>Stop memorizing. Start understanding.</h1>
+    <p class="tagline">Learn the fight, not the tree.</p>
+    <p class="lede">Afterbook shows you what an opening is fighting for: the squares that matter, the pieces that do the work, and the pawn break that decides the middlegame. Short lessons. Quizzes that ask "what is the break?", not "what is move 14?"</p>
+
+    <ul class="points">
+      <li>
+        <h3>Plans, not trees</h3>
+        <p>Each lesson teaches one idea on the board. When your opponent leaves the book, you still know the plan.</p>
+      </li>
+      <li>
+        <h3>A complete repertoire</h3>
+        <p>40 plan cards in 9 complete repertoire paths, plus 16 pawn structures you will meet again and again.</p>
+      </li>
+      <li>
+        <h3>Drills on ideas</h3>
+        <p>Spaced review asks about squares, breaks, and plans, so the ideas stay with you for the next game.</p>
+      </li>
+    </ul>
+
+    <div class="cta">
+      <!-- App Store badge placeholder. Replace with Apple's official badge and the app link once the app is live. -->
+      <a class="btn" href="support.html">Download on the App Store (coming soon)</a>
+      <span class="note">Every plan starts with a 7-day free trial.</span>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <p>Opening names from the Lichess chess-openings database (CC0).</p>
+    <p>&copy; 2026 Making Things LLC</p>
+  </div>
+</footer>
+</body>
+</html>
