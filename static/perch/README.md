@@ -5,8 +5,8 @@ no analytics: three HTML files, one stylesheet, three icons and six screenshots.
 
 ```
 index.html      Home: what Perch does, the four screens, filters, cities, privacy summary.
-                Says Perch is in testing; swap in an App Store link once it is public
-                (app ID 6811679793)
+                The hero links to https://apps.apple.com/app/id6811679793 (app ID
+                6811679793); that link 404s until the app is approved and public
 assets/img/*.jpg  iPhone 17 Pro Max simulator captures (iOS 26.5), 1320x2868 scaled to 736x1600
                 by AppStoreScreenshotsUITests in the Perch repo
 privacy.html    Privacy policy (App Store Connect: privacyPolicyUrl)
@@ -35,7 +35,7 @@ Drawn from `docs/REQUIREMENTS.md` §6 and the in-app Privacy Policy
 - **Location** is While Using only. It goes to Apple for the travel estimate on a place's page,
   and never to the catalog host. ZIP search goes to Apple's geocoder.
 - **The catalog request** carries a city file name and nothing else.
-- **25 cities**, all cafés. The count comes from `Perch/Resource/index.json`.
+- **27 cities, 1,436 places**, all cafés. Both counts come from `Perch/Resource/index.json`.
 - **Company**: Making Things LLC, support+perch@getmakingthings.com.
 
 ## Before it goes live
