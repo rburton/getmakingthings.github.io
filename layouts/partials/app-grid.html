@@ -1,0 +1,17 @@
+<ul class="app-grid">
+  {{ range site.Data.apps }}
+    <li>
+      <a href="{{ .url }}" class="app-card">
+        {{ with .icon }}
+          <img src="{{ . }}" alt="" class="app-card__icon" width="64" height="64" loading="lazy">
+        {{ else }}
+          <span class="app-card__icon app-card__icon--fallback" style="background: {{ .color | safeCSS }}" aria-hidden="true">{{ substr .name 0 1 }}</span>
+        {{ end }}
+        <span class="app-card__body">
+          <span class="app-card__name">{{ .name }}{{ if .kids }} <span class="tag">For kids</span>{{ end }}</span>
+          <span class="app-card__tagline">{{ .tagline }}</span>
+        </span>
+      </a>
+    </li>
+  {{ end }}
+</ul>

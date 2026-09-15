@@ -1,10 +1,177 @@
 {{ define "main" }}
 <section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__title">{{ .Site.Title }}</h1>
-    <p class="hero__tagline">{{ .Site.Params.tagline }}</p>
-    <a href="/apps/" class="hero__cta">See Our Apps</a>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>A family company that makes software</p>
+      <h1 class="hero__title">Software made with care, for the people <span class="hero__highlight">you love.</span></h1>
+      <p class="hero__lede">Making Things is one person, a laptop and a family full of ideas. We build apps we would happily hand to the girls in our family, and we hold every one of them to that standard.</p>
+      <div class="hero__actions">
+        <a href="#promise" class="btn btn--primary">Our promise to families</a>
+        <a href="#apps" class="btn btn--ghost">See our apps</a>
+      </div>
+      <ul class="hero__chips" aria-label="Our commitments">
+        <li>We never sell your data</li>
+        <li>No tracking in kids' apps</li>
+        <li>Children before growth</li>
+      </ul>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 440 420" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="330" cy="92" r="46" fill="#F4B63F"/>
+        <circle cx="330" cy="92" r="64" fill="none" stroke="#F4B63F" stroke-width="3" stroke-dasharray="4 14" stroke-linecap="round"/>
+        <ellipse cx="220" cy="372" rx="190" ry="20" fill="#EFE3D0"/>
+        <path d="M150 104 L262 206 H38 Z" fill="#E9604A" stroke="#E9604A" stroke-width="18" stroke-linejoin="round"/>
+        <path d="M32 26 C26 22 24.5 19.5 24.5 17.3 C24.5 15 26.3 13.4 28.3 13.4 C30 13.4 31.3 14.4 32 15.8 C32.7 14.4 34 13.4 35.7 13.4 C37.7 13.4 39.5 15 39.5 17.3 C39.5 19.5 38 22 32 26Z" fill="#FFF8EE" transform="translate(150 158) scale(4.6) translate(-32 -19.7)"/>
+        <rect x="42" y="230" width="146" height="140" rx="22" fill="#243B6B"/>
+        <rect x="92" y="290" width="46" height="80" rx="16" fill="#FFF8EE"/>
+        <rect x="214" y="276" width="94" height="94" rx="18" fill="#F4B63F"/>
+        <rect x="236" y="298" width="50" height="50" rx="25" fill="#FFF8EE" opacity=".55"/>
+        <rect x="324" y="250" width="80" height="120" rx="40" fill="#7FB08F"/>
+        <rect x="240" y="196" width="60" height="60" rx="14" fill="#8FC1E3" transform="rotate(-12 270 226)"/>
+        <path d="M384 190 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" fill="#E9604A"/>
+        <path d="M60 60 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#8FC1E3"/>
+      </svg>
+    </div>
   </div>
-  <div class="hero__accent" aria-hidden="true"></div>
+</section>
+
+<section id="promise" class="section promise">
+  <div class="container">
+    <header class="section__header">
+      <p class="eyebrow">Our promise for children's apps</p>
+      <h2 class="section__title">Child safety is our priority.</h2>
+      <p class="section__lede">When we make software for children, safety is never a feature we add later. It is the first decision we make, and every other decision follows from it.</p>
+    </header>
+    <ul class="promise__grid">
+      <li class="card card--coral">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+        <h3>Safe by design</h3>
+        <p>No chatting with strangers, no ads, no links out to the open web, and no surprises. Every screen is one we are comfortable watching the girls in our family use.</p>
+      </li>
+      <li class="card card--sun">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 6.5C6.5 5 9.5 5 12 6.5 14.5 5 17.5 5 20 6.5V19c-2.5-1.5-5.5-1.5-8 0-2.5-1.5-5.5-1.5-8 0z"/><path d="M12 6.5V19"/></svg>
+        </span>
+        <h3>Truly educational</h3>
+        <p>Learning through play, at a child's own pace. We praise effort over perfection and design for real understanding, not more screen time.</p>
+      </li>
+      <li class="card card--sage">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>
+        </span>
+        <h3>On device</h3>
+        <p>The learning happens on the device in your hands. Our children's apps keep a child's work on that device and keep working without an internet connection.</p>
+      </li>
+      <li class="card card--sky">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>
+        </span>
+        <h3>Privacy first</h3>
+        <p>Our children's apps have no analytics, no tracking and no accounts for kids. A child's privacy and safety always come before growth.</p>
+      </li>
+    </ul>
+    <div class="pledge">
+      <p class="pledge__big">In our apps for children: no analytics, no tracking, no ads.</p>
+      <p class="pledge__small">What your child does in our apps stays with your child. Their privacy and safety come before growth, every time.</p>
+      <p class="pledge__note">Across every app we make, for kids or grown ups, we never sell your data. In some apps for adults we may use analytics, only to understand what to improve.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section family">
+  <div class="container family__inner">
+    <div class="family__intro">
+      <p class="eyebrow">Who we are</p>
+      <h2 class="section__title">A family company, first and always.</h2>
+      <p class="section__lede">Our ideas come from around the family table: Grandmom, my brother, his two girls, and a few random ideas of my own. Then one person brings them to life from a coffee shop. The girls are our first testers and toughest critics, and every app starts with one question: would we put this in front of them?</p>
+    </div>
+    <ul class="family__values">
+      <li class="value">
+        <span class="value__badge value__badge--coral" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 20c-5.5-3.6-8.5-6.9-8.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 8.5 2.6C20.5 13.1 17.5 16.4 12 20z"/></svg>
+        </span>
+        <div>
+          <h3>Passionate about family</h3>
+          <p>Family is why we do this. We want software that gives families more good time together, not software that pulls them apart.</p>
+        </div>
+      </li>
+      <li class="value">
+        <span class="value__badge value__badge--navy" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8.5 8L4 12l4.5 4"/><path d="M15.5 8L20 12l-4.5 4"/><path d="M13.5 5.5l-3 13"/></svg>
+        </span>
+        <div>
+          <h3>Passionate about software</h3>
+          <p>We love making things. We sweat the details, from the first tap to the last pixel, because well made software is a joy to use at any age.</p>
+        </div>
+      </li>
+      <li class="value">
+        <span class="value__badge value__badge--sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="10" r="2.2"/><path d="M3.5 19c.5-3.2 2.5-5 5-5s4.5 1.8 5 5"/><path d="M13.5 15.2c.9-.8 1.9-1.2 3-1.2 2 0 3.5 1.5 4 5"/></svg>
+        </span>
+        <div>
+          <h3>Made to be shared</h3>
+          <p>Many of our apps are made to be enjoyed side by side, with a parent and child reading, learning and laughing together.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section ai">
+  <div class="container">
+    <header class="section__header">
+      <p class="eyebrow eyebrow--light">Responsible AI</p>
+      <h2 class="section__title">We use AI thoughtfully, and only where it truly helps.</h2>
+      <p class="section__lede">AI can make software kinder, smarter and more helpful. It can also be careless. We aim to use it responsibly, with families in mind at every step.</p>
+    </header>
+    <ul class="ai__grid">
+      <li class="ai__item">
+        <span class="ai__num">01</span>
+        <h3>Helpful, not hype</h3>
+        <p>We only reach for AI when it makes an app genuinely better for the person using it, never as a gimmick.</p>
+      </li>
+      <li class="ai__item">
+        <span class="ai__num">02</span>
+        <h3>On device where we can</h3>
+        <p>Wherever possible, AI features run on your device, so personal information never needs to leave it.</p>
+      </li>
+      <li class="ai__item">
+        <span class="ai__num">03</span>
+        <h3>Your family is not training data</h3>
+        <p>We do not use your family's data, and especially not your child's, to train AI models.</p>
+      </li>
+      <li class="ai__item">
+        <span class="ai__num">04</span>
+        <h3>People stay in charge</h3>
+        <p>We design AI features to be clear, predictable and age appropriate, with grown ups firmly in control.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="apps" class="section apps">
+  <div class="container">
+    <header class="section__header section__header--row">
+      <div>
+        <p class="eyebrow">Our apps</p>
+        <h2 class="section__title">Things we have made.</h2>
+      </div>
+      <a href="/apps/" class="btn btn--ghost">All apps</a>
+    </header>
+    {{ partial "app-grid.html" . }}
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="container">
+    <div class="cta__card">
+      <img src="/images/logo-mark.svg" alt="" width="72" height="72" class="cta__mark">
+      <h2 class="section__title">A question from a parent?</h2>
+      <p class="section__lede">We are a family too, and we read every email. Ask us anything about how our apps work or how we look after your child's privacy.</p>
+      <a href="mailto:{{ .Site.Params.email }}" class="btn btn--primary">Write to us</a>
+    </div>
+  </div>
 </section>
 {{ end }}

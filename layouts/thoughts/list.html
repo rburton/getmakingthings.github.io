@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="page thoughts">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <p class="eyebrow">Thoughts</p>
+      <h1 class="section__title">Notes from the family table.</h1>
+      {{ with .Description }}<p class="section__lede">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ $posts := .Pages.ByDate.Reverse }}
+    {{ if $posts }}
+      <ul class="post-list">
+        {{ range $posts }}
+          <li>
+            <a href="{{ .RelPermalink }}" class="post-card">
+              <span class="post-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <span aria-hidden="true">&middot;</span>
+                <span>{{ .ReadingTime }} min read</span>
+              </span>
+              <span class="post-card__title">{{ .Title }}</span>
+              <span class="post-card__summary">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 180 }}{{ end }}</span>
+              <span class="post-card__more">Read more <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <div class="empty-state">
+        <img src="/images/logo-mark.svg" alt="" width="64" height="64">
+        <h2>The first thought is brewing.</h2>
+        <p>We are still writing. Check back soon for notes on building apps for families.</p>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,11 +1,14 @@
 {{ define "main" }}
-<article class="about-page">
-  <header class="about-page__header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="about-page__intro">{{ . }}</p>{{ end }}
-  </header>
-  <div class="prose">
-    {{ .Content }}
+<article class="page">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <p class="eyebrow">About us</p>
+      <h1 class="section__title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="section__lede">{{ . }}</p>{{ end }}
+    </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
   </div>
 </article>
 {{ end }}

@@ -3,27 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.tagline }}{{ end }}">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
-  <nav class="site-nav">
-    <a href="/" class="site-nav__logo"><img src="/images/logo.png" alt="Making Things" class="site-nav__logo-img" width="28" height="28"><span>Making Things</span></a>
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="site-nav__link{{ if $.IsMenuCurrent "main" . }} site-nav__link--active{{ end }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main">
+      <a href="/" class="brand" aria-label="Making Things home">
+        <img src="/images/logo-mark.svg" alt="" class="brand__mark" width="40" height="40">
+        <span class="brand__name">Making Things</span>
+      </a>
+      <div class="site-nav__links">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="site-nav__link{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__link--active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </nav>
+  </header>
   <main id="main">
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
-    <p><a href="mailto:{{ .Site.Params.email }}">Contact</a></p>
-    <p>&copy; {{ now.Year }} {{ .Site.Params.company }}</p>
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="/" class="brand" aria-label="Making Things home">
+          <img src="/images/logo-mark.svg" alt="" class="brand__mark" width="36" height="36">
+          <span class="brand__name">Making Things</span>
+        </a>
+        <p>A family company making safe, thoughtful software.</p>
+      </div>
+      <ul class="site-footer__links">
+        <li><a href="/#promise">Our promise</a></li>
+        <li><a href="/apps/">Apps</a></li>
+        <li><a href="/thoughts/">Thoughts</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="mailto:{{ .Site.Params.email }}">Contact</a></li>
+      </ul>
+    </div>
+    <p class="container site-footer__legal">&copy; {{ now.Year }} {{ .Site.Params.company }}. Made with love by a family, for families.</p>
   </footer>
 </body>
 </html>

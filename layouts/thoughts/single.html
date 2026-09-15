@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="page post">
+  <div class="container container--narrow">
+    <nav class="breadcrumb">
+      <a href="{{ .Parent.RelPermalink }}">&larr; All thoughts</a>
+    </nav>
+    <header class="post__header">
+      <p class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </p>
+      <h1 class="post__title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="section__lede">{{ . }}</p>{{ end }}
+      {{ with .Params.tags }}
+        <ul class="post__tags">
+          {{ range . }}<li class="tag tag--soft">{{ . }}</li>{{ end }}
+        </ul>
+      {{ end }}
+    </header>
+
+    <div class="prose post__body">
+      {{ .Content }}
+    </div>
+
+    {{ if or .PrevInSection .NextInSection }}
+      <nav class="post__nav" aria-label="More thoughts">
+        {{ with .NextInSection }}
+          <a href="{{ .RelPermalink }}" class="post__nav-link">
+            <span class="post-meta">Newer</span>
+            <span class="post__nav-title">{{ .Title }}</span>
+          </a>
+        {{ end }}
+        {{ with .PrevInSection }}
+          <a href="{{ .RelPermalink }}" class="post__nav-link post__nav-link--older">
+            <span class="post-meta">Older</span>
+            <span class="post__nav-title">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </nav>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

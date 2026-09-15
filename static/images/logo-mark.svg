@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Making Things</title>
+  <path d="M32 8 L55 29 H9 Z" fill="#E9604A" stroke="#E9604A" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M32 26 C26 22 24.5 19.5 24.5 17.3 C24.5 15 26.3 13.4 28.3 13.4 C30 13.4 31.3 14.4 32 15.8 C32.7 14.4 34 13.4 35.7 13.4 C37.7 13.4 39.5 15 39.5 17.3 C39.5 19.5 38 22 32 26Z" fill="#FFF8EE"/>
+  <rect x="8" y="35" width="27" height="22" rx="5" fill="#243B6B"/>
+  <rect x="39" y="43" width="17" height="14" rx="4" fill="#F4B63F"/>
+</svg>

@@ -3,15 +3,23 @@ languageCode = 'en-us'
 title = 'Making Things LLC'
 
 [params]
-  tagline = 'We build iOS apps people love to use.'
+  tagline = 'A family company making safe, private, thoughtful software. Child safety is our priority.'
   company = 'Making Things LLC'
   email = 'support@getmakingthings.com'
 
 [menus]
   [[menus.main]]
+    name = 'Our promise'
+    url = '/#promise'
+    weight = 5
+  [[menus.main]]
     name = 'Apps'
     pageRef = '/apps'
     weight = 10
+  [[menus.main]]
+    name = 'Thoughts'
+    pageRef = '/thoughts'
+    weight = 15
   [[menus.main]]
     name = 'About'
     pageRef = '/about'

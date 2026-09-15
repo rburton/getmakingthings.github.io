@@ -1,0 +1,8 @@
+# Apps shown on the homepage and the /apps/ listing.
+# kids: true marks apps made for children.
+- name: Wobbly
+  url: /wobbly/
+  icon: /wobbly/assets/app-icon-light.png
+  tagline: Learn to write, read and count, for ages 3 to 8.
+  color: "#7FB08F"
+  kids: true
