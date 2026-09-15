@@ -1,2 +1,19 @@
+# Hugo build output (built by GitHub Actions on deploy)
+/public/
+/resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# macOS
 .DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local notes
 CLAUDE.md
+.claude/
