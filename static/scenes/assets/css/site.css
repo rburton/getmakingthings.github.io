@@ -371,6 +371,24 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 
 .shot img { border-radius: clamp(1.3rem, 4.2vw, 2rem); }
 
+/* A watch capture in a watch-shaped frame. The captures are 416x496 native, which
+   is the Series 11 46mm display, so the corner radius is given as a percentage. */
+.watch-shot {
+  border: 1px solid var(--line-strong);
+  border-radius: 27% / 23%;
+  overflow: hidden;
+  background: #000;
+  padding: 5px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
+  max-width: 13rem;
+  margin-inline: auto;
+}
+
+.watch-shot img { border-radius: 25% / 21%; }
+
+/* Watch screens are shorter and narrower than phone ones, so the strip is tighter. */
+.screens.narrow figure { width: min(11rem, 42vw); }
+
 /* Lists ----------------------------------------------------------------- */
 
 .ticks {

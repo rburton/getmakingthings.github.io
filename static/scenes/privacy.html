@@ -36,7 +36,7 @@
   </div>
 
   <h2>1. Who this covers</h2>
-  <p>This policy covers the Scenes iPhone app, its widgets, its Control Center controls and its App Intents, all published by Making Things LLC ("we", "us"). It also covers this website.</p>
+  <p>This policy covers the Scenes iPhone app, its widgets, its Control Center controls, its App Intents and the Scenes app for Apple Watch, all published by Making Things LLC ("we", "us"). It also covers this website.</p>
 
   <h2>2. No account, no profile</h2>
   <p>Scenes has no sign-up, no login, no email capture and no user profile. We do not know who you are, and we have no way to link the app to you. Your App Store purchase is handled by Apple under your Apple Account, and we never see your Apple Account, your name, your email address or your payment details.</p>
@@ -52,6 +52,10 @@
     <li>A small snapshot file that lets widgets, controls and the Live Activity draw the current scene without launching the app.</li>
   </ul>
   <p>None of it is sent to us. There is no Scenes server to send it to.</p>
+
+  <h3>The Apple Watch app</h3>
+  <p>The watch keeps its own copy of two small files: the snapshot of the current scene, and the rollup of today, which is what the Today screen on the watch draws. Your iPhone sends them over Apple's WatchConnectivity, a direct local link between two devices you own. It uses no server of ours, no iCloud and no internet connection, and nothing on the watch goes anywhere else. Buttons on the watch send back a short command, and your iPhone does the work. Delete the watch app and its copy goes with it.</p>
+  <p>When a gym, walk, run or meditation scene is live, the watch can run the workout session itself, because it is the device wearing the sensor. Heart rate, distance and energy are then measured by the watch. The rule below does not change: what is read is shown while the scene is live and then discarded. The workout is saved to Health once, by whichever device ran the session, so you never get two copies of the same walk.</p>
 
   <h2>4. iCloud sync</h2>
   <p>If you turn on sync, the data above is stored in your <strong>private CloudKit database</strong>, inside your own iCloud account, so your devices can agree with each other. Apple encrypts it and we cannot read it, list it, or recover it for you. Its handling is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
@@ -77,7 +81,7 @@
       </tr>
       <tr>
         <td>Health</td>
-        <td>Only if you open a walk, run, meditation or gym scene and choose to connect it</td>
+        <td>Only if you open a walk, run, meditation or gym scene, on either device, and choose to connect it</td>
         <td>Reading: workouts, workout effort, mindful minutes, and, if you allow it, heart rate, steps, distance and active energy for the minutes your session ran. Writing: the workout itself, an effort score, mindful minutes, and a State of Mind entry if you log a mood.</td>
       </tr>
       <tr>

@@ -29,9 +29,9 @@
 <div class="wrap prose">
 
   <h1>Support</h1>
-  <p class="stamp">Scenes for iPhone. Making Things LLC.</p>
+  <p class="stamp">Scenes for iPhone and Apple Watch. Making Things LLC.</p>
 
-  <p class="lede">Write to <a href="mailto:support+scenes@getmakingthings.com">support+scenes@getmakingthings.com</a>. A person reads it, usually within two business days. Tell us your iPhone model, your iOS version and what you expected to happen; a screenshot or a Settings export helps more than anything else.</p>
+  <p class="lede">Write to <a href="mailto:support+scenes@getmakingthings.com">support+scenes@getmakingthings.com</a>. A person reads it, usually within two business days. Tell us your iPhone model, your iOS version, your watchOS version if it is about the watch, and what you expected to happen; a screenshot or a Settings export helps more than anything else.</p>
 
   <p><a class="btn btn-primary" href="mailto:support+scenes@getmakingthings.com">Email support</a></p>
 
@@ -49,6 +49,16 @@
 
   <h2>A reminder did not go off, or went off when I had already done it</h2>
   <p>Scenes arms one alarm at a time, for the next occurrence only. If you have already run that scene today, the reminder stands down for the day and re-arms for the next one. Nothing about it is scored, so a skipped day costs you nothing.</p>
+
+  <h2>The watch app</h2>
+  <p>Scenes for Apple Watch installs alongside the iPhone app and is covered by the same subscription. If it is not on your watch, open the Watch app on your iPhone, scroll to Available Apps and install Scenes. It needs watchOS 26.5.</p>
+  <ul>
+    <li><strong>Adding a complication.</strong> As on the phone, no app may put itself on your watch face. Touch and hold the face, tap Edit, swipe to the complications, tap one and choose Scenes. The rectangular one is also the Smart Stack card.</li>
+    <li><strong>It says "Will sync".</strong> Your iPhone is out of range. Nothing is lost: the countdown keeps running, because the end time is absolute, and whatever you tapped is applied in order as soon as the phone is back.</li>
+    <li><strong>It says "Scenes is on your iPhone".</strong> The watch has not been told about an active subscription yet. Open Scenes on the phone once, with the watch nearby. There is no purchase on the watch by design.</li>
+    <li><strong>It says a habit needs your phone.</strong> Walks, runs and meditations start on the watch alone. Deep Work, Errands and Gym change lists the phone owns, so the phone has to be in range for those.</li>
+    <li><strong>One alert, one device.</strong> The watch app never schedules an alert of its own. The end of a block or a rest set rings on the phone and is forwarded to your wrist the usual way.</li>
+  </ul>
 
   <h2>Managing your subscription</h2>
   <ul>
@@ -81,6 +91,7 @@
     <li><strong>Location is When In Use only</strong>, requested on the first errand stop that has an address, and used only to show the distance to that stop. Never "Always", never background tracking.</li>
     <li><strong>AlarmKit is used</strong> so a focus block, a rest set or a reminder can ring while the phone is on silent.</li>
     <li><strong>The system surfaces render from a shared snapshot.</strong> Live Activities, widgets and Control Center controls draw from a small file in the app group, so they stay correct without the app running.</li>
+    <li><strong>The Apple Watch app is embedded in this submission.</strong> One binary, one version, one subscription. It sells nothing: with no active subscription it shows a single screen reading "Scenes is on your iPhone", with no price and nothing to tap. On watchOS, HealthKit is used only for a live workout session while a gym, walk, run or meditation scene is live, and what it reads is displayed and discarded.</li>
     <li><strong>No accounts, no tracking, no third-party SDKs.</strong> The app is Data Not Collected, and shows no App Tracking Transparency prompt because it tracks nothing.</li>
   </ol>
 

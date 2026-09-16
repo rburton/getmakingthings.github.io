@@ -1,24 +1,27 @@
 # Scenes website
 
-A static marketing and legal site for the Scenes iPhone app. No build step, no JavaScript, no
-cookies, no analytics: four HTML files, one stylesheet and five images. Open `index.html` in a
-browser, or serve the folder with `python3 -m http.server` to click through it.
+A static marketing and legal site for the Scenes app for iPhone and Apple Watch. No build step, no
+JavaScript, no cookies, no analytics: four HTML files, one stylesheet and ten images. Open
+`index.html` in a browser, or serve the folder with `python3 -m http.server` to click through it.
 
 ```
 index.html      Marketing: the problem, the one-live-scene rule, the scenes, the surfaces,
-                the record, privacy summary, pricing, FAQ
+                the Apple Watch app (#watch), the record, privacy summary, pricing, FAQ
 privacy.html    Privacy policy (App Store Connect: privacyPolicyUrl)
 terms.html      Terms of use, including the subscription and billing terms
 support.html    Support answers, plus a "For App Review" section at #app-review
 assets/css/site.css
-assets/img/     Real iPhone 17 Pro simulator screenshots (iOS 26.5), plus the app icon
+assets/img/     Real iPhone 17 Pro simulator screenshots (iOS 26.5) and real Apple Watch
+                Series 11 46mm simulator screenshots (watchOS 26.5), plus the app icon
 assets/favicon.png, assets/apple-touch-icon.png   Both cut from the shipping app icon
 ```
 
 Every image is a real capture from the app running in the simulator, not a mockup, and every
 `<img>` carries its true `width`/`height` with `height: auto` in CSS, so nothing is ever stretched.
-The screenshots are 736x1600 (the 1206x2622 device capture scaled by an exact factor), displayed at
-roughly 230 to 310 CSS pixels wide, so they stay sharp on retina without shipping 1.4 MB each.
+The phone screenshots are 736x1600 (the 1206x2622 device capture scaled by an exact factor),
+displayed at roughly 230 to 310 CSS pixels wide, so they stay sharp on retina without shipping
+1.4 MB each. The five watch screenshots are 416x496, which is the Series 11 46mm display at native
+resolution, displayed at about 176 CSS pixels wide and so already better than 2x.
 
 ## Regenerating the screenshots
 
@@ -57,6 +60,45 @@ Which argument set produced which file:
 | `week.jpg` | `--ui-testing --demo --metrics-demo --open scenes://week` |
 | `reminders.jpg` | `--ui-testing --demo --reminders-demo --open scenes://reminders` |
 
+## Regenerating the watch screenshots
+
+The watch app is a separate scheme and a separate simulator. `35B68244-1E02-4D23-BDD3-4863E35894A0`
+is the watchOS 26.5 "Apple Watch Series 11 (46mm)"; its capture is 416x496, which is exactly what
+the page ships. The launch arguments are the `--watch-demo` set in the root `CLAUDE.md`.
+
+```bash
+export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+WSIM=35B68244-1E02-4D23-BDD3-4863E35894A0
+xcrun simctl boot $WSIM
+xcodebuild build -project ../Scenes.xcodeproj -scheme ScenesWatch \
+  -destination "generic/platform=watchOS Simulator" -derivedDataPath /tmp/scenes-watch-dd -quiet
+xcrun simctl install $WSIM /tmp/scenes-watch-dd/Build/Products/Debug-watchsimulator/ScenesWatch.app
+
+xcrun simctl terminate $WSIM com.getmakingthings.Scenes.watchkitapp
+xcrun simctl launch $WSIM com.getmakingthings.Scenes.watchkitapp \
+  --watch-demo --watch-demo-variant deep-work
+sleep 5    # the first frame is a spinner
+xcrun simctl io $WSIM screenshot deepwork.png
+sips -s format jpeg -s formatOptions 88 deepwork.png --out assets/img/watch-deepwork.jpg
+```
+
+**`simctl status_bar override` does not work on a watchOS simulator** (POSIX error 45), so the
+watch clock cannot be set to 9:41 the way the phone's is. It shows the Mac's real time. Capture all
+five inside the same minute or the row disagrees with itself: wait for `date +%S` to roll over,
+then take them back to back. The five together take about 27 seconds.
+
+| File | Launch arguments (after `--watch-demo`) |
+|---|---|
+| `watch-deepwork.jpg` | `--watch-demo-variant deep-work` |
+| `watch-gym.jpg` | `--watch-demo-variant gym-rest` |
+| `watch-errands.jpg` | `--watch-demo-variant errands` |
+| `watch-switch.jpg` | `--watch-demo-variant deep-work --watch-demo-screen switch` |
+| `watch-today.jpg` | `--watch-demo-variant deep-work --watch-demo-screen today` |
+
+There is no capture of a complication or the Smart Stack card: reaching either needs input on the
+watch face, and nothing on the CLI can drive a watch simulator's crown or touch screen. The copy
+describes them instead of showing them.
+
 The icons are cut from the shipping app icon, so they change only when it does:
 
 ```bash
@@ -73,7 +115,16 @@ shipped code. If any of these change, the site has to change with them:
 
 - **Subscription only.** No free tier, no scene cap, no gated feature (PRD §11). Weekly $1.49,
   monthly $2.99, annual $19.99, 7-day trial granted once per subscription group (PRD §13).
-- **Minimum iOS 26.5**, iPhone only.
+- **Minimum iOS 26.5 and watchOS 26.5.** The Apple Watch app is embedded in the iPhone app: one
+  download, one submission, one subscription, no separate purchase (`docs/applewatch/architecture.md`
+  §2). There is no Mac app.
+- **What the watch can do alone**: walking, running and meditation start with no phone in range;
+  Deep Work, Errands and Gym do not, because they mutate lists the phone owns
+  (`ScenesWatch/ScenesList/PhoneFreeScenes.swift`). Nothing is sold on the watch, and a
+  non-subscriber sees one screen reading "Scenes is on your iPhone" (`docs/applewatch/spec.md` §4.9).
+- **The watch link is local.** WatchConnectivity between two devices the same person owns: no
+  server, no iCloud, no network (`docs/applewatch/architecture.md` §4.1). The privacy policy says so
+  in §3.
 - **Permissions**: notifications after the first block, Location When In Use only on the first
   mapped errand stop, Health only inside an activity or gym scene, alarms for reminders (PRD §18).
 - **Health data is display only**: never persisted, synced or exported.
