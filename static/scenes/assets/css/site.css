@@ -553,6 +553,16 @@ th {
 
 .site-footer .spacer { margin-left: auto; }
 
+/* On a phone: the copyright, then Privacy · Terms · Support on one line, then the address. */
+@media (max-width: 640px) {
+  .site-footer .wrap > span:first-child,
+  .site-footer a[href^="mailto:"] { flex-basis: 100%; }
+
+  .site-footer a[href^="mailto:"] { overflow-wrap: anywhere; }
+
+  .site-footer .spacer { display: none; }
+}
+
 :focus-visible {
   outline: 2px solid var(--deep-work);
   outline-offset: 3px;
