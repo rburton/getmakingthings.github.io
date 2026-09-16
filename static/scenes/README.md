@@ -36,8 +36,11 @@ xcodebuild build -project ../Scenes.xcodeproj -scheme Scenes \
   -destination "platform=iOS Simulator,OS=26.5,name=iPhone 17 Pro" -derivedDataPath /tmp/scenes-dd -quiet
 xcrun simctl install $SIM /tmp/scenes-dd/Build/Products/Debug-iphonesimulator/Scenes.app
 xcrun simctl privacy $SIM grant location com.getmakingthings.Scenes
-xcrun simctl status_bar $SIM override --time "9:41" --batteryState charged --batteryLevel 100 \
+# `discharging`, not `charged`: a charged battery draws green with a bolt, which no real phone shows
+xcrun simctl status_bar $SIM override --time "9:41" --batteryState discharging --batteryLevel 100 \
   --cellularMode active --cellularBars 4 --wifiMode active --wifiBars 3
+# near the demo pharmacy, so the next stop shows a walking distance rather than only its street
+xcrun simctl location $SIM set 37.7793,-122.4193
 
 # terminate first: a re-launch of a running app silently ignores new launch arguments
 xcrun simctl terminate $SIM com.getmakingthings.Scenes
@@ -59,6 +62,11 @@ Which argument set produced which file:
 | `gym.jpg` | `--ui-testing --demo --open scenes://type/gym` |
 | `week.jpg` | `--ui-testing --demo --metrics-demo --open scenes://week` |
 | `reminders.jpg` | `--ui-testing --demo --reminders-demo --open scenes://reminders` |
+
+`--reminders-demo` arms the Errands reminder half an hour from the moment the app launches, so its
+time is whatever the clock says (7:21 PM in the current set). Take `reminders.jpg` and `errands.jpg`
+inside the same minute so the two agree, and update both `alt` texts to the new time. The first
+errands launch after an install often has no distance yet; launch it twice and wait 25 seconds.
 
 ## Regenerating the watch screenshots
 
