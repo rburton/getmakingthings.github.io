@@ -1,0 +1,255 @@
+/* Flushable site: Bubble Bath (story 042). Tokens mirror docs/DesignSystem.md §2; system fonts only;
+   no third-party requests. Decoration is CSS only: no JavaScript.
+
+   WCAG contrast, measured with the sRGB formula (scripts/site/test_site.py re-checks every pair).
+   Text sits on the bath gradient, so each pair is measured against the gradient's darker stop
+   (--bath-top) and against the frosted card (--card).
+
+   Light                      on --bath-top #C5E2F5   on --bath #E6F2FB   on --card #F7F9FC
+     --ink    #12306B              9.38                   11.11               11.99
+     --ink-2  #3F5B85              5.11                    6.06                6.54
+     --link   #1A5C9E              5.07                    6.02                6.49   (app linkPaper #1F66AD is 4.37 on #C5E2F5, so one step deeper)
+     --flush-text #A33A27          4.88                    5.78                6.24
+     --later-text #7A5500          4.98                    5.90                6.37
+     --keep-text  #17645A          5.18                    6.14                6.62
+   Night bath                 on --bath-top #0E2240   on --bath #1B3A64   on --card #25497A
+     --ink    #EAF4FC             14.26                   10.26                8.15
+     --ink-2  #A6BEDC              8.34                    6.00                4.77
+     --link   #8CC2F0              8.39                    6.04                4.80
+     --flush-text #FFAC9C          8.80                    6.34                5.03
+     --later-text #FFCB45         10.50                    7.56                6.00
+     --keep-text  #93E3D8         10.76                    7.75                6.15
+   Fills (both schemes): white on --action #1F74C0 4.86, on --action-pressed #185FA0 6.60;
+     navy #12306B on coral #F37B66 4.72, on yellow #F5BB19 7.23, on seafoam #52B7AB 5.25.
+   The brand bath blue #2582D0 is 3.0 on the bath top and 4.1 under white text, so it is a swatch
+   (bubbles, the focus ring's glow), never text or a button fill. */
+:root {
+  color-scheme: light dark;
+
+  /* Brand swatches (DesignSystem §2.1). Fixed, never text colours. */
+  --brand-blue: #2582D0;
+  --brand-coral: #F0705A;
+  --brand-yellow: #F5BB19;
+  --brand-seafoam: #52B7AB;
+
+  /* Bath water: a two-stop gradient with a ~6% tile grid. */
+  --bath-top: #C5E2F5;
+  --bath: #E6F2FB;
+  --tile: rgb(37 130 208 / .06);
+  --card: #F7F9FC;
+  --card-glass: rgb(247 249 252 / .9);
+  --line: #C9DEEF;
+  --shadow: rgb(18 48 107 / .14);
+
+  --ink: #12306B;
+  --ink-2: #3F5B85;
+  --link: #1A5C9E;
+  --action: #1F74C0;
+  --action-pressed: #185FA0;
+  --on-action: #FFFFFF;
+
+  /* Pile fills (navy labels) and pile colours as text. */
+  --flush: #F37B66;
+  --later: #F5BB19;
+  --keep: #52B7AB;
+  --on-pile: #12306B;
+  --flush-text: #A33A27;
+  --later-text: #7A5500;
+  --keep-text: #17645A;
+
+  --rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
+  --radius-card: 28px;
+  --radius-shot: 24px;
+  --gutter: 16px;
+  --max: 1080px;
+}
+
+/* Night bath: deep navy water, the same pile hues. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bath-top: #0E2240;
+    --bath: #1B3A64;
+    --tile: rgb(140 194 240 / .06);
+    --card: #25497A;
+    --card-glass: rgb(37 73 122 / .9);
+    --line: #2C4A73;
+    --shadow: rgb(4 12 28 / .45);
+
+    --ink: #EAF4FC;
+    --ink-2: #A6BEDC;
+    --link: #8CC2F0;
+
+    --flush-text: #FFAC9C;
+    --later-text: #FFCB45;
+    --keep-text: #93E3D8;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; background: var(--bath); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font: 17px/1.55 var(--rounded);
+  background:
+    linear-gradient(var(--tile) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, var(--tile) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, var(--bath-top), var(--bath) 60vh) no-repeat var(--bath);
+}
+
+a { color: var(--link); text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--link); outline-offset: 3px; border-radius: 8px;
+  box-shadow: 0 0 0 6px rgb(37 130 208 / .25);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.narrow { max-width: 720px; }
+
+h1, h2, h3 { font-family: var(--rounded); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); margin: 0 0 .4em; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 0 0 .5em; }
+h3 { font-size: 1.25rem; margin: 1.6em 0 .4em; }
+
+.caption { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+.caption.flush { color: var(--flush-text); }
+.caption.later { color: var(--later-text); }
+.caption.keep { color: var(--keep-text); }
+.muted { color: var(--ink-2); }
+
+/* Header and footer */
+.site-header { padding: 16px 0; }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--link); font: 700 1.35rem var(--rounded); }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.site-header nav { display: flex; gap: 6px 18px; flex-wrap: wrap; }
+.site-header nav a { color: var(--ink-2); text-decoration: none; font-size: .95rem; font-weight: 500; padding: 6px 0; }
+.site-header nav a:hover { color: var(--link); }
+
+/* The foam strip: decoration drawn by a pseudo-element, so it is never in the accessibility tree,
+   and it sits in its own space above the footer, never behind a link or button. */
+.site-footer { position: relative; margin-top: 120px; padding: 28px 0 40px; font-size: .9rem; color: var(--ink-2); background: var(--card-glass); }
+.site-footer::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 72px;
+  background: url("assets/art/foam.webp") repeat-x center bottom / auto 100%;
+  pointer-events: none;
+}
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+.site-footer nav { display: flex; gap: 6px 18px; flex-wrap: wrap; }
+
+/* Hero */
+.hero { position: relative; padding-block: 32px 24px; display: grid; gap: 40px; align-items: center; }
+main { overflow-x: clip; }  /* the foam and bubbles run past the art, never past the page */
+@media (min-width: 860px) { .hero { grid-template-columns: 1.1fr .9fr; padding-block-start: 56px; } }
+.hero .lede { font-size: 1.2rem; color: var(--ink-2); max-width: 34ch; }
+.hero .icon { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 24px; box-shadow: 0 10px 24px var(--shadow); }
+/* The duck floats in the foam beside the phone, never over the captured UI: under it on a phone,
+   to its left once the hero has two columns. */
+.hero-art { position: relative; margin: 0; justify-self: center; padding: 0 0 112px; }
+.hero-art .duck { position: absolute; width: 120px; left: 0; bottom: 0; z-index: 1; }
+@media (min-width: 860px) {
+  .hero-art { padding-bottom: 40px; }
+  .hero-art .duck { width: 150px; left: -160px; }
+}
+/* The hero's foam strip: a full-bleed pseudo-element along the hero's bottom edge, under the art,
+   never behind a link or button (the hero's text ends above it). */
+.hero::after {
+  content: ""; position: absolute; left: calc(50% - 50vw); right: calc(50% - 50vw); bottom: 0; height: 96px; z-index: 0;
+  background: url("assets/art/foam.webp") repeat-x center bottom / auto 100%;
+  pointer-events: none;
+}
+.hero > * { position: relative; z-index: 1; }
+
+/* Bubbles drift up behind the hero art. CSS only, frozen under reduced motion. */
+.bubbles { position: absolute; inset: -40px -20% 40px; pointer-events: none; overflow: hidden; z-index: 0; }
+.bubbles span {
+  position: absolute; bottom: -60px; width: 44px; aspect-ratio: 1;
+  background: url("assets/art/bubble.webp") center / contain no-repeat;
+  opacity: .8; animation: drift 14s linear infinite;
+}
+.bubbles span:nth-child(1) { left: 4%; animation-delay: -2s; }
+.bubbles span:nth-child(2) { left: 22%; width: 28px; animation-duration: 18s; animation-delay: -9s; }
+.bubbles span:nth-child(3) { left: 78%; width: 36px; animation-duration: 16s; animation-delay: -5s; }
+.bubbles span:nth-child(4) { left: 92%; width: 22px; animation-duration: 20s; animation-delay: -13s; }
+.bubbles span:nth-child(5) { left: 60%; width: 30px; animation-duration: 22s; animation-delay: -17s; }
+@keyframes drift {
+  from { transform: translateY(0); opacity: 0; }
+  10% { opacity: .8; }
+  to { transform: translateY(-720px) translateX(12px); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bubbles span { animation: none; opacity: .7; }
+  .bubbles span:nth-child(1) { bottom: 18%; }
+  .bubbles span:nth-child(2) { bottom: 62%; }
+  .bubbles span:nth-child(3) { bottom: 38%; }
+  .bubbles span:nth-child(4) { bottom: 76%; }
+  .bubbles span:nth-child(5) { bottom: 88%; }
+}
+
+.shot {
+  position: relative; z-index: 1;
+  width: min(300px, 76vw); border-radius: var(--radius-shot);
+  border: 6px solid var(--card); background: var(--card);
+  box-shadow: 0 20px 44px var(--shadow);
+}
+.shot.wide { width: min(560px, 100%); }
+
+.cta {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 30px;
+  border-radius: 999px; background: var(--action); color: var(--on-action); font-weight: 700; text-decoration: none;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .35), 0 8px 18px rgb(31 116 192 / .3);
+}
+a.cta:hover { background: var(--action-pressed); }
+.cta[aria-disabled="true"] { cursor: default; }
+.price { margin: 14px 0 0; color: var(--ink-2); }
+
+/* Sections */
+section, section.wrap { padding-block: 48px; }  /* block only: .wrap owns the side gutter (section.wrap outranks .wrap's shorthand) */
+.features { display: grid; gap: 56px; }
+.feature { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 860px) {
+  .feature { grid-template-columns: 1fr 1fr; }
+  .feature:nth-child(even) figure { order: -1; }
+}
+.feature figure { margin: 0; justify-self: center; }
+.feature p { color: var(--ink-2); max-width: 44ch; }
+
+.ipad { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 860px) { .ipad { grid-template-columns: .8fr 1.2fr; } }
+.ipad figure { margin: 0; justify-self: center; }
+.ipad p { color: var(--ink-2); max-width: 44ch; }
+
+.privacy-strip {
+  background: var(--card-glass); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 28px var(--gutter); text-align: center; box-shadow: 0 10px 30px var(--shadow);
+}
+.privacy-strip p { margin: 0; font: 700 clamp(1.05rem, 3vw, 1.4rem) var(--rounded); }
+.privacy-strip .dot { color: var(--keep-text); padding: 0 .35em; }
+
+.faq-head { display: flex; align-items: flex-end; gap: 12px; }
+.faq-head img { width: 88px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+.faq summary { cursor: pointer; font-weight: 600; list-style: none; padding-right: 1.5em; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--link); font-weight: 700; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { color: var(--ink-2); margin: .6em 0 0; }
+
+/* Legal pages */
+.legal { padding-top: 24px; }
+.legal h2 { font-size: 1.35rem; margin-top: 2em; }
+.legal li { margin: .35em 0; }
+.legal .effective { color: var(--ink-2); }
+.todo { background: var(--later); color: var(--on-pile); border-radius: 4px; padding: 0 .25em; }
+
+.card {
+  background: var(--card-glass); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 24px; box-shadow: 0 10px 30px var(--shadow);
+}
+
+.sleepy { width: 180px; margin: 8px 0 16px; }
