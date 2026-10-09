@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tellable: Offline Read Aloud</title>
+<meta name="description" content="Tellable reads any document aloud on your iPhone or iPad, offline, with every word highlighted as it is spoken. No account, no tracking.">
+<link rel="preload" href="assets/fonts/AtkinsonHyperlegible-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<meta name="theme-color" content="#2563EB">
+<meta property="og:title" content="Tellable: Offline Read Aloud">
+<meta property="og:description" content="Reads any document aloud, offline, with every word highlighted.">
+<meta property="og:image" content="https://getmakingthings.com/tellable/assets/og-image.png">
+<meta property="og:url" content="https://getmakingthings.com/tellable/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="assets/motion.js" defer></script>
+</head>
+<body class="home">
+<svg class="defs" aria-hidden="true"><linearGradient id="mk-circle" x1=".2" x2=".8" y2="1"><stop offset="0" stop-color="#4C8DFF"/><stop offset=".55" stop-color="#2563EB"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient><linearGradient id="mk-coral" x2="0" y2="1"><stop offset="0" stop-color="#FFB08F"/><stop offset="1" stop-color="#FF8A65"/></linearGradient><filter id="mk-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="2.53" stdDeviation="2.85" flood-color="#000814" flood-opacity=".22"/></filter></svg>
+<header>
+  <a href="index.html"><svg class="mark idle" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)"/><rect class="bar b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><rect class="bar b1" x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/><rect class="bar b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>Tellable</a>
+  <nav aria-label="Site">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div>
+    <svg class="mark intro idle" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)" filter="url(#mk-shadow)"/><rect class="bar b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><g class="pulse"><rect class="bar b1" x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/></g><rect class="bar b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>
+    <h1>Tellable: Offline Read Aloud</h1>
+    <p class="lede">Text to Speech that works offline</p>
+    <p>Scan a page, open a PDF, or paste a link, and hear it read in a natural voice with each word highlighted as it is spoken. Everything happens on your iPhone or iPad.</p>
+    <!-- Replace with Apple's official "Download on the App Store" badge and the real app link once the app is live. -->
+    <p><span class="soon" aria-disabled="true">Coming soon to the App Store</span></p>
+    <p class="meta">Requires iOS 18 or later. Five documents are free. Tellable Pro, a one-time purchase or a yearly subscription, adds unlimited documents, Save as audio and Up Next.</p>
+    </div>
+
+    <section class="demo" id="demo" aria-labelledby="demo-title">
+    <h2 id="demo-title">Every word, as it is spoken</h2>
+    <p>A coral box follows the voice, so your eyes never lose the place.</p>
+    <div class="device">
+    <div class="screen">
+    <p class="page"><span class="s on"><span data-ms="480">Tellable</span> <span data-ms="300">reads</span> <span data-ms="240">any</span> <span data-ms="300">page</span> <span class="on" data-ms="440">aloud,</span> <span data-ms="280">word</span> <span data-ms="220">by</span> <span data-ms="320">word.</span></span> <span class="s"><span data-ms="300">Scan</span> <span data-ms="220">a</span> <span data-ms="420">letter</span> <span data-ms="220">or</span> <span data-ms="300">open</span> <span data-ms="220">a</span> <span data-ms="500">PDF.</span></span> <span class="s"><span data-ms="300">Even</span> <span data-ms="1000">1,200</span> <span data-ms="340">stays</span> <span data-ms="240">one</span> <span data-ms="300">word</span> <span data-ms="220">on</span> <span data-ms="220">the</span> <span data-ms="340">page.</span></span> <span class="s"><span data-ms="400">Nothing</span> <span data-ms="380">leaves</span> <span data-ms="220">your</span> <span data-ms="520">device.</span></span></p>
+    <div class="dock">
+    <button class="play" type="button" aria-label="Play the demo" disabled><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zm7 0h3v14h-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
+    <span class="wave" aria-hidden="true"><i class="p"></i><i class="p"></i><i class="p"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="time" aria-hidden="true">0:01</span>
+    <button class="speed" type="button" aria-label="Speed 1x" disabled>1x</button>
+    </div>
+    </div>
+    </div>
+    <p>Tap any word to jump there.</p>
+    <p>This is the real highlight. In the app you hear it too.</p>
+    </section>
+  </section>
+
+  <div class="scenes">
+    <section class="scene clean">
+    <div>
+    <h2>Hear the words, not the clutter</h2>
+    <p>Clean Read skips page numbers, headers, footnote marks and citations, and shows you what it skipped.</p>
+    </div>
+    <div class="art sheet" aria-hidden="true">
+    <div class="small"><span class="skip" data-t="The River" style="--d:.6s"><span>The River</span></span><span class="skip" data-t="Chapter 3" style="--d:.6s"><span>Chapter 3</span></span></div>
+    <p class="say"><span class="s on"><span>The</span> <span>water</span> <span>rose</span> <span>all</span> <span>night,</span><sup class="skip" data-t="12" style="--d:.9s"><span>12</span></sup> <span>and</span> <span>by</span> <span>morning</span> <span>the</span> <span>road</span> <span>was</span> <span class="last">gone.</span></span></p>
+    <div class="small folio"><span class="skip" data-t="47" style="--d:1.2s"><span>47</span></span><span class="tag">Skipped</span></div>
+    </div>
+    </section>
+
+    <section class="scene offline">
+    <div>
+    <h2>Works with no signal</h2>
+    <p>Eight voices are built in and live on your device. Read on a plane, in a tunnel, anywhere.</p>
+    </div>
+    <div class="art sheet" aria-hidden="true">
+    <div class="small status"><span>9:41</span><span class="net"><span class="signal">LTE</span><span class="plane">&#x2708;&#xFE0E;</span></span></div>
+    <p class="say"><span class="s on"><span>Read</span> <span>on</span> <span>a</span> <span>plane,</span> <span>in</span> <span>a</span> <span>tunnel,</span> <span class="last">anywhere.</span></span></p>
+    <div class="mini"><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <ul class="pills"><li>Works offline</li><li>Nothing uploaded</li><li>No account</li></ul>
+    </div>
+    </section>
+
+    <section class="scene">
+    <div>
+    <h2>Scan it, open it, paste it</h2>
+    <p>Paper pages, PDFs, Word files, web pages and plain text, all in one library.</p>
+    </div>
+    <ul class="art chips" aria-hidden="true"><li>PDF</li><li class="scan">Scan</li><li>Photos</li><li>Word</li><li>Text</li><li>Paste</li></ul>
+    </section>
+
+    <section class="scene">
+    <div>
+    <h2>Five free. Then your choice.</h2>
+    <p>Five documents are free, with every voice and Clean Read. Tellable Pro, a one-time purchase or a yearly subscription, adds unlimited documents, Save as audio and Up Next. No ads, no account.</p>
+    </div>
+    <div class="art plans" aria-hidden="true">
+    <svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)"/><rect class="bar b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><rect class="bar b1" x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/><rect class="bar b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>
+    <div class="plan sel"><span class="check"><svg viewBox="0 0 26 26"><path d="M7.5 13.5l3.6 3.6 7.4-8"/></svg></span><b>Lifetime</b><small>One purchase, yours forever</small></div>
+    <div class="plan"><span class="check"></span><b>Yearly</b><small>Renews each year until you cancel</small></div>
+    </div>
+    </section>
+  </div>
+
+  <section class="screens" aria-label="Screenshot">
+    <figure>
+    <img src="assets/screenshot-reader.jpg" alt="The Tellable reader on an iPhone: a page of text with the current sentence tinted blue and the spoken word boxed in coral" width="590" height="1282" loading="lazy">
+    <figcaption>The reader highlights each word as it is spoken.</figcaption>
+    </figure>
+  </section>
+
+  <section class="closing">
+    <img class="mark" src="assets/icon-192.png" alt="" width="72" height="72" loading="lazy">
+    <h2>Hear any page. Offline.</h2>
+    <p><span class="soon" aria-disabled="true">Coming soon to the App Store</span></p>
+  </section>
+</main>
+<footer>
+  <nav aria-label="Footer">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+  </nav>
+  <p>© 2026 Making Things. Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+</footer>
+</body>
+</html>

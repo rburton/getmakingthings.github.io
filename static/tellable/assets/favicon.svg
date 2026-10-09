@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="bglight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF1FF"/></linearGradient>
+<linearGradient id="cilight" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#4C8DFF"/><stop offset=".55" stop-color="#2563EB"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
+<linearGradient id="cblight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB08F"/><stop offset="1" stop-color="#FF8A65"/></linearGradient>
+</defs><rect width="100" height="100" fill="url(#bglight)"/><circle cx="50" cy="50" r="38" fill="url(#cilight)"/><rect x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96" fill="#FFFFFF"/><rect x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96" fill="#FFFFFF"/><rect x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#cblight)"/></svg>

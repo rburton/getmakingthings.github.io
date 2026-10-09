@@ -1,0 +1,187 @@
+/* Tellable website. Tokens from docs/design/specs/Tellable-Design-v3.md. Motion: story 055. */
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:local("Atkinson Hyperlegible"),url(assets/fonts/AtkinsonHyperlegible-Regular.ttf) format("truetype")}
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:local("Atkinson Hyperlegible Bold"),url(assets/fonts/AtkinsonHyperlegible-Bold.ttf) format("truetype")}
+:root{
+  --background:#F5F8FF;--surface:#FFFFFF;--ink:#0F1B2D;--ink-secondary:#54627A;
+  --primary:#2563EB;--navy:#0B2A5B;--sky-tint:#DCE8FF;--coral:#FF9F7A;--coral-tint:#FFE3D6;
+  --brand-fill:#2563EB;--ink-on-coral:#0F1B2D;--accent-on-tint:#2563EB;--line:#DCE8FF;
+  --skipped:#7B889E;--dock:#0B2A5B;
+  color-scheme:light dark;
+
+  --read:"Atkinson Hyperlegible",system-ui,sans-serif;--round:ui-rounded,"SF Pro Rounded",system-ui,sans-serif;--out:cubic-bezier(.2,.8,.2,1);
+  /* The mark's motion, one line per value of DesignSystem.Mark.Timing.standard
+     (Tellable/Shared/DesignSystem/MarkAnimation.swift). motion.js reads these too. */
+  --wave-up:1.45;--wave-down:.7;
+  --wave-per-bar:420ms;
+  --wave-stagger:110ms;
+  --wave-pass:640ms;    /* wavePassDuration: wavePerBar + 2 waveStagger */
+  --wave-passes:2;
+  --blink-low:.15;
+  --blink-down:140ms;
+  --blink-up:160ms;
+  --blink-gap:120ms;
+  --intro-blinks:720ms; /* introBlinks 2: 2 (down + up) + gap, so the intro ends at 2.0 s */
+  --idle-min:6000ms;--idle-max:10000ms;
+}
+@media (prefers-color-scheme:dark){:root{
+  --background:#0B1220;--surface:#18223A;--ink:#E6EDF8;--ink-secondary:#93A3BD;
+  --primary:#60A5FA;--navy:#18223A;--sky-tint:rgba(96,165,250,.2);--coral-tint:#FF9F7A;
+  --accent-on-tint:#E6EDF8;--line:#243352;--dock:#0B1220;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--background);color:var(--ink);font:400 1.125rem/1.6 var(--read)}
+h1,h2,h3{font-family:var(--round);font-weight:800;line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:2.25rem}h2{font-size:1.5rem;margin-top:2em}h3{font-size:1.125rem;margin-top:1.5em}
+p,ul,ol,dl{margin:0 0 1em}
+a{color:var(--primary);text-decoration:underline;text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+main,header,footer{max-width:65ch;margin:0 auto;padding:0 1.25rem}
+header{display:flex;align-items:center;gap:.75rem;min-height:4.5rem}
+header a{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;color:var(--ink);text-decoration:none;font:800 1.25rem var(--round)}
+header .mark{width:40px;height:40px}
+main{padding-top:1rem;padding-bottom:3rem}
+footer{border-top:1px solid var(--line);padding-top:1rem;padding-bottom:2.5rem;color:var(--ink-secondary);font-size:1rem}
+footer nav{display:flex;flex-wrap:wrap;gap:0 .5rem}
+footer nav a,.faq-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem}
+.lede{font-size:1.25rem;color:var(--ink-secondary)}
+.meta{color:var(--ink-secondary);font-size:1rem}
+.note{background:var(--coral-tint);color:var(--ink-on-coral);border-radius:12px;padding:.75rem 1rem;font-weight:700}
+.note a{color:var(--ink-on-coral)}
+.store-badge{display:inline-block;padding:15px;line-height:0}
+.store-badge img{width:180px;height:60px}
+.screens{display:grid;gap:1.5rem;margin:2.5rem 0}
+.screens figure{margin:0}
+.screens img{width:100%;height:auto;border-radius:24px;background:var(--sky-tint);display:block}
+.screens figcaption{color:var(--ink-secondary);font-size:1rem;text-align:center;margin-top:.5rem}
+.faq-nav{list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.faq-nav a{background:var(--sky-tint);color:var(--accent-on-tint);border-radius:999px;padding:0 1rem;text-decoration:none;font-size:1rem}
+dt{font-weight:700;margin-top:1.25em}
+dd{margin:0}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.95em;background:var(--sky-tint);padding:0 .25em;border-radius:4px}
+@media (min-width:600px){.screens{grid-template-columns:1fr 1fr}}
+
+/* The mark: DesignSystem.Mark.Geometry as inline SVG. Coral never blinks. */
+.defs{position:absolute;width:0;height:0}
+.mark{display:block;flex:none;overflow:visible;background:linear-gradient(#FFF,#EAF1FF);border-radius:22.37%}
+.bar,.pulse{transform-box:fill-box;transform-origin:center}
+.b0,.b2{fill:#FFF}.b1{--i:1}.b2{--i:2}
+/* Percentages: 140 ms steps of a 640 ms pass; blinks of 140 + 160 ms, 120 ms apart */
+@keyframes wave{0%{transform:none}21.875%{transform:scaleY(var(--wave-up))}43.75%{transform:scaleY(var(--wave-down))}65.625%,to{transform:none}}
+@keyframes blink2{0%,41.667%,58.333%,to{opacity:1}19.444%,77.778%{opacity:var(--blink-low)}}
+@keyframes blink1{46.667%{opacity:var(--blink-low)}}
+@keyframes pulse{to{transform:scaleY(1.12)}}
+@media (prefers-reduced-motion:no-preference){
+.intro .bar{animation:wave var(--wave-pass) ease-in-out calc(var(--i,0)*var(--wave-stagger)) var(--wave-passes) both}
+.intro .b0,.intro .b2{animation-name:wave,blink2;animation-duration:var(--wave-pass),var(--intro-blinks);animation-delay:calc(var(--i,0)*var(--wave-stagger)),calc(var(--wave-pass)*var(--wave-passes));animation-iteration-count:var(--wave-passes),1}
+.speaking .pulse{animation:pulse 600ms ease-in-out infinite alternate}}
+
+/* Home */
+.home main,.home header,.home footer{max-width:72rem}
+.hero{display:grid;gap:3rem;padding:1.5rem 0 1rem;text-align:center}
+.hero .mark{width:132px;height:132px;margin:0 auto 1.25rem}
+.hero h1{font-size:clamp(2.1rem,1.3rem + 3vw,3.25rem);text-wrap:balance}
+.hero .meta,.scene h2+p,.demo p{margin:0}
+.demo h2,.scene h2,.closing h2{font-size:clamp(1.6rem,1.15rem + 1.6vw,2.25rem);text-wrap:balance;margin:0 0 .4em}
+.demo>p,.scene h2+p{color:var(--ink-secondary)}
+.demo{text-align:left}.demo>div~p{text-align:center;font-size:1rem;text-wrap:balance}
+@media (min-width:900px){.hero{grid-template-columns:1fr 1fr;align-items:center;text-align:left;gap:4rem;padding-top:3rem}.hero .mark{margin-left:0}}
+
+.device{max-width:25rem;margin:1.5rem auto 1rem;border:2px solid color-mix(in srgb,var(--ink-secondary) 35%,transparent);border-radius:46px;padding:9px}
+.screen{background:var(--surface);border-radius:36px;overflow:hidden}
+.page{margin:0;padding:1.75rem 1.5rem 1.25rem;font:1.25rem/1.6 var(--read);cursor:pointer}
+/* Padding reserved by a negative margin: the box moves nothing */
+.s,.page [data-ms],.say .s>span{border-radius:6px;padding:.1em 0;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.s{transition:background-color 250ms cubic-bezier(.2,.9,.3,1.1)}
+.s.on{background-color:var(--sky-tint)}
+.page [data-ms],.say .s>span{border-radius:7px;padding:.1em 4px;margin:0 -4px}
+.page .on[data-ms],.say .last{background-color:var(--coral);color:var(--ink-on-coral)}
+.dock{display:flex;align-items:center;gap:.75rem;margin:0 .75rem .75rem;padding:.4rem .5rem;border-radius:26px;background:var(--dock);color:#FFF}
+.dock button{display:grid;place-items:center;min-width:44px;min-height:44px;border:0;border-radius:22px;padding:0 .85rem;font:700 1rem var(--read);background:rgba(255,255,255,.16);color:#FFF;cursor:pointer}
+.dock button:focus-visible{outline-color:#FFF;outline-offset:2px}
+.dock .play{padding:0;background:#FFF;color:#0B2A5B}
+.play svg{width:22px;fill:currentColor}
+.play .i-pause,.play.on .i-play{display:none}
+.play.on .i-pause{display:block}
+.time{font-size:.9375rem;font-variant-numeric:tabular-nums}
+.wave{flex:1;display:flex;align-items:center;gap:2px;height:28px}
+.wave i{flex:1;height:45%;border-radius:2px;background:rgba(255,255,255,.35)}
+.wave i:nth-child(2n){height:72%}.wave i:nth-child(3n){height:96%}.wave i:nth-child(5n){height:58%}.wave i:nth-child(7n){height:30%}
+.wave .p,.mini i{background:var(--coral)}
+@media (prefers-reduced-motion:reduce){.s{transition:none}}
+
+/* Scenes: end states unless html.motion */
+.scenes{display:grid;gap:4.5rem;margin:5.5rem 0 4rem}
+.scene{display:grid;gap:1.75rem;align-items:center}
+.art{width:100%;max-width:24rem;justify-self:center;list-style:none;margin:0;padding:0}
+.sheet{padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-radius:22px}
+.art .say{margin:.9rem 0;font:1.125rem/1.6 var(--read)}
+.small{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.skip{position:relative}
+.skip>span{position:relative;z-index:1;opacity:0}
+.skip::after{content:attr(data-t);position:absolute;left:0;top:0;color:var(--skipped)}
+.folio{justify-content:center;gap:.75rem}
+.tag{color:var(--ink-secondary);border:1px solid var(--line);border-radius:6px;padding:.1em .5em}
+.net{display:grid}
+.net>*{grid-area:1/1;justify-self:end}
+.signal{opacity:0}
+.mini{display:flex;padding:.5rem .9rem;border-radius:18px;background:var(--dock)}
+.mini .wave{height:22px;justify-content:center;gap:5px}.mini i{flex:0 0 4px}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1rem 0 0}
+.pills li{background:var(--sky-tint);color:var(--accent-on-tint);border-radius:999px;padding:.2rem .8rem;font-size:.875rem;font-weight:700}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.chips li,.plan{position:relative;overflow:hidden;display:grid;place-items:center;min-height:4.5rem;border-radius:18px;background:var(--surface);border:1px solid var(--line);font:800 1.0625rem var(--round)}
+.chips .scan{background:var(--brand-fill);border-color:var(--brand-fill);color:#FFF}
+.scan::after{content:"";position:absolute;inset:0 10% auto;height:2px;background:#FFF;opacity:0}
+.plans{display:grid;gap:.75rem;justify-items:center}
+.plans .mark{width:64px;margin-bottom:.5rem}
+.plan{width:100%;grid-template-columns:auto 1fr auto;gap:0 .75rem;justify-items:start;padding:.85rem 1rem;border-width:2px}
+.plan.sel{border-color:var(--primary)}
+.plan small{grid-column:2/4;color:var(--ink-secondary);font:400 .875rem var(--read)}
+.check{grid-row:span 2;width:26px;height:26px;border-radius:50%;border:2px solid var(--line)}
+.sel .check{background:var(--brand-fill);border-color:var(--brand-fill)}
+.check svg{display:block;fill:none;stroke:#FFF;stroke-width:3;stroke-linecap:round;stroke-dasharray:20}
+.oss{max-width:65ch;margin:4rem 0 0}
+.closing{text-align:center;padding:3rem 1.25rem 1.5rem;margin-top:3.5rem;border-radius:28px;background:var(--surface);border:1px solid var(--line)}
+.closing .mark{width:72px;height:72px;margin:0 auto 1.25rem;border-radius:16px}
+@media (min-width:768px){.scene{grid-template-columns:1fr 1fr;gap:3rem}.scene:nth-child(even) .art{order:-1}}
+
+/* motion.js adds .play in view, .off out of view */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+@keyframes out{from{opacity:1}to{opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}}
+@keyframes tint{from{background-color:transparent}}
+@keyframes box{from,to{background-color:var(--coral);color:var(--ink-on-coral)}}
+@keyframes last{0%{background-color:transparent;color:inherit}.1%{background-color:var(--coral)}}
+@keyframes talk{50%{transform:scaleY(.45)}}
+@keyframes chip{0%{opacity:0;transform:translateY(16px) scale(.9)}45%{opacity:1;transform:translateY(-4px) scale(1.04)}}
+@keyframes sweep{15%,85%{opacity:.9}to{opacity:0;transform:translateY(4.4rem)}}
+@keyframes draw{from{stroke-dashoffset:20}}
+.offline{--t:.4s;--t0:.5s;--w:300ms}
+.motion{
+.scene:not(.play) *,.scene:not(.play) ::after,.off *,.off ::after{animation-play-state:paused!important}
+.scene>div:first-child>*,.pills li,.plan{animation:rise 400ms var(--out) var(--r,0s) both}
+.scene h2+p{--r:80ms}
+.skip>span{animation:out 300ms var(--d) both}
+.tag{animation:pop 300ms var(--out) 1.5s both}
+.say .s{animation:tint 250ms ease-out var(--t,1.7s) both}
+.say .s>span{animation:box var(--w,280ms) linear calc(var(--t0,1.8s) + var(--i)*var(--w,280ms))}
+.say .s>.last{animation-name:last;animation-fill-mode:both}
+.signal{animation:out 300ms 1s both}
+.plane{animation:pop 350ms var(--out) 1.3s both}
+.mini i{animation:talk 520ms ease-in-out calc(.5s - var(--i)*97ms) 5}
+.pills{--r:2.7s}.pills li+li{--r:2.78s}.pills li+li+li{--r:2.86s}
+.chips li{animation:chip 420ms ease-out calc(.45s + var(--i)*60ms) both}
+.scan::after{animation:sweep 700ms ease-in-out 1.1s}
+.plan{--r:.4s}.plan+.plan{--r:.48s}
+.check{animation:pop 250ms var(--out) .85s both}
+.check path{animation:draw 300ms ease-out 1s both}
+.plans .b0,.plans .b2{animation:blink1 300ms ease-in-out .9s}
+@media (prefers-reduced-motion:reduce){*,::after{animation:none!important}}
+}
+/* getmakingthings.com/tellable/: header nav and the pre-launch App Store line, as the sibling app folders have */
+header{justify-content:space-between;flex-wrap:wrap}
+header nav{display:flex;flex-wrap:wrap;gap:0 .25rem}
+header nav a{font:700 1rem var(--read);color:var(--ink-secondary);padding:0 .5rem}
+.soon{display:inline-block;margin:15px 0;padding:.85rem 1.25rem;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-weight:700;color:var(--ink-secondary)}
