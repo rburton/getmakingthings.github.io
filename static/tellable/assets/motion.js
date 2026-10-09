@@ -91,7 +91,7 @@
     demo.querySelector('.page').onclick = e => {
       const w = e.target.closest('[data-ms]');
       if (!w || !getSelection().isCollapsed) return;
-      t = starts[words.indexOf(w)];
+      t = starts[words.indexOf(w.parentNode.querySelector('[data-ms]'))]; // the app reads from the tapped word's sentence
       rest = 0;
       held = true;
       draw();
