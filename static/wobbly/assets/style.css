@@ -304,7 +304,8 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
   padding: 20px;
   background: rgba(50, 46, 56, 0.55);
 }
-.invite-modal[hidden] { display: none; }
+.invite-modal[hidden],
+.invite-card [hidden] { display: none; }
 .invite-card {
   outline: none; /* focused by script on open, not by keyboard tabbing */
   background: var(--card);
@@ -370,6 +371,79 @@ h2 { font-size: 1.7rem; margin: 0 0 16px; }
 .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
 .card p { margin: 0; color: var(--ink-muted); }
 
+/* ---------------------------------------------------------------------------
+   "Four big skills": the first thing a parent reads after the hero, so each
+   card gets a tinted icon disc, a one-line promise in its own accent colour,
+   one short paragraph and a row of facts, rather than a wall of text. Accent
+   comes from the --accent custom property set inline, like the steps below.
+--------------------------------------------------------------------------- */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 18px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: 20px;
+  border-top: 5px solid var(--accent, var(--indigo-1));
+  padding: 22px 22px 20px;
+  box-shadow: 0 4px 14px rgba(50, 46, 56, 0.08);
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  font-size: 1.7rem;
+  line-height: 1;
+  background: color-mix(in srgb, var(--accent, var(--indigo-1)) 18%, #fff);
+  margin-bottom: 14px;
+}
+
+.skill h3 { margin: 0 0 4px; font-size: 1.22rem; line-height: 1.25; }
+
+.skill-tag {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--accent, var(--indigo-1)) 62%, var(--ink));
+}
+
+.skill > p:not(.skill-tag) { margin: 0; color: var(--ink-muted); }
+
+.skill-facts {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid rgba(50, 46, 56, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-facts li {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--accent, var(--indigo-1)) 14%, #fff);
+  border-radius: 999px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
+/* Browsers without color-mix (pre-2023) fall back to a neutral tint. */
+@supports not (background: color-mix(in srgb, red 50%, white)) {
+  .skill-icon, .skill-facts li { background: var(--cream); }
+  .skill-tag { color: var(--indigo-2); }
+}
+
 /* Parent pull-quote: the emotional centerpiece of the "grow the child" section. */
 .ethos-note {
   background: var(--card);
@@ -422,8 +496,7 @@ h2 { font-size: 1.7rem; margin: 0 0 16px; }
   border-radius: 999px;
   white-space: nowrap;
 }
-.price .amount { font-size: 2.8rem; font-weight: 800; color: var(--indigo-2); }
-.price .per { color: var(--ink-muted); font-size: 0.95rem; }
+.price .per { color: var(--indigo-2); font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
 .price h3 { font-size: 1.3rem; margin: 0 0 4px; }
 
 /* The free/full cards inside a card need list styling of their own. */
