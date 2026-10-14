@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tellable: Offline Read Aloud</title>
-<meta name="description" content="Tellable reads any document aloud on your iPhone or iPad, offline, with every word highlighted as it is spoken. No account, no tracking.">
+<meta name="description" content="Hear any page. Follow every word. Tellable reads scans, PDFs, books and articles aloud on your iPhone or iPad, offline, with each word highlighted as it is spoken. No account, nothing collected, and Pro is one payment.">
 <link rel="preload" href="assets/fonts/AtkinsonHyperlegible-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
@@ -13,11 +13,14 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <meta name="theme-color" content="#2563EB">
 <meta property="og:title" content="Tellable: Offline Read Aloud">
-<meta property="og:description" content="Reads any document aloud, offline, with every word highlighted.">
+<meta property="og:description" content="Hear any page. Follow every word. Offline, private, no account.">
 <meta property="og:image" content="https://getmakingthings.com/tellable/assets/og-image.png">
 <meta property="og:url" content="https://getmakingthings.com/tellable/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<!-- RELEASE DAY: uncomment the Smart App Banner and put the app's id in place of APP_ID (see README.md).
+<meta name="apple-itunes-app" content="app-id=APP_ID">
+-->
 <script src="assets/motion.js" defer></script>
 </head>
 <body class="home">
@@ -34,12 +37,14 @@
   <section class="hero">
     <div>
     <svg class="mark intro idle" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)" filter="url(#mk-shadow)"/><rect class="bar b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><g class="pulse"><rect class="bar b1" x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/></g><rect class="bar b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>
-    <h1>Tellable: Offline Read Aloud</h1>
-    <p class="lede">Text to Speech that works offline</p>
-    <p>Scan a page, open a PDF, or paste a link, and hear it read in a natural voice with each word highlighted as it is spoken. Everything happens on your iPhone or iPad.</p>
-    <!-- Replace with Apple's official "Download on the App Store" badge and the real app link once the app is live. -->
+    <h1>Hear any page. Follow every word.</h1>
+    <p class="lede">Tellable: Offline Read Aloud</p>
+    <p>Scan a page, open a PDF or a book, or paste a link, and hear it read in a natural voice with each word highlighted as it is spoken. It all happens on your iPhone or iPad: offline, private, and no account to make.</p>
+    <!-- RELEASE DAY: replace the "Coming soon" line below with Apple's badge (see README.md):
+    <p><a class="store-badge" href="https://apps.apple.com/app/idAPP_ID"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60"></a></p>
+    -->
     <p><span class="soon" aria-disabled="true">Coming soon to the App Store</span></p>
-    <p class="meta">Requires iOS 18 or later. Five documents are free. Tellable Pro, a one-time purchase or a yearly subscription, adds unlimited documents, Save as audio and Up Next.</p>
+    <p class="meta">For iPhone and iPad with iOS 18 or later. Five documents are free. Tellable Pro is one payment, or a yearly plan if you prefer.</p>
     </div>
 
     <section class="demo" id="demo" aria-labelledby="demo-title">
@@ -62,10 +67,19 @@
   </section>
 
   <div class="scenes">
+    <section class="scene">
+    <div>
+    <h2>Read anything</h2>
+    <p>Point your camera at a page or pick a screenshot from Photos. Open a PDF (scanned ones too), a Word file, an EPUB or a DRM-free Kindle book, or Markdown, RTF and plain text. Paste text or a link. All in one library.</p>
+    <p>Reading in Safari? Share the page to Tellable to add it, or, with Pro, to play it next.</p>
+    </div>
+    <ul class="art chips" aria-hidden="true"><li class="scan">Scan</li><li>Photos</li><li>PDF</li><li>Word</li><li>EPUB</li><li>Kindle</li><li>Web link</li><li>Text</li><li>Paste</li></ul>
+    </section>
+
     <section class="scene clean">
     <div>
     <h2>Hear the words, not the clutter</h2>
-    <p>Clean Read skips page numbers, headers, footnote marks and citations, and shows you what it skipped.</p>
+    <p>Clean Read skips page numbers, headers and footers, footnote marks and citations. What it skipped stays on the page, dimmed, and a tap lets you hear it.</p>
     </div>
     <div class="art sheet" aria-hidden="true">
     <div class="small"><span class="skip" data-t="The River" style="--d:.6s"><span>The River</span></span><span class="skip" data-t="Chapter 3" style="--d:.6s"><span>Chapter 3</span></span></div>
@@ -74,10 +88,22 @@
     </div>
     </section>
 
+    <section class="scene tables">
+    <div>
+    <h2>Tables and pictures, too</h2>
+    <p>Tables are read row by row, each value with its header, so a number comes with its name. The Figures tab lists the pictures and tables in a document and takes you to where each one sits.</p>
+    </div>
+    <div class="art sheet" aria-hidden="true">
+    <table class="grid"><tr><th>Month</th><th>Rain</th></tr><tr class="on"><td>March</td><td class="box">42 mm</td></tr><tr><td>April</td><td>57 mm</td></tr></table>
+    <p class="small heard"><span>Heard as</span></p>
+    <p class="said">"Month, March. Rain, 42 millimetres."</p>
+    </div>
+    </section>
+
     <section class="scene offline">
     <div>
-    <h2>Works with no signal</h2>
-    <p>Eight voices are built in and live on your device. Read on a plane, in a tunnel, anywhere.</p>
+    <h2>Natural voices, built in</h2>
+    <p>Eight voices, American and British, live on your device and work from the first launch. Nothing to download, no word limits, no credits. Read on a plane, in a tunnel, anywhere.</p>
     </div>
     <div class="art sheet" aria-hidden="true">
     <div class="small status"><span>9:41</span><span class="net"><span class="signal">LTE</span><span class="plane">&#x2708;&#xFE0E;</span></span></div>
@@ -87,18 +113,28 @@
     </div>
     </section>
 
-    <section class="scene">
+    <section class="scene listen">
     <div>
-    <h2>Scan it, open it, paste it</h2>
-    <p>Paper pages, PDFs, Word files, web pages and plain text, all in one library.</p>
+    <h2>Listen your way</h2>
+    <p>Choose a speed from 0.5x to 3x. Play and pause from the Lock Screen, and set a sleep timer for bed. Bookmark a sentence or write a note on it, then find it again in a tap.</p>
+    <p>With Pro, line up chapters and articles in Up Next, save a document as audio to take anywhere, and play your notes back or share them as audio.</p>
     </div>
-    <ul class="art chips" aria-hidden="true"><li>PDF</li><li class="scan">Scan</li><li>Photos</li><li>Word</li><li>Text</li><li>Paste</li></ul>
+    <ul class="art pills" aria-hidden="true"><li>0.5x to 3x</li><li>Lock Screen</li><li>Sleep timer</li><li>Bookmarks</li><li>Notes</li><li>Up Next</li><li>Save as audio</li><li>Play notes</li></ul>
+    </section>
+
+    <section class="scene private">
+    <div>
+    <h2>Private by design</h2>
+    <p>Tellable collects no data, and there is no account. It goes online only to fetch a link you paste.</p>
+    <p>Want your library on your iPad too? Turn on iCloud sync. It is off until you choose it, and it uses your own private iCloud, which we cannot see.</p>
+    </div>
+    <ul class="art rows" aria-hidden="true"><li>Data collected<b>None</b></li><li>Account<b>None</b></li><li>iCloud sync<span class="switch"></span></li></ul>
     </section>
 
     <section class="scene">
     <div>
-    <h2>Five free. Then your choice.</h2>
-    <p>Five documents are free, with every voice and Clean Read. Tellable Pro, a one-time purchase or a yearly subscription, adds unlimited documents, Save as audio and Up Next. No ads, no account.</p>
+    <h2>Five free. Then pay once.</h2>
+    <p>Five documents are free for good, with every voice and Clean Read. Tellable Pro unlocks unlimited documents, Up Next, Save as audio and playing your notes. Buy it once, or choose a yearly plan. No free trial, so no surprise charge; Tellable can remind you three days before a yearly plan renews. Family Sharing included. No ads.</p>
     </div>
     <div class="art plans" aria-hidden="true">
     <svg class="mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)"/><rect class="bar b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><rect class="bar b1" x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/><rect class="bar b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>
@@ -118,6 +154,9 @@
   <section class="closing">
     <img class="mark" src="assets/icon-192.png" alt="" width="72" height="72" loading="lazy">
     <h2>Hear any page. Offline.</h2>
+    <!-- RELEASE DAY: replace the "Coming soon" line below with Apple's badge (see README.md):
+    <p><a class="store-badge" href="https://apps.apple.com/app/idAPP_ID"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60"></a></p>
+    -->
     <p><span class="soon" aria-disabled="true">Coming soon to the App Store</span></p>
   </section>
 </main>
