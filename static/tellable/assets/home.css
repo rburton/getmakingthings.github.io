@@ -297,35 +297,3 @@ section{position:relative}
 .motion .voice-cloud.go li{animation:cloud .6s var(--spring) both;animation-delay:calc(var(--d) * 70ms)}
 .motion .rsvp-card .word.flash{animation:flash .12s ease-out}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
-
-/* Pay once: the hero's promise, the rent band and the comparison (2026-10-28). */
-.promise{list-style:none;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
-.promise li{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .9rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);font:700 .9375rem var(--read)}
-.promise li::before{content:"";width:1rem;height:1rem;border-radius:50%;background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M7.5 13.5l3.6 3.6 7.4-8' fill='none' stroke='%230F1B2D' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% no-repeat}
-.rent{padding:clamp(4rem,9vw,7rem) 0;background:var(--night);color:#E6EDF8}
-.rent .eyebrow{color:var(--coral)}
-.rent .sub{color:#B5C3DA;margin-bottom:2rem}
-.rent-grid{display:grid;gap:3rem;align-items:center}
-@media (min-width:900px){.rent-grid{grid-template-columns:1fr 1fr}}
-.ghost.on-dark{color:#FFF;border-color:#2F4470}
-.ghost.on-dark:hover{border-color:var(--coral)}
-.struck{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
-.struck li{display:grid;gap:.35rem;padding:1.3rem 1.5rem;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
-.struck s{font:800 clamp(1.35rem,1.1rem + 1vw,1.9rem) var(--round);color:#FFF;text-decoration-color:var(--coral);text-decoration-thickness:.12em}
-.struck span{color:#B5C3DA}
-.adhd{padding:clamp(4.5rem,10vw,8rem) 0;background:linear-gradient(180deg,transparent,var(--coral-tint) 50%,transparent)}
-.adhd-grid{display:grid;gap:1rem;margin-top:3rem}
-@media (min-width:640px){.adhd-grid{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1000px){.adhd-grid{grid-template-columns:repeat(3,1fr)}}
-.aside{margin-top:2rem;font-size:.9375rem;color:var(--ink-2);max-width:44rem}
-.compare-wrap{margin-top:2.5rem;overflow-x:auto;border-radius:26px;border:1px solid var(--line);background:var(--surface)}
-.compare{width:100%;min-width:34rem;border-collapse:collapse;text-align:left}
-.compare caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.compare th,.compare td{padding:1rem 1.25rem;vertical-align:top;border-top:1px solid var(--line)}
-.compare thead th{border-top:0;font:800 1.05rem var(--round)}
-.compare tbody th{font:700 1rem var(--read);color:var(--ink);width:22%}
-.compare td{color:var(--ink-2)}
-.compare .us{color:var(--ink);font-weight:700;background:var(--sky)}
-.compare thead .us{color:var(--primary)}
-@media (max-width:600px){.compare{min-width:0}.compare thead{display:none}.compare tr{display:grid;grid-template-columns:1fr 1fr}.compare tbody th{grid-column:1/-1;width:auto;padding-bottom:.25rem;border-top:1px solid var(--line)}.compare td{border-top:0;font-size:.9375rem}.compare td::before{display:block;font:700 .75rem var(--read);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.25rem;color:var(--ink-2)}.compare td:not(.us)::before{content:"Usual app"}.compare td.us::before{content:"Tellable";color:var(--primary)}.compare tbody tr:first-child th{border-top:0}}
