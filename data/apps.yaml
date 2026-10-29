@@ -6,3 +6,9 @@
   tagline: Learn to write, read and count, for ages 3 to 8.
   color: "#7FB08F"
   kids: true
+- name: Tellable
+  url: /tellable/
+  icon: /tellable/assets/icon-512.png
+  tagline: Hear any page read aloud, with each word highlighted as it is spoken.
+  color: "#FF9F7A"
+  kids: false
