@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tellable on Product Hunt: turn every reading into a study session</title>
+<meta name="description" content="Tellable reads your PDFs, scanned pages and articles aloud with each word highlighted, then helps you study them with summaries, questions and flashcards. On iPhone and iPad, offline and private. Five documents free.">
+<link rel="canonical" href="https://getmakingthings.com/tellable/producthunt.html">
+<link rel="preload" href="assets/fonts/AtkinsonHyperlegible-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/ph.css">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<meta name="theme-color" content="#0B2A5B">
+<meta property="og:title" content="Tellable: turn every reading into a study session">
+<meta property="og:description" content="Hear your readings with every word highlighted, then study them with summaries, questions and flashcards. Offline and private, on iPhone and iPad.">
+<meta property="og:image" content="https://getmakingthings.com/tellable/assets/og-image.png">
+<meta property="og:url" content="https://getmakingthings.com/tellable/producthunt.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6822751387">
+</head>
+<body>
+<svg class="defs" aria-hidden="true"><linearGradient id="mk-circle" x1=".2" x2=".8" y2="1"><stop offset="0" stop-color="#4C8DFF"/><stop offset=".55" stop-color="#2563EB"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient><linearGradient id="mk-coral" x2="0" y2="1"><stop offset="0" stop-color="#FFB08F"/><stop offset="1" stop-color="#FF8A65"/></linearGradient></svg>
+
+<!-- Welcome for Product Hunt visitors. Dismissible; the choice is remembered in this browser only. -->
+<aside class="welcome" id="welcome" aria-label="Welcome">
+  <div class="wrap">
+    <p><b>Hello, Product Hunt!</b> Thanks for stopping by. Tellable is free for your first five documents, with every voice and no account. We read every comment, so tell us what you think.</p>
+    <button class="close" type="button" aria-label="Dismiss the welcome message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+</aside>
+
+<header class="top">
+  <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="url(#mk-circle)"/><rect class="b0" x="31.79" y="42.08" width="7.92" height="15.83" rx="3.96"/><rect x="46.04" y="32.58" width="7.92" height="34.83" rx="3.96" fill="url(#mk-coral)"/><rect class="b2" x="60.29" y="38.92" width="7.92" height="22.17" rx="3.96"/></svg>Tellable</a>
+  <a class="pill-cta" href="https://apps.apple.com/us/app/tellable-offline-read-aloud/id6822751387">Get the app</a>
+</header>
+
+<main>
+<!-- Hero: the promise, one step to get it, and the app doing it. -->
+<section class="hero">
+  <div class="glow" aria-hidden="true"></div>
+  <div>
+    <p class="eyebrow">Read aloud for learners, on iPhone and iPad</p>
+    <h1>Turn every reading into a <span class="hl">study</span> session.</h1>
+    <p class="lede">Open a PDF, scan a textbook page or share an article, and Tellable reads it aloud in a natural voice, <strong>highlighting each word as it is spoken.</strong> Then summarize the chapter, ask it questions and test yourself with flashcards. It all runs on your device, so it works offline and your reading stays yours.</p>
+    <div class="get">
+      <a class="store-badge" href="https://apps.apple.com/us/app/tellable-offline-read-aloud/id6822751387"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60"></a>
+      <div class="qr"><img src="assets/ph/app-store-qr.svg" alt="" width="76" height="76"><p><strong>On a computer?</strong>Scan with your iPhone camera.</p></div>
+    </div>
+    <p class="fine">Five documents free<span class="dot" aria-hidden="true"></span>No account<span class="dot" aria-hidden="true"></span>iOS 18 or later</p>
+  </div>
+
+  <figure class="stage">
+    <div class="phone">
+      <video id="demo" src="assets/ph/reader-demo.mp4" poster="assets/ph/reader-poster.jpg" width="604" height="1314" muted loop playsinline preload="metadata" aria-label="Tellable reading a biology chapter aloud. A coral box moves from word to word as each is spoken, the sentence being read is tinted, and a page number and running header are marked Skipped."></video>
+    </div>
+    <figcaption class="caption">
+      <button class="toggle" id="toggle" type="button" aria-label="Pause the recording"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zm7 0h3v14h-3z"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+      <span>Recorded in the app. In your hands, you hear the voice too.</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- The problem, then the outcome. -->
+<section class="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <p class="eyebrow center">Why we made it</p>
+    <h2 id="why-title" class="big center">More to read than time to read it.</h2>
+    <div class="pair">
+      <div class="side">
+        <span class="tag">Without Tellable</span>
+        <h3>Reading stalls.</h3>
+        <ul>
+          <li>The reading list grows faster than you can sit down with it.</li>
+          <li>Your eyes drift, and you read the same paragraph three times.</li>
+          <li>Robotic voices trip over page numbers, footnotes and citations like [2–5].</li>
+          <li>Many read-aloud apps want an account, a connection and your files on their servers.</li>
+        </ul>
+      </div>
+      <div class="side after">
+        <span class="tag">With Tellable</span>
+        <h3>Reading moves with you.</h3>
+        <ul>
+          <li><strong>Get through it anywhere.</strong> The bus, the gym, a walk, at up to 3x speed.</li>
+          <li><strong>Never lose your place.</strong> A coral box follows the voice word by word, so a glance finds you again.</li>
+          <li><strong>Hear it like a person reads it.</strong> Clean Read skips page numbers, running headers and citations.</li>
+          <li><strong>Keep it private.</strong> Everything is read on your device. No account, nothing uploaded.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Made for learners: the study tools, with on-device AI. -->
+<section class="learn" aria-labelledby="learn-title">
+  <div class="wrap">
+    <p class="eyebrow center">Made for learners</p>
+    <h2 id="learn-title" class="big center">Study with it, not just listen.</h2>
+    <p class="sub center">Tellable is built for students and anyone learning from what they read, including readers with ADHD or dyslexia. When the chapter is done, on-device AI helps you understand it and remember it.</p>
+    <ul class="ai">
+      <li>
+        <picture><source srcset="assets/screens/dark-summary.jpg" media="(prefers-color-scheme: dark)"><img src="assets/screens/light-summary.jpg" alt="The Summary of a biology chapter, its first sentence tinted and the spoken word boxed in coral" width="660" height="1434" loading="lazy"></picture>
+        <h3>Summaries</h3>
+        <p>The key points of a chapter or the whole book, read aloud with the word highlighted.</p>
+      </li>
+      <li>
+        <picture><source srcset="assets/screens/dark-ask.jpg" media="(prefers-color-scheme: dark)"><img src="assets/screens/light-ask.jpg" alt="The Ask sheet: a question about the citric acid cycle, the answer below it with the pages it came from" width="660" height="1434" loading="lazy"></picture>
+        <h3>Ask questions</h3>
+        <p>Ask your document anything. Hear the answer from its pages, with the page it came from.</p>
+      </li>
+      <li>
+        <picture><source srcset="assets/screens/dark-flashcards.jpg" media="(prefers-color-scheme: dark)"><img src="assets/screens/light-flashcards.jpg" alt="Flashcard 3 of 10, turned to its answer, with Jump to page 88 below" width="660" height="1434" loading="lazy"></picture>
+        <h3>Flashcards</h3>
+        <p>A deck made from your reading. Flip the cards, or let Tellable read question, pause, answer.</p>
+      </li>
+    </ul>
+    <p class="ai-note">Your documents and questions never leave your device. Summaries, Ask and flashcards use Apple Intelligence on iOS 26, on an iPhone or iPad that supports it, with Tellable Pro.</p>
+  </div>
+</section>
+
+<!-- Three features, no more. -->
+<section class="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <h2 id="features-title" class="big center">What you get</h2>
+    <ul class="three">
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+        <h3>Reads what you read</h3>
+        <p>PDFs, scanned pages, EPUB, Word, DRM-free Kindle books, web articles, photos and pasted text.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span>
+        <h3>Natural voices, offline</h3>
+        <p>Voices that run on your iPhone or iPad, from 0.5x to 3x, on a plane or underground.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+        <h3>Private by design</h3>
+        <p>No account and no ads. Your documents are read on your device and never sent to us.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Close: the same one step. -->
+<section class="closing" aria-labelledby="get-title">
+  <div class="wrap">
+    <div class="closing-card">
+      <h2 id="get-title" class="big">Hear your first page in a minute.</h2>
+      <p class="sub">Download Tellable, open something you have been meaning to read, and press play.</p>
+      <div class="get">
+        <a class="store-badge" href="https://apps.apple.com/us/app/tellable-offline-read-aloud/id6822751387"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60"></a>
+        <div class="qr"><img src="assets/ph/app-store-qr.svg" alt="" width="76" height="76"><p><strong>On a computer?</strong>Scan with your iPhone camera.</p></div>
+      </div>
+      <p class="fine">Five documents free. Pro is one payment, or yearly if you prefer.</p>
+      <p class="more"><a href="index.html">Take the full tour</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <nav aria-label="Footer">
+    <a href="index.html">Tellable</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <p>© 2026 Making Things. Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+</footer>
+
+<script>
+(function () {
+  // The welcome banner: hide it once dismissed. Storage can be blocked, so every access is guarded.
+  var banner = document.getElementById('welcome');
+  var key = 'tellable.ph.welcome.dismissed';
+  try { if (localStorage.getItem(key) === '1') banner.hidden = true; } catch (e) {}
+  banner.querySelector('.close').addEventListener('click', function () {
+    banner.hidden = true;
+    try { localStorage.setItem(key, '1'); } catch (e) {}
+  });
+
+  // The recording: plays on its own unless Reduce Motion is on; the button always pauses or plays it.
+  var video = document.getElementById('demo');
+  var toggle = document.getElementById('toggle');
+  function show(paused) {
+    toggle.classList.toggle('paused', paused);
+    toggle.setAttribute('aria-label', paused ? 'Play the recording' : 'Pause the recording');
+  }
+  toggle.addEventListener('click', function () {
+    if (video.paused) { video.play().catch(function () {}); } else { video.pause(); }
+  });
+  video.addEventListener('play', function () { show(false); });
+  video.addEventListener('pause', function () { show(true); });
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still) { show(true); } else { video.play().catch(function () { show(true); }); }
+})();
+</script>
+</body>
+</html>
