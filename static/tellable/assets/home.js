@@ -26,7 +26,7 @@
   // The headline reads itself: a coral box word by word, the line tinted.
   const head = $('.karaoke');
   if (head && !still) {
-    const words = $$('.w', head), ms = [380, 300, 520, 420, 380, 640];
+    const words = $$('.w', head), ms = words.map(w => Number(w.dataset.ms) || 420);
     let i = -1, timer = 0, visible = true;
     const step = () => {
       words.forEach(w => w.classList.remove('on'));
