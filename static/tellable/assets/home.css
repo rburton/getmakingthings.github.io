@@ -237,6 +237,7 @@ section{position:relative}
 .plan{position:relative;padding:2rem;border-radius:26px;background:var(--surface);border:1px solid var(--line)}
 .plan h3{font-size:1.75rem}
 .plan-note{color:var(--ink-2);margin-top:.5rem}
+.plan-ai{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
 .plan ul{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:.7rem}
 .plan li{display:flex;gap:.7rem;align-items:baseline}
 .plan li::before{content:"";flex:none;width:1.1rem;height:1.1rem;border-radius:50%;transform:translateY(.15rem);background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M7.5 13.5l3.6 3.6 7.4-8' fill='none' stroke='%232563EB' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E") center/100% no-repeat}
